@@ -1,0 +1,101 @@
+:root {
+    --menuBurger: #e8e8e8;
+    --textColorMenu: #818181;
+}
+
+/*Style de la nav desktop*/
+
+/* il faut que fasse disparaitre ce bloc en mobile et c'est un echec, demander a anthony*/
+    @media (max-width: 768px) {
+         .nav-descktop {
+             display: none;
+    }}
+
+    @media (min-width: 768px) {
+         .nav-descktop {
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
+             align-items: center;
+    }}
+
+
+
+
+
+.nav-descktop>ul>li {
+
+    @media (min-width: 768px) {
+     text-decoration: none;
+     color: #ffffff;
+     margin: 2em;
+    }
+ }
+
+.nav-descktop>ul>li>a {
+
+    @media (min-width: 768px) {
+     text-decoration: none;
+    }
+ }
+
+/*Style Menu Burger*/
+
+.sideNav {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -250px;
+    background-color: var(--menuBurger);
+    padding: 3.75rem 0rem 0rem 0rem;
+    transition: right 0.5s ease;
+}
+
+.sideNav>.close {
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--textColorMenu);
+    display: block;
+    transition: 0.3s;
+    color: black;
+    border-radius: 1rem;
+}
+
+.sideNav>a:hover {
+    background-color: rgb(175, 178, 181);
+}
+
+.sideNav>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0px 0px 0px 2rem;
+}
+
+.sideNav.active {
+    right: 0;
+}
+
+.sideNav>.close {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+}
+
+.menuBurger>span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 0.5rem 0rem;
+}
+
+
+
