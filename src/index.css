@@ -1,3 +1,8 @@
+@import "./light.css";
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    /*background-image: var(--light-fire);
+    background-blend-mode: var(--mode-fire);
+    height: 100vh;*/
 }

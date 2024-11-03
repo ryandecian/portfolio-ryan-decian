@@ -5,41 +5,50 @@
 
 /*Style de la nav desktop*/
 
-/* il faut que fasse disparaitre ce bloc en mobile et c'est un echec, demander a anthony*/
+/*nav-desktop*/
+
+.nav-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     @media (max-width: 768px) {
-         .nav-descktop {
-             display: none;
-    }}
+        display: none;
+    }
+}
+
+.nav-desktop>section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-desktop>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-desktop>ul>li {
 
     @media (min-width: 768px) {
-         .nav-descktop {
-             display: flex;
-             flex-direction: row;
-             justify-content: center;
-             align-items: center;
-    }}
-
-
-
-
-
-.nav-descktop>ul>li {
-
-    @media (min-width: 768px) {
-     text-decoration: none;
-     color: #ffffff;
+     list-style: none;
      margin: 2em;
     }
  }
 
-.nav-descktop>ul>li>a {
-
-    @media (min-width: 768px) {
-     text-decoration: none;
-    }
+.nav-desktop>ul>li>a {
+    text-decoration: none;
  }
 
 /*Style Menu Burger*/
+
+.nav-mobile {
+    display: flex;
+    justify-content: end;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
 
 .sideNav {
     width: 250px;
@@ -49,26 +58,35 @@
     top: 0;
     right: -250px;
     background-color: var(--menuBurger);
-    padding: 3.75rem 0rem 0rem 0rem;
     transition: right 0.5s ease;
 }
 
-.sideNav>.close {
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
+
+.sideNav>div {
+    display: flex;
+    justify-content: start;
+    padding: 0rem 0rem 3rem 0rem;
+
+}
+
+.sideNav>div>.close {
+    margin: 1rem 0rem 0rem 1rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
     text-decoration: none;
-    font-size: 24px;
-    color: var(--textColorMenu);
+    text-align: center;
+    font-size: 2rem;
     display: block;
     transition: 0.3s;
     color: black;
-    border-radius: 1rem;
+    border-radius: 3rem;
+    background-color: red;
 }
 
 .sideNav>a:hover {
     background-color: rgb(175, 178, 181);
 }
 
-.sideNav>ul {
+.sideNav>.menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,6 +94,14 @@
     list-style-type: none;
     padding: 0;
     margin: 0px 0px 0px 2rem;
+}
+
+.sideNav>.menu>li {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.sideNav>.menu>li>a {
+    text-decoration: none;
 }
 
 .sideNav.active {
@@ -96,6 +122,4 @@
     background-color: black;
     margin: 0.5rem 0rem;
 }
-
-
 
