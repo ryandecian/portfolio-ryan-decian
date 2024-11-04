@@ -54,6 +54,15 @@ function Nav() {
                          <li><a href="#">Projets</a></li>
                      </ul>
 
+                     <section>
+                         <div className="languageFR">
+                             <img src={drapFrancais} alt="Langue français"/>
+                         </div>
+                         <div className="languageEN">
+                             <img src={drapAnglais} alt="English language"/> 
+                         </div>
+                     </section>
+
                  </div>
 
                  <a href="#" 

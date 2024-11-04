@@ -131,6 +131,13 @@
     text-decoration: none;
 }
 
+.sideNav>section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 2rem 0rem 0rem 0rem;
+}
+
 .sideNav.active {
     right: 0;
 }
