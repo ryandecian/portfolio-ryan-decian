@@ -1,0 +1,28 @@
+.Container {
+    display: grid;
+    background-color: rgb(217, 92, 239);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.Container>.a {
+    grid-column: 2/4;
+
+}
+/*
+.Container>.a {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.Container>.e {
+    grid-area: 3/2/5/4;
+}
+*/
+.Container>div {
+    background-color: rgb(230, 167, 240);
+}

@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 /*Les importation de page*/
 import Home from "./pages/Home.tsx"
+import About from "./pages/About.tsx"
+import Grid from "./pages/Grid.tsx"
 
 const router = createBrowserRouter([
     {
@@ -16,7 +18,11 @@ const router = createBrowserRouter([
        },
        {
          path: "/about",
-         element: <Home/>,
+         element: <About/>,
+       },
+       {
+         path: "/grid",
+         element: <Grid/>,
        },
       ]
     },

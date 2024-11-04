@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Nav.css"
 import { Outlet, Link } from "react-router-dom";
+import drapAnglais from "../../public/data-img/drapeau-anglais.png"
+import drapFrancais from "../../public/data-img/drapeau-français.png"
 
 function Nav() {
     const [active, setActive] = useState(false)
@@ -18,10 +20,10 @@ function Nav() {
 
                  <section>
                      <div className="languageFR">
-                         <img/>
+                         <img src={drapFrancais} alt="Langue français"/>
                      </div>
                      <div className="languageEN">
-                         <img/> 
+                         <img src={drapAnglais} alt="English language"/> 
                      </div>
                  </section>
 
@@ -35,6 +37,8 @@ function Nav() {
 
 
              <div className="nav-mobile">
+                 <h1 id="Autor">Ryan DECIAN</h1>
+                 <h3>Développeur web full stack junior</h3>
                  <div  className={`sideNav ${active ? "active" : ""}`} id="mySideNav">
 
                      <div>
@@ -65,7 +69,6 @@ function Nav() {
 
 
          </nav>
-         <Link to="/">Home</Link>
      </header>
 )}
 
