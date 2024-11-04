@@ -17,6 +17,7 @@ function Nav() {
 
              <div className="nav-desktop">
 
+                 <div className="frontiereNav">
 
                  <section>
                      <div className="languageFR">
@@ -32,7 +33,14 @@ function Nav() {
                      <li><a href="#">Expériances</a></li>
                      <li><a href="#">Projets</a></li>
                  </ul>
-             
+
+                 </div>
+
+                 <section>
+                 <h1 id="Autor">Ryan DECIAN</h1>
+                 <h3>Développeur web full stack junior</h3>
+                 </section>
+                 
              </div>
 
 
