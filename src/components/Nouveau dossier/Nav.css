@@ -92,16 +92,7 @@
     margin-bottom: 1.25rem;
 }
 
-.sideNav {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: -250px;
-    background-color: var(--menuBurger);
-    transition: right 0.5s ease;
-}
+
 
 
 .sideNav>div {
@@ -111,19 +102,7 @@
 
 }
 
-.sideNav>div>.close {
-    margin: 1rem 0rem 0rem 1rem;
-    padding: 0.4rem 1rem 0.4rem 1rem;
-    text-decoration: none;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: normal;
-    display: block;
-    transition: 0.3s;
-    color: black;
-    border-radius: 3rem;
-    background-color: #e2e2e2;
-}
+
 
 .sideNav>div>.close:hover {
     background-color: rgb(255, 142, 142);
@@ -133,47 +112,10 @@
     background-color: rgb(175, 178, 181);
 }
 
-.sideNav>.menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    list-style-type: none;
-    padding: 0;
-    margin: 0px 0px 0px 2rem;
-}
-
-.sideNav>.menu>li {
-    margin: 0.5rem 0rem 0.5rem 0rem;
-}
-
-.sideNav>.menu>li>a {
-    text-decoration: none;
-}
 
 .sideNav>section {
     display: flex;
     justify-content: start;
     align-items: center;
     margin: 2rem 0rem 0rem 0rem;
-}
-
-.sideNav.active {
-    right: 0;
-}
-
-
-
-#openBtn {
-    position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
-}
-
-.menuBurger>span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 0.5rem 0rem;
 }
