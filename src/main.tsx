@@ -14,7 +14,7 @@ const router = createBrowserRouter([
      children: [
        {
          path: "/",
-         element: <Home/>,
+         element: <Home />,
        },
        {
          path: "/about",
@@ -27,6 +27,11 @@ const router = createBrowserRouter([
       ]
     },
   ]);
+
+const rootElement = document.getElementById("root");
+if (rootElement == null) {
+  throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
+}
 
 createRoot(document.getElementById('root')!).render(
   <RouterProvider router={router}/>
