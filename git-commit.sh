@@ -9,16 +9,24 @@
 
 #!/bin/bash
 
-# Vérifie si un agent SSH est actif
+# Vérifie si un agent SSH est déjà actif
 if [ -z "$SSH_AGENT_PID" ] || ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
-  echo "🔑 Aucun agent SSH actif, démarrage d'un agent SSH..."
-  eval "$(ssh-agent -s)" > /dev/null
+  # Vérifie s'il existe un fichier d'environnement d'agent SSH actif
+  if [ -f ~/.ssh-agent ]; then
+    echo "🔑 Connexion à l'agent SSH existant..."
+    source ~/.ssh-agent > /dev/null
+    if ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
+      echo "🔑 L'agent SSH trouvé est inactif. Démarrage d'un nouvel agent..."
+      eval "$(ssh-agent -s)" > ~/.ssh-agent
+    fi
+  else
+    echo "🔑 Aucun agent SSH actif. Démarrage d'un nouvel agent SSH..."
+    eval "$(ssh-agent -s)" > ~/.ssh-agent
+  fi
 fi
 
-# Détecte automatiquement les clés SSH dans ~/.ssh
+# Ajoute les clés SSH détectées automatiquement
 ssh_keys=$(find ~/.ssh -type f -name "id_*" ! -name "*.pub")
-
-# Ajoute chaque clé trouvée à l'agent SSH
 if [ -n "$ssh_keys" ]; then
   for key in $ssh_keys; do
     ssh-add "$key" > /dev/null 2>&1
