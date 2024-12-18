@@ -18,7 +18,7 @@ function NavPC() {
                          <img src={drapFrancais} alt="Langue français"/>
                      </div>
                      <div className="languageEN">
-                         <img src={mail} alt="English language"/> 
+                         <img src={drapAnglais} alt="English language"/> 
                      </div>
                  </section>
 
