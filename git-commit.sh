@@ -15,37 +15,31 @@
 
 #!/bin/bash
 
-# Vérifie si un agent SSH est déjà actif
-if [ -z "$SSH_AGENT_PID" ] || ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
-  # Vérifie s'il existe un fichier d'environnement d'agent SSH actif
-  if [ -f ~/.ssh-agent ]; then
-    echo "🔑 Connexion à l'agent SSH existant..."
-    source ~/.ssh-agent > /dev/null 2>&1
-    if ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
-      echo "🔑 L'agent SSH trouvé est inactif. Démarrage d'un nouvel agent..."
-      eval "$(ssh-agent -s)" > ~/.ssh-agent
-      echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" > ~/.ssh-agent
-      echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> ~/.ssh-agent
-    fi
-  else
-    echo "🔑 Aucun agent SSH actif. Démarrage d'un nouvel agent SSH..."
-    eval "$(ssh-agent -s)" > /dev/null
-    echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" > ~/.ssh-agent
-    echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> ~/.ssh-agent
-  fi
-fi
+# Emplacement du fichier pour stocker les informations de l'agent
+SSH_ENV="$HOME/.ssh-agent.env"
 
-# Vérifie si la clé est déjà chargée
-ssh_keys=$(ssh-add -l 2>/dev/null | grep -c id_ed25519)
-if [ "$ssh_keys" -eq 0 ]; then
-  ssh-add ~/.ssh/id_ed25519 > /dev/null 2>&1
-  if [ $? -eq 0 ]; then
-    echo "🔐 Clé SSH ajoutée avec succès : ~/.ssh/id_ed25519"
-  else
-    echo "❌ Échec lors de l'ajout de la clé SSH : ~/.ssh/id_ed25519"
-  fi
+# Fonction pour démarrer un nouvel agent SSH
+start_agent() {
+    echo "🔑 Démarrage d'un nouvel agent SSH..."
+    eval "$(ssh-agent -s)" > "$SSH_ENV"
+    echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$SSH_ENV"
+    echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> "$SSH_ENV"
+    ssh-add ~/.ssh/id_ed25519 > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        echo "🔐 Clé SSH ajoutée avec succès : ~/.ssh/id_ed25519"
+    else
+        echo "❌ Échec lors de l'ajout de la clé SSH : ~/.ssh/id_ed25519"
+    fi
+}
+
+# Recharger ou démarrer l'agent SSH
+if [ -f "$SSH_ENV" ]; then
+    source "$SSH_ENV" > /dev/null
+    if ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
+        start_agent
+    fi
 else
-  echo "✅ Clé SSH déjà chargée dans l'agent."
+    start_agent
 fi
 
 # Affiche l'état actuel du dépôt
@@ -59,8 +53,8 @@ files=$(git ls-files --modified --deleted --others --exclude-standard)
 
 # Vérifie s'il y a des fichiers à ajouter
 if [ -z "$files" ]; then
-  echo "❌ Aucun fichier modifié, supprimé ou nouveau fichier à ajouter. Commit annulé."
-  exit 1
+    echo "❌ Aucun fichier modifié, supprimé ou nouveau fichier à ajouter. Commit annulé."
+    exit 1
 fi
 
 # Ajoute les fichiers modifiés, nouveaux et supprimés
@@ -81,4 +75,3 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 # Pousse sur la branche courante
 git push origin "$branch" || { echo "❌ Erreur : Push échoué."; exit 1; }
 echo "✅ Commit réussi, envoi sur la branche '$branch'..."
-
