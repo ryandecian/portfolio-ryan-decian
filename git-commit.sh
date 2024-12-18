@@ -4,6 +4,8 @@
 # chmod +x git-commit.sh
 #Copier coller cette ligne dans package.json dans script :
 # "commit": "bash ./git-commit.sh"
+#Copier coller cette commande dans le terminal :
+# nano ~/.ssh/config
 #Exécution de cette commande avec :
 # npm run commit
 
@@ -75,3 +77,4 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 # Pousse sur la branche courante
 git push origin "$branch" || { echo "❌ Erreur : Push échoué."; exit 1; }
 echo "✅ Commit réussi, envoi sur la branche '$branch'..."
+
