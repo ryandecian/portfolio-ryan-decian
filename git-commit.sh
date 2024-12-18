@@ -29,20 +29,17 @@ if [ -z "$SSH_AGENT_PID" ] || ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
   fi
 fi
 
-# Ajoute les clés SSH détectées automatiquement
-ssh_keys=$(find ~/.ssh -type f -name "id_*" ! -name "*.pub")
-if [ -n "$ssh_keys" ]; then
-  for key in $ssh_keys; do
-    ssh-add "$key" > /dev/null 2>&1
-    if [ $? -eq 0 ]; then
-      echo "🔐 Clé SSH ajoutée avec succès : $key"
-    else
-      echo "❌ Échec lors de l'ajout de la clé SSH : $key"
-    fi
-  done
+# Vérifie si la clé est déjà chargée
+ssh_keys=$(ssh-add -l 2>/dev/null | grep -c id_ed25519)
+if [ "$ssh_keys" -eq 0 ]; then
+  ssh-add ~/.ssh/id_ed25519 > /dev/null 2>&1
+  if [ $? -eq 0 ]; then
+    echo "🔐 Clé SSH ajoutée avec succès : ~/.ssh/id_ed25519"
+  else
+    echo "❌ Échec lors de l'ajout de la clé SSH : ~/.ssh/id_ed25519"
+  fi
 else
-  echo "❌ Aucune clé SSH trouvée dans ~/.ssh. Veuillez en créer une avant de continuer."
-  exit 1
+  echo "✅ Clé SSH déjà chargée dans l'agent."
 fi
 
 # Affiche l'état actuel du dépôt
@@ -78,4 +75,3 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 # Pousse sur la branche courante
 git push origin "$branch" || { echo "❌ Erreur : Push échoué."; exit 1; }
 echo "✅ Commit réussi, envoi sur la branche '$branch'..."
-
