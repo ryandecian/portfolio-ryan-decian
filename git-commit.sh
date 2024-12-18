@@ -14,14 +14,18 @@ if [ -z "$SSH_AGENT_PID" ] || ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
   # Vérifie s'il existe un fichier d'environnement d'agent SSH actif
   if [ -f ~/.ssh-agent ]; then
     echo "🔑 Connexion à l'agent SSH existant..."
-    source ~/.ssh-agent > /dev/null
+    source ~/.ssh-agent > /dev/null 2>&1
     if ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
       echo "🔑 L'agent SSH trouvé est inactif. Démarrage d'un nouvel agent..."
       eval "$(ssh-agent -s)" > ~/.ssh-agent
+      echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" > ~/.ssh-agent
+      echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> ~/.ssh-agent
     fi
   else
     echo "🔑 Aucun agent SSH actif. Démarrage d'un nouvel agent SSH..."
-    eval "$(ssh-agent -s)" > ~/.ssh-agent
+    eval "$(ssh-agent -s)" > /dev/null
+    echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" > ~/.ssh-agent
+    echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> ~/.ssh-agent
   fi
 fi
 
@@ -74,4 +78,3 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 # Pousse sur la branche courante
 git push origin "$branch" || { echo "❌ Erreur : Push échoué."; exit 1; }
 echo "✅ Commit réussi, envoi sur la branche '$branch'..."
-
