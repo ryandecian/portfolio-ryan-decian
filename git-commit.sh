@@ -78,3 +78,4 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 # Pousse sur la branche courante
 git push origin "$branch" || { echo "❌ Erreur : Push échoué."; exit 1; }
 echo "✅ Commit réussi, envoi sur la branche '$branch'..."
+
