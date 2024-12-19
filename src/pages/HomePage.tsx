@@ -1,5 +1,6 @@
 import "./HomePage.css"
 import NavRoot from "../components/NavRoot/NavRoot";
+import HomeMainRoot from "../components/HomeMainRoot/HomeMainRoot";
 
 function HomePage() {
     return(
@@ -7,7 +8,9 @@ function HomePage() {
         <header>
             <NavRoot />
         </header>
-        <main></main>
+        <main>
+            <HomeMainRoot />
+        </main>
         <footer></footer>
         </>
     )
