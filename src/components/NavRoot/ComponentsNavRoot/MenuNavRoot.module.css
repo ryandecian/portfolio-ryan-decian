@@ -44,4 +44,5 @@ from "../NavPC/NavPC.tsx"
 
 .MenuLinkPC {
     text-decoration: none;
+    color: inherit;
 }

@@ -4,12 +4,6 @@
 # chmod +x git-commit.sh
 #Copier coller cette ligne dans package.json dans script :
 # "commit": "bash ./git-commit.sh"
-#Copier coller cette commande dans le terminal :
-# nano ~/.ssh/config
-#Copier coller ce code dans le ficher : 
-# Host *
-#  AddKeysToAgent yes
-#  IdentityFile ~/.ssh/id_ed25519
 #Exécution de cette commande avec :
 # npm run commit
 

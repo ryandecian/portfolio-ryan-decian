@@ -1,4 +1,10 @@
 :root {
     --menuBurger: #e8e8e8;
     --textColorMenu: #818181;
+
+    --textColorBlack: black;
+    --textColorWhite: white;
+
+    --backgroundBlack: black;
+    --backgroundWhite: white;
 }
