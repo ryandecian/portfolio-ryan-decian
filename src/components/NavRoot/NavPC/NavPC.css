@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: red;
+    color: var(--textColorWhite);
     @media (max-width: 768px) {
         display: none;
     }

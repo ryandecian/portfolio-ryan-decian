@@ -6,6 +6,9 @@ import style from "../ComponentsNavRoot/MenuNavRoot.module.css"
 
 import drapFrancais from "../../../assets/data-img/drapeau-français.png"
 import drapAnglais from "../../../assets/data-img/drapeau-anglais.png"
+import mail from "../../../assets/data-img/mail-icon.webp"
+import github from "../../../assets/data-img/github-icon.png"
+import linkedin from "../../../assets/data-img/linkedin-icon.png"
 
 function NavMobile() {
     const [active, setActive] = useState(false)
