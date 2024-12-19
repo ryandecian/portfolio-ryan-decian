@@ -41,10 +41,13 @@ function NavMobile() {
 
                      <section>
                          <div className="IconNavMobile">
-                             <img src={drapFrancais} alt="Langue français"/>
+                             <img src={github} alt="GitHub"/>
                          </div>
                          <div className="IconNavMobile">
-                             <img src={drapAnglais} alt="English language"/> 
+                             <img src={linkedin} alt="Linkedin"/> 
+                         </div>
+                         <div className="IconNavMobile">
+                             <img src={mail} alt="Mail"/> 
                          </div>
                      </section>
 
