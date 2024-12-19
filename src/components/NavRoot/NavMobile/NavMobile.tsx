@@ -40,10 +40,10 @@ function NavMobile() {
                      />
 
                      <section>
-                         <div className="languageFR">
+                         <div className="IconNavMobile">
                              <img src={drapFrancais} alt="Langue français"/>
                          </div>
-                         <div className="languageEN">
+                         <div className="IconNavMobile">
                              <img src={drapAnglais} alt="English language"/> 
                          </div>
                      </section>

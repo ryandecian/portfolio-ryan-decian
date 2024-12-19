@@ -16,13 +16,13 @@ function NavPC() {
              <div className="NavTopPC">
 
                  <section>
-                     <div className="IconNav">
+                     <div className="IconNavPC">
                          <img src={github} alt="GitHub"/>
                      </div>
-                     <div className="IconNav">
+                     <div className="IconNavPC">
                          <img src={linkedin} alt="Linkedin"/> 
                      </div>
-                     <div className="IconNav">
+                     <div className="IconNavPC">
                          <img src={mail} alt="Mail"/> 
                      </div>
                  </section>
