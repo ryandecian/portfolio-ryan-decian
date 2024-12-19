@@ -3,12 +3,8 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import MenuNavRoot from "../ComponentsNavRoot/MenuNavRoot"
 import style from "../ComponentsNavRoot/MenuNavRoot.module.css"
-
-import drapFrancais from "../../../assets/data-img/drapeau-français.png"
-import drapAnglais from "../../../assets/data-img/drapeau-anglais.png"
-import mail from "../../../assets/data-img/mail-icon.webp"
-import github from "../../../assets/data-img/github-icon.png"
-import linkedin from "../../../assets/data-img/linkedin-icon.png"
+import IconNavRoot from "../ComponentsNavRoot/IconNavRoot"
+import StyleIcon from "../ComponentsNavRoot/IconNavRoot.module.css"
 
 function NavMobile() {
     const [active, setActive] = useState(false)
@@ -39,17 +35,9 @@ function NavMobile() {
                          moduleMenuLink={style.MenuLinkMobile}
                      />
 
-                     <section>
-                         <div className="IconNavMobile">
-                             <img src={github} alt="GitHub"/>
-                         </div>
-                         <div className="IconNavMobile">
-                             <img src={linkedin} alt="Linkedin"/> 
-                         </div>
-                         <div className="IconNavMobile">
-                             <img src={mail} alt="Mail"/> 
-                         </div>
-                     </section>
+                     <IconNavRoot
+                         iconNav={StyleIcon.IconNavMobile}
+                     />
 
                  </div>
 
