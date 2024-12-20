@@ -46,10 +46,23 @@
     grid-template-rows: repeat(6, 50);
     gap: 15px;
     justify-content: center;
+    align-items: center;
     width: 50%;
 }
 
 /*-----------------test----------------*/
+
+.LanguageDevPC > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LanguageDevPC > div > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .LanguageDevPC > .div1 {
     grid-column: 3/5;
