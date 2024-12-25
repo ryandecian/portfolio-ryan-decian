@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "check": "biome check src",
     "preview": "vite preview",
-    "commit": "bash ./git-commit.sh"
+    "commit": "bash ./npm-run-commit.sh"
   },
   "dependencies": {
     "react": "^18.3.1",
