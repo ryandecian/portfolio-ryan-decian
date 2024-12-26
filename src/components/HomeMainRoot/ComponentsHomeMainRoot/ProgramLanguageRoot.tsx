@@ -1,12 +1,11 @@
 import style from "./ProgramLanguageRoot.module.css"
 
 /*Import des images*/
-import LogoReact from "../../../assets/ProgramLanguageImg/LogoReact.png"
+import LogoReact from "../../../assets/ProgramLanguageImg/LogoReactSimple.png"
 import LogoNodeJS from "../../../assets/ProgramLanguageImg/LogoNodeJS.png"
 import LogoHTML from "../../../assets/ProgramLanguageImg/LogoHTMLSimple.png"
 import LogoCSS from "../../../assets/ProgramLanguageImg/LogoCSSSimple.png"
 import LogoJavaScript from "../../../assets/ProgramLanguageImg/LogoJavaScriptSimple.png"
-import LogoModuleCSS from "../../../assets/ProgramLanguageImg/LogoModuleCSS.png"
 import LogoGitHub from "../../../assets/ProgramLanguageImg/LogoGitHubSimpleBlue.png"
 
 function ProgramLanguageRoot() {
@@ -16,6 +15,7 @@ function ProgramLanguageRoot() {
              <div className={style.Container1PC}>
                  <div className={style.BorderContainerPC}>
                      <img src={LogoReact} alt="Logo React" />
+                     <h5>REACT</h5>
                  </div>
              </div>
 
