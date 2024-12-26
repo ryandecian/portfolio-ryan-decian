@@ -3,10 +3,11 @@ import style from "./ProgramLanguageRoot.module.css"
 /*Import des images*/
 import LogoReact from "../../../assets/ProgramLanguageImg/LogoReact.png"
 import LogoNodeJS from "../../../assets/ProgramLanguageImg/LogoNodeJS.png"
-import LogoHTML from "../../../assets/ProgramLanguageImg/LogoHTMLWhite.png"
-import LogoCSS from "../../../assets/ProgramLanguageImg/LogoCSSWhite.png"
-import LogoJavaScript from "../../../assets/ProgramLanguageImg/LogoJavaScriptWhite.png"
+import LogoHTML from "../../../assets/ProgramLanguageImg/LogoHTMLSimple.png"
+import LogoCSS from "../../../assets/ProgramLanguageImg/LogoCSSSimple.png"
+import LogoJavaScript from "../../../assets/ProgramLanguageImg/LogoJavaScriptSimple.png"
 import LogoModuleCSS from "../../../assets/ProgramLanguageImg/LogoModuleCSS.png"
+import LogoGitHub from "../../../assets/ProgramLanguageImg/LogoGitHubSimpleBlue.png"
 
 function ProgramLanguageRoot() {
     return (
@@ -21,37 +22,42 @@ function ProgramLanguageRoot() {
              <div className={style.Container2PC}>
                  <div className={style.BorderContainerPC}>
                      <img src={LogoCSS} alt="Logo CSS" />
-                     <h3></h3>
+                     <h5>CSS</h5>
                  </div>
              </div>
 
              <div className={style.Container3PC}>
                  <div className={style.BorderContainerPC}>
-                     <img src={LogoModuleCSS} alt="Logo Module CSS" />
+                     <img src={LogoCSS} alt="Logo Module CSS" />
+                     <h5>Module CSS</h5>
                  </div>
              </div>
 
              <div className={style.Container4PC}>
                  <div className={style.BorderContainerPC}>
                      <img src={LogoHTML} alt="Logo HTML" />
+                     <h5>HTML</h5>
                  </div>
              </div>
 
              <div className={style.Container5PC}>
                  <div className={style.BorderContainerPC}>
                      <img src={LogoJavaScript} alt="Logo JavaScript" />
+                     <h5>JAVASCRIPT</h5>
                  </div>
              </div>
 
              <div className={style.Container6PC}>
                  <div className={style.BorderContainerPC}>
                      <img src={LogoNodeJS} alt="Logo NodeJS" />
+                     <h5>NodeJS</h5>
                  </div>
              </div>
 
              <div className={style.Container7PC}>
                  <div className={style.BorderContainerPC}>
-                     <img src={LogoNodeJS} alt="Logo React" />
+                     <img src={LogoGitHub} alt="Logo GitHub" />
+                     <h5>Git et GitHub</h5>
                  </div>
              </div>
 
