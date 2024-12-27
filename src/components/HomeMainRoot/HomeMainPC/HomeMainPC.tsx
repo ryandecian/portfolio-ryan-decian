@@ -41,7 +41,9 @@ function HomeMainPC() {
 
             </section>
 
-            <section className="ContainerProjetHomeMainPC"></section>
+            <section className="ContainerProjetHomeMainPC">
+                <h1>Je suis le container projet</h1>
+            </section>
         </section>
     )
 }
