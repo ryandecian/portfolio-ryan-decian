@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 interface CardProjetRootProps {
     moduleContainerCardProjetRoot: string,
     moduleCardProjetImg: string,
@@ -7,8 +9,12 @@ interface CardProjetRootProps {
     moduleButtonCardProjet: string, 
     src: string,
     title: string,
-    year: number,
+    yearStart?: string,
+    yearEnd?: string,
     key: number, 
+
+    moduleContainerSubCardProjetRoot: string,
+    moduleTitleSubCardProjet: string,
 }
 
 function CardProjetRoot(Props: CardProjetRootProps) {
@@ -21,23 +27,47 @@ function CardProjetRoot(Props: CardProjetRootProps) {
          moduleButtonCardProjet, 
          src, 
          title, 
-         year, 
-         key, } = Props
+         yearStart, 
+         yearEnd, 
+         key, 
+
+         moduleContainerSubCardProjetRoot, 
+         moduleTitleSubCardProjet, 
+        } = Props
+
+        const [isOpen, setIsOpen] = useState(false);
+
+        const Window = () => {
+            setIsOpen((prev) => !prev);
+        }
+
     return (
-         <section className={moduleContainerCardProjetRoot}>
-             <div className={moduleCardProjetImg}>
-                 <img src={src} alt={title} />
-             </div>
+        <>
+        {isOpen === false ?
+             <section className={moduleContainerCardProjetRoot}>
+                 <div className={moduleCardProjetImg}>
+                     <img src={src} alt={title} />
+                 </div>
 
-             <div className={moduleContainerCardProjetInfo} key={key}>
-                 <h1 className={moduleTitleCardProjet}>{title}</h1>
-                 <h3 className={moduleYearCardProjet}>{year}</h3>
-             </div>
+                 <div className={moduleContainerCardProjetInfo} key={key}>
+                     <h1 className={moduleTitleCardProjet}>{title}</h1>
+                     <h3 className={moduleYearCardProjet}>{yearEnd}</h3>
+                 </div>
 
-             <div className={moduleButtonCardProjet}>
-                <button></button>
-             </div>
-         </section>
+                 <div className={moduleButtonCardProjet}>
+                    <button onClick={Window}>Voir plus</button>
+                 </div>
+             </section>
+         :
+             <section className={moduleContainerSubCardProjetRoot}>
+                <h1 className={moduleTitleSubCardProjet}>{title}</h1>
+                <p>Date</p>
+                <p>Description</p>
+                <div></div>
+                <button onClick={Window}>Voir moins</button>
+             </section>
+         }
+         </>
     );
 }
 

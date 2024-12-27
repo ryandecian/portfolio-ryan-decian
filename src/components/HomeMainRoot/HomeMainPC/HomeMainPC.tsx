@@ -1,8 +1,23 @@
 import "./HomeMainPC.css"
 import Avatar from "../../../assets/data-img/Avatar-Ryan-DECIAN.jpg"
 import ProgramLanguageRoot from "../ComponentsHomeMainRoot/ProgramLanguageRoot";
+import CardProjetRoot from "../ComponentsHomeMainRoot/CardProjetRoot";
+import style from "../ComponentsHomeMainRoot/CardProjetRoot.module.css"
+
+import LogoReact from "../../../assets/ProgramLanguageImg/LogoReactSimple.png"
 
 function HomeMainPC() {
+    const Projets = [
+        {
+            id: 1,
+            title: "Projet bille",
+            date: {
+                yearStart: "2024",
+                yearEnd: "2024",
+            },
+            img: LogoReact,
+        },
+    ]
     return (
         <section className="HomeMainPC">
 
@@ -43,6 +58,29 @@ function HomeMainPC() {
 
             <section className="ContainerProjetHomeMainPC">
                 <h1>Je suis le container projet</h1>
+                <section>
+                     {
+                         Projets.map((Var) => {
+                             return (
+                                 <CardProjetRoot
+                                     moduleContainerCardProjetRoot = {style.ContainerCardProjetRootPC}
+                                     moduleCardProjetImg = {style.CardProjetImgPC}
+                                     moduleContainerCardProjetInfo = {style.ContainerCardProjetInfoPC}
+                                     moduleTitleCardProjet = {style.TitleCardProjetPC}
+                                     moduleYearCardProjet = {style.YearCardProjetPC}
+                                     moduleButtonCardProjet = {style.ButtonCardProjetPC}
+                                     src = {Var.img}
+                                     title = {Var.title}
+                                     yearEnd = {Var.date.yearEnd}
+                                     key = {Var.id}
+
+                                     moduleContainerSubCardProjetRoot = {style.ContainerSubCardProjetRootPC}
+                                     moduleTitleSubCardProjet = {style.TitleSubCardProjet}
+                                     />
+                             )
+                         })
+                     }
+                </section>
             </section>
         </section>
     )
