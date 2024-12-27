@@ -1,3 +1,5 @@
+@import "./assets/Fonts/Roboto/RobotoStyleSheet.css";
+
 :root {
     --BackgroudMenuBurger: #A9CCE3;
     --textColorMenu: #818181;
@@ -7,4 +9,14 @@
 
     --backgroundBlack: black;
     --backgroundWhite: white;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Police Roboto */
+    font-size: 16px; /* Taille de la police */
+    line-height: 1.6; /* Espacement entre les lignes pour lisibilité */
+    margin: 0;
+    padding: 20px; /* Encadre un espace minimum sur le site*/
+    text-align: justify; 
+    /*ligne le texte en ajustant les espaces pour des lignes de même longueur.*/
 }
