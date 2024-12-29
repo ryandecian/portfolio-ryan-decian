@@ -58,7 +58,7 @@ function HomeMainPC() {
             </section>
 
             <section className="ContainerProjetHomeMainPC">
-                <h1>Je suis le container projet</h1>
+                <h2>Je suis le container projet</h2>
                 <section>
                      {
                          Projets.map((Var) => {

@@ -27,6 +27,7 @@ from "../NavPC/NavPC.tsx"
 
 .MenuLinkMobile {
     text-decoration: none;
+    font-size: var(--font-size-root);
 }
 
 

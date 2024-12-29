@@ -15,9 +15,10 @@
     color: inherit;
 }
 
-#AutorMobile {
+.NavMobile > a > h1 {
     animation: flip 2s infinite;
     margin-bottom: 0.5rem;
+    font-size: var(--h1);
     color: var(--textColorWhite);
 }
 @keyframes flip {
@@ -33,6 +34,7 @@
     margin-top: 0.5rem;
     margin-bottom: 1.25rem;
     color: var(--textColorWhite);
+    font-size: var(--h3);
 }
 
 /*-----------------------------------------------*/
