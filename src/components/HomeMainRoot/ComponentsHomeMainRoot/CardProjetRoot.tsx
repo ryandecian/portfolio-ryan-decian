@@ -82,7 +82,7 @@ function CardProjetRoot(Props: CardProjetRootProps) {
                          ? <p>{description}</p> 
                          : null}
                  </div>
-                <div></div>
+                <div className={yearEnd}></div>
                 <button onClick={Window}>Voir moins</button>
              </section>
          }

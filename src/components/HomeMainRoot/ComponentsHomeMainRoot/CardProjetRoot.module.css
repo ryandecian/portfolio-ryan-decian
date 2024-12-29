@@ -13,6 +13,7 @@
     height: 325px;
     background-color: red;
     margin: auto;
+    grid-column: span 2;
 }
 
 .CardProjetImgPC {
@@ -81,10 +82,11 @@
     align-items: center;
     flex-direction: column;
     border-radius: 1rem;
-    width: 240px;
+    width: 500px;
     height: 325px;
     background-color: red;
     margin: auto;
+    grid-column: span 4;
 }
 
 .TitleSubCardProjetPC {
@@ -98,11 +100,24 @@
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    width: calc(100% - 0.5rem); /*Attention, dépend de la valeur margin qui doit être = */
-    margin: 0rem 0rem 0rem 0.5rem;
+    width: calc(100% - 1rem); /*Attention, dépend de la valeur margin qui doit être = */
+    margin: 0.5rem 0rem 0rem 0.5rem;
 }
 
 .DateSubCardProjetPC {
     font-size: var(--p);
     margin: 0.5rem 0rem 0rem 0rem;
+}
+
+.ContainerSubCardProjetRootPC > button {
+    background: none; /* Supprime le fond */
+    border: none; /* Supprime les contours */
+    outline: none; /* Supprime le focus par défaut */
+    color: var(--textColorWhite); /* Couleur du texte */
+    font-size: var(--h4); /* Taille de la police */
+    cursor: pointer; /* Curseur de clic */
+    padding: 0;
+    margin: 0;
+    font-family: inherit; /* Hérite de la police parente */
+    text-decoration: none; /* Supprime tout soulignement */
 }

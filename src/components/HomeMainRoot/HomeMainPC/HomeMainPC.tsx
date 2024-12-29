@@ -19,7 +19,27 @@ function HomeMainPC() {
             description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
         },
         {
-            id: 1,
+            id: 2,
+            title: "Projet card",
+            date: {
+                yearStart: "2015",
+                yearEnd: "10/2024",
+            },
+            img: LogoReact,
+            description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
+        },
+        {
+            id: 3,
+            title: "Projet card",
+            date: {
+                yearStart: "2015",
+                yearEnd: "10/2024",
+            },
+            img: LogoReact,
+            description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
+        },
+        {
+            id: 4,
             title: "Projet card",
             date: {
                 yearStart: "2015",
