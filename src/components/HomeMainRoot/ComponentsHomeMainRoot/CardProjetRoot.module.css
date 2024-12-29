@@ -8,12 +8,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    grid-column: span 2;
     border-radius: 1rem;
     width: 240px;
     height: 325px;
     background-color: red;
     margin: auto;
-    grid-column: span 2;
+    transition: all 0.3s ease;
 }
 
 .CardProjetImgPC {
@@ -81,12 +82,13 @@
     justify-content: start;
     align-items: center;
     flex-direction: column;
+    grid-column: span 4;
     border-radius: 1rem;
     width: 500px;
     height: 325px;
     background-color: red;
     margin: auto;
-    grid-column: span 4;
+    transition: all 0.3s ease;
 }
 
 .TitleSubCardProjetPC {

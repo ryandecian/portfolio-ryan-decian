@@ -5,17 +5,18 @@ import CardProjetRoot from "../ComponentsHomeMainRoot/CardProjetRoot";
 import style from "../ComponentsHomeMainRoot/CardProjetRoot.module.css"
 
 import LogoReact from "../../../assets/ProgramLanguageImg/LogoReactSimple.png"
+import AnimationCard from "../../../assets/Projets/AnimationCard/AnimationCard.jpg"
 
 function HomeMainPC() {
     const Projets = [
         {
             id: 1,
-            title: "Projet bille",
+            title: "AnimationCard",
             date: {
                 yearStart: "2015",
                 yearEnd: "10/2024",
             },
-            img: LogoReact,
+            img: AnimationCard,
             description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
         },
         {
@@ -88,7 +89,7 @@ function HomeMainPC() {
             </section>
 
             <section className="ContainerProjetHomeMainPC">
-                <h2>Je suis le container projet</h2>
+                <h2>Projets</h2>
                 <section className="MapProjetPC">
                      {
                          Projets.map((Var) => {
