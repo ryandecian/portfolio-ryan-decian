@@ -15,6 +15,8 @@ interface CardProjetRootProps {
 
     moduleContainerSubCardProjetRoot: string,
     moduleTitleSubCardProjet: string,
+    moduleDateSubCardProjet: string,
+    moduleContainerSubCardProjetInfo: string,
     description: string,
 }
 
@@ -35,6 +37,8 @@ function CardProjetRoot(Props: CardProjetRootProps) {
 
          moduleContainerSubCardProjetRoot, 
          moduleTitleSubCardProjet, 
+         moduleDateSubCardProjet, 
+         moduleContainerSubCardProjetInfo, 
         } = Props
 
         const [isOpen, setIsOpen] = useState(false);
@@ -62,17 +66,19 @@ function CardProjetRoot(Props: CardProjetRootProps) {
              </section>
          :
              <section className={moduleContainerSubCardProjetRoot}>
-                <h1 className={moduleTitleSubCardProjet}>{title}</h1>
-                {yearStart || yearEnd ? (
-                    <p>
-                        {yearStart && yearEnd
-                        ? `${yearStart} - ${yearEnd}`
-                        : yearStart
-                        ? yearStart
-                        : yearEnd}
-                    </p>
-                ) : null}
-                <p>{description}</p>
+                 <h2 className={moduleTitleSubCardProjet}>{title}</h2>
+                 <div className={moduleContainerSubCardProjetInfo}>
+                     {yearStart || yearEnd ? (
+                         <p className={moduleDateSubCardProjet}>
+                             {yearStart && yearEnd
+                             ? `${yearStart} - ${yearEnd}`
+                             : yearStart
+                             ? yearStart
+                             : yearEnd}
+                         </p>
+                     ) : null}
+                     <p>{description}</p>
+                 </div>
                 <div></div>
                 <button onClick={Window}>Voir moins</button>
              </section>

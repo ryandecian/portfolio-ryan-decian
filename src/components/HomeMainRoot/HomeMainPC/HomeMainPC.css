@@ -55,7 +55,23 @@
     font-size: var(--p);
 }
 
+.ContainerProjetHomeMainPC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .ContainerProjetHomeMainPC > h2 {
     font-size: var(--h2);
 }
 
+.MapProjetPC {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
