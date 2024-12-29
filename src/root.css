@@ -9,6 +9,16 @@
 
     --backgroundBlack: black;
     --backgroundWhite: white;
+
+    /*Logique taille police d'écriture site*/
+    --font-size-root: 16px;
+    --p: var(--font-size-root); /*16px*/
+    --h1: calc(var(--font-size-root) * 2); /*32px*/
+    --h2: calc(var(--font-size-root) * 1.5); /*24px*/
+    --h3: calc(var(--font-size-root) + 2px); /*18px*/
+    --h4: var(--font-size-root); /*16px*/
+    --h5: calc(var(--font-size-root) - 2px); /*14px*/
+    --h6: calc(var(--font-size-root) - 5px); /*11px*/
 }
 
 body {
@@ -17,6 +27,6 @@ body {
     line-height: 1.6; /* Espacement entre les lignes pour lisibilité */
     margin: 0;
     padding: 20px; /* Encadre un espace minimum sur le site*/
-    text-align: justify; 
+    /*text-align: justify; 
     /*ligne le texte en ajustant les espaces pour des lignes de même longueur.*/
 }

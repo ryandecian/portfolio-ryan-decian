@@ -12,11 +12,11 @@ function HomeMainPC() {
             id: 1,
             title: "Projet bille",
             date: {
-                yearStart: "2024",
-                yearEnd: "2024",
+                yearStart: "",
+                yearEnd: "",
             },
             img: LogoReact,
-            description: "",
+            description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
         },
     ]
     return (
@@ -72,6 +72,7 @@ function HomeMainPC() {
                                      moduleButtonCardProjet = {style.ButtonCardProjetPC}
                                      src = {Var.img}
                                      title = {Var.title}
+                                     yearStart = {Var.date.yearStart}
                                      yearEnd = {Var.date.yearEnd}
                                      key = {Var.id}
 

@@ -63,8 +63,16 @@ function CardProjetRoot(Props: CardProjetRootProps) {
          :
              <section className={moduleContainerSubCardProjetRoot}>
                 <h1 className={moduleTitleSubCardProjet}>{title}</h1>
-                <p>{title}</p>
-                <p>Description</p>
+                {yearStart || yearEnd ? (
+                    <p>
+                        {yearStart && yearEnd
+                        ? `${yearStart} - ${yearEnd}`
+                        : yearStart
+                        ? yearStart
+                        : yearEnd}
+                    </p>
+                ) : null}
+                <p>{description}</p>
                 <div></div>
                 <button onClick={Window}>Voir moins</button>
              </section>
