@@ -12,12 +12,12 @@ interface CardProjetRootProps {
     yearStart?: string,
     yearEnd?: string,
     key: number, 
+    description?: string,
 
     moduleContainerSubCardProjetRoot: string,
     moduleTitleSubCardProjet: string,
     moduleDateSubCardProjet: string,
     moduleContainerSubCardProjetInfo: string,
-    description: string,
 }
 
 function CardProjetRoot(Props: CardProjetRootProps) {
@@ -77,7 +77,10 @@ function CardProjetRoot(Props: CardProjetRootProps) {
                              : yearEnd}
                          </p>
                      ) : null}
-                     <p>{description}</p>
+                     
+                     {description 
+                         ? <p>{description}</p> 
+                         : null}
                  </div>
                 <div></div>
                 <button onClick={Window}>Voir moins</button>
