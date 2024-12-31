@@ -13,11 +13,13 @@ function HomeMainPC() {
             id: 1,
             title: "AnimationCard",
             date: {
-                yearStart: "2015",
-                yearEnd: "10/2024",
+                yearStart: "10/2024",
+                yearEnd: "11/2024",
             },
             img: AnimationCard,
-            description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
+            description1: "Premier projet perso en dehors de la formation où l'objectif était de créer une carte avec des jeux de lumière visible lors du survol de la souris",
+            description2: "test",
+            description3: "",
         },
         {
             id: 2,
@@ -27,7 +29,7 @@ function HomeMainPC() {
                 yearEnd: "10/2024",
             },
             img: LogoReact,
-            description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
+            description1: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
         },
         {
             id: 3,
@@ -108,10 +110,14 @@ function HomeMainPC() {
                                      key = {Var.id}
 
                                      moduleContainerSubCardProjetRoot = {style.ContainerSubCardProjetRootPC}
+                                     moduleSubContainerSubCardProjetRoot = {style.SubContainerSubCardProjetRootPC}
                                      moduleTitleSubCardProjet = {style.TitleSubCardProjetPC}
                                      moduleDateSubCardProjet = {style.DateSubCardProjetPC}
                                      moduleContainerSubCardProjetInfo = {style.ContainerSubCardProjetInfoPC}
-                                     description = {Var.description}
+                                     moduleDescriptionSubCardProjet = {style.DescriptionSubCardProjetPC}
+                                     description1 = {Var.description1}
+                                     description2 = {Var.description2}
+                                     description3 = {Var.description3}
                                      />
                              )
                          })

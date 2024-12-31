@@ -12,12 +12,16 @@ interface CardProjetRootProps {
     yearStart?: string,
     yearEnd?: string,
     key: number, 
-    description?: string,
+    description1?: string,
+    description2?: string,
+    description3?: string,
 
     moduleContainerSubCardProjetRoot: string,
+    moduleSubContainerSubCardProjetRoot: string,
     moduleTitleSubCardProjet: string,
     moduleDateSubCardProjet: string,
     moduleContainerSubCardProjetInfo: string,
+    moduleDescriptionSubCardProjet: string,
 }
 
 function CardProjetRoot(Props: CardProjetRootProps) {
@@ -33,12 +37,16 @@ function CardProjetRoot(Props: CardProjetRootProps) {
          yearStart, 
          yearEnd, 
          key, 
-         description, 
+         description1, 
+         description2, 
+         description3, 
 
          moduleContainerSubCardProjetRoot, 
+         moduleSubContainerSubCardProjetRoot, 
          moduleTitleSubCardProjet, 
          moduleDateSubCardProjet, 
          moduleContainerSubCardProjetInfo, 
+         moduleDescriptionSubCardProjet, 
         } = Props
 
         const [isOpen, setIsOpen] = useState(false);
@@ -66,8 +74,11 @@ function CardProjetRoot(Props: CardProjetRootProps) {
              </section>
          :
              <section className={moduleContainerSubCardProjetRoot}>
-                 <h2 className={moduleTitleSubCardProjet}>{title}</h2>
-                 <div className={moduleContainerSubCardProjetInfo}>
+                 <div className={moduleSubContainerSubCardProjetRoot}>
+                    
+                     <h2 className={moduleTitleSubCardProjet}>{title}</h2>
+
+                     <div className={moduleContainerSubCardProjetInfo}>
                      {yearStart || yearEnd ? (
                          <p className={moduleDateSubCardProjet}>
                              {yearStart && yearEnd
@@ -78,11 +89,22 @@ function CardProjetRoot(Props: CardProjetRootProps) {
                          </p>
                      ) : null}
                      
-                     {description 
-                         ? <p>{description}</p> 
+                     {description1 
+                         ? <p className={moduleDescriptionSubCardProjet}>{description1}</p> 
                          : null}
+
+                     {description2 
+                         ? <p className={moduleDescriptionSubCardProjet}>{description2}</p> 
+                         : null}
+
+                     {description3 
+                         ? <p className={moduleDescriptionSubCardProjet}>{description3}</p> 
+                         : null}
+                     </div>
+
+                     <div className={yearEnd}><p>JS</p></div>
+
                  </div>
-                <div className={yearEnd}></div>
                 <button onClick={Window}>Voir moins</button>
              </section>
          }

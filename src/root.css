@@ -10,15 +10,35 @@
     --backgroundBlack: black;
     --backgroundWhite: white;
 
-    /*Logique taille police d'écriture site*/
-    --font-size-root: 16px;
-    --p: var(--font-size-root); /*16px*/
-    --h1: calc(var(--font-size-root) * 2); /*32px*/
-    --h2: calc(var(--font-size-root) * 1.5); /*24px*/
-    --h3: calc(var(--font-size-root) + 2px); /*18px*/
-    --h4: var(--font-size-root); /*16px*/
-    --h5: calc(var(--font-size-root) - 2px); /*14px*/
-    --h6: calc(var(--font-size-root) - 5px); /*11px*/
+     /*Logique taille police d'écriture site*/
+         --font-size-root: 16px; /*Ref size, dimensionne tout le site*/
+         --p: var(--font-size-root); /*16px*/
+         --h1: calc(var(--font-size-root) * 2); /*32px*/
+         --h2: calc(var(--font-size-root) * 1.5); /*24px*/
+         --h3: calc(var(--font-size-root) + 2px); /*18px*/
+         --h4: var(--font-size-root); /*16px*/
+         --h5: calc(var(--font-size-root) - 2px); /*14px*/
+         --h6: calc(var(--font-size-root) - 5px); /*11px*/
+
+
+     /*Logique des CardProjet*/
+
+         /* 1) Dimension des container CardProjet*/
+             /*MapProjetPC*/
+                 --MapProjetPC-grid-template-columns: repeat(auto-fit, 110px);
+                 --MapProjet-grid-auto-rows: min-content;
+                 --MapProjet-gap: 20px;
+
+         /* 2) Dimension des cards*/
+             /*Face avant (Before)*/
+                 --GridColumnFaceBefore: span 2;
+                 --WidthFaceBefore: 240px;
+                 --HeightFaceBefore: 325px;
+
+             /*Face Arrière (After)*/
+                 --GridColumnFaceAfter: span 4;
+                 --WidthFaceAfter: 500px;
+                 --HeightFaceAfter: 325px;
 }
 
 body {

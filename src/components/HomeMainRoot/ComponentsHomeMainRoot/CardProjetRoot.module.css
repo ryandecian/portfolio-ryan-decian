@@ -8,10 +8,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    grid-column: span 2;
+    grid-column: var(--GridColumnFaceBefore);
     border-radius: 1rem;
-    width: 240px;
-    height: 325px;
+    width: var(--WidthFaceBefore);
+    height: var(--HeightFaceBefore);
     background-color: red;
     margin: auto;
     transition: all 0.3s ease;
@@ -30,7 +30,7 @@
     width: 240px;
     height: 240px;
     max-width: 100%;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0.5rem 0.5rem;
     object-fit: contain;
 }
 
@@ -76,19 +76,28 @@
 }
 
 /*--------------------------------------------------------*/
-
+/*Face arrière de la card*/
 .ContainerSubCardProjetRootPC {
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    grid-column: span 4;
+    grid-column: var(--GridColumnFaceAfter);
     border-radius: 1rem;
-    width: 500px;
-    height: 325px;
+    width: var(--WidthFaceAfter);
+    height: var(--HeightFaceAfter);
     background-color: red;
     margin: auto;
     transition: all 0.3s ease;
+}
+
+.SubContainerSubCardProjetRootPC {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: var(--WidthFaceAfter);
+    height: var(--HeightFaceAfter);
 }
 
 .TitleSubCardProjetPC {
@@ -109,6 +118,11 @@
 .DateSubCardProjetPC {
     font-size: var(--p);
     margin: 0.5rem 0rem 0rem 0rem;
+}
+
+.DescriptionSubCardProjetPC {
+    margin: 1rem 0rem 0rem 0rem;
+    font-size: var(--p);
 }
 
 .ContainerSubCardProjetRootPC > button {

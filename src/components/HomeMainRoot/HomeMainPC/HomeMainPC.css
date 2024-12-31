@@ -69,9 +69,9 @@
 
 .MapProjetPC {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 110px);
-    grid-auto-rows: min-content;
-    gap: 20px;
+    grid-template-columns: var(--MapProjetPC-grid-template-columns);
+    grid-auto-rows: var(--MapProjet-grid-auto-rows);
+    gap: var(--MapProjet-gap);
     justify-content: center;
     align-items: start;
     width: 100%;
