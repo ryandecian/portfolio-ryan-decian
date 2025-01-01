@@ -1,27 +1,34 @@
 import { useState } from "react"
 
-interface CardProjetRootProps {
-    moduleContainerCardProjetRoot: string,
-    moduleCardProjetImg: string,
-    moduleContainerCardProjetInfo: string,
-    moduleTitleCardProjet: string, 
-    moduleYearCardProjet: string,
-    moduleButtonCardProjet: string, 
-    src: string,
-    title: string,
-    yearStart?: string,
-    yearEnd?: string,
-    key: number, 
-    description1?: string,
-    description2?: string,
-    description3?: string,
+interface LanguageDev {
+    img: string; // Chemin de l'image
+    alt: string;   // Texte alternatif pour l'image
+}
 
-    moduleContainerSubCardProjetRoot: string,
-    moduleSubContainerSubCardProjetRoot: string,
-    moduleTitleSubCardProjet: string,
-    moduleDateSubCardProjet: string,
-    moduleContainerSubCardProjetInfo: string,
-    moduleDescriptionSubCardProjet: string,
+interface CardProjetRootProps {
+    moduleContainerCardProjetRoot: string;
+    moduleCardProjetImg: string;
+    moduleContainerCardProjetInfo: string;
+    moduleTitleCardProjet: string;
+    moduleYearCardProjet: string;
+    moduleButtonCardProjet: string;
+    src: string;
+    title: string;
+    yearStart?: string;
+    yearEnd?: string;
+    key: number;
+    description1?: string;
+    description2?: string;
+    description3?: string;
+
+    moduleContainerSubCardProjetRoot: string;
+    moduleSubContainerSubCardProjetRoot: string;
+    moduleTitleSubCardProjet: string;
+    moduleDateSubCardProjet: string;
+    moduleContainerSubCardProjetInfo: string;
+    moduleDescriptionSubCardProjet: string;
+    moduleImgLangageDev: string;
+    languageDev: LanguageDev[];
 }
 
 function CardProjetRoot(Props: CardProjetRootProps) {
@@ -47,6 +54,8 @@ function CardProjetRoot(Props: CardProjetRootProps) {
          moduleDateSubCardProjet, 
          moduleContainerSubCardProjetInfo, 
          moduleDescriptionSubCardProjet, 
+         moduleImgLangageDev, 
+         languageDev, 
         } = Props
 
         const [isOpen, setIsOpen] = useState(false);
@@ -102,7 +111,17 @@ function CardProjetRoot(Props: CardProjetRootProps) {
                          : null}
                      </div>
 
-                     <div className={yearEnd}><p>JS</p></div>
+                     <div className={moduleImgLangageDev}>
+                        {languageDev.map((Var, index) => {
+                            return (
+                                 <img 
+                                     key={index}
+                                     src={Var.img} 
+                                     alt={Var.alt}
+                                 />
+                            )
+                        })}
+                     </div>
 
                  </div>
                 <button onClick={Window}>Voir moins</button>

@@ -153,6 +153,22 @@
     font-size: var(--p);
 }
 
+.ImgLangageDevPC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.ImgLangageDevPC > img{
+    width: 20px;
+    height: 20px;
+    border-radius: 1rem 1rem 0.5rem 0.5rem;
+    object-fit: contain;
+}
+
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
