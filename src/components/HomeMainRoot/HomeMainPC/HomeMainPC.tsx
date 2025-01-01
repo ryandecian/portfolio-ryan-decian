@@ -3,6 +3,7 @@ import Avatar from "../../../assets/data-img/Avatar-Ryan-DECIAN.jpg"
 import ProgramLanguageRoot from "../ComponentsHomeMainRoot/ProgramLanguageRoot";
 import CardProjetRoot from "../ComponentsHomeMainRoot/CardProjetRoot";
 import style from "../ComponentsHomeMainRoot/CardProjetRoot.module.css"
+import { Link } from "react-router-dom";
 
 import LogoReact from "../../../assets/ProgramLanguageImg/LogoReactSimple.png"
 import AnimationCard from "../../../assets/Projets/AnimationCard/AnimationCard.jpg"
@@ -18,7 +19,7 @@ function HomeMainPC() {
             },
             img: AnimationCard,
             description1: "Premier projet perso en dehors de la formation où l'objectif était de créer une carte avec des jeux de lumière visible lors du survol de la souris",
-            description2: "test",
+            description2: "",
             description3: "",
         },
         {
@@ -90,9 +91,9 @@ function HomeMainPC() {
 
             </section>
 
-            <section className="ContainerProjetHomeMainPC">
+             <section className="ContainerProjetHomeMainPC">
                 <h2>Projets</h2>
-                <section className="MapProjetPC">
+                 <section className="MapProjetPC">
                      {
                          Projets.map((Var) => {
                              return (
@@ -122,10 +123,11 @@ function HomeMainPC() {
                              )
                          })
                      }
-                </section>
-            </section>
-        </section>
-    )
-}
+                 </section>
+                 <Link to="Projets" className="ButtonHomeMainPC">Voir plus de projets</Link>
+             </section>
+         </section>
+     )
+ }
 
 export default HomeMainPC;

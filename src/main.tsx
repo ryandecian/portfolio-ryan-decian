@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 /*Les importation de page*/
 import HomePage from './pages/HomePage.tsx';
-import About from "./pages/About.tsx"
+import Projets from "./pages/Projets.tsx"
 import Grid from "./pages/Grid.tsx"
 
 const router = createBrowserRouter([
@@ -21,12 +21,12 @@ const router = createBrowserRouter([
          element: <HomePage />,
        },
        {
-         path: "/about",
-         element: <About/>,
+         path: "/projets",
+         element: <Projets />,
        },
        {
          path: "/grid",
-         element: <Grid/>,
+         element: <Grid />,
        },
       ]
     },
