@@ -37,6 +37,14 @@ function HomeMainPC() {
                     img: LogoHTML,
                     alt: "HTML",
                 },
+                {
+                    img: LogoCSS,
+                    alt: "CSS",
+                },
+                {
+                    img: LogoJavaScript,
+                    alt: "JavaScript",
+                },
             ],
         },
         {
