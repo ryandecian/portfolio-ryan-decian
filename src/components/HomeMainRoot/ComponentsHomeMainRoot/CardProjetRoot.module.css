@@ -157,9 +157,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0.5rem 0rem 0.3rem 0rem;
     width: 100%;
     max-width: 100%;
     max-height: auto;
+}
+
+.LienProdPC {
+    margin: 0.3rem 0rem 0.5rem 0rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--p);
 }
 
 .ImgLangageDevPC > img{

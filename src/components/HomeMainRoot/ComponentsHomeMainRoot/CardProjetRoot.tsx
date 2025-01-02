@@ -29,6 +29,8 @@ interface CardProjetRootProps {
     moduleDescriptionSubCardProjet: string;
     moduleImgLangageDev: string;
     languageDev: LanguageDev[];
+    lienProd?: string;
+    moduleLienProd: string;
 }
 
 function CardProjetRoot(Props: CardProjetRootProps) {
@@ -56,6 +58,8 @@ function CardProjetRoot(Props: CardProjetRootProps) {
          moduleDescriptionSubCardProjet, 
          moduleImgLangageDev, 
          languageDev, 
+         lienProd, 
+         moduleLienProd, 
         } = Props
 
         const [isOpen, setIsOpen] = useState(false);
@@ -122,6 +126,8 @@ function CardProjetRoot(Props: CardProjetRootProps) {
                             )
                         })}
                      </div>
+
+                     <a href={lienProd} className={moduleLienProd}>Venez le découvrir avec ce lien</a>
 
                  </div>
                 <button onClick={Window}>Voir moins</button>

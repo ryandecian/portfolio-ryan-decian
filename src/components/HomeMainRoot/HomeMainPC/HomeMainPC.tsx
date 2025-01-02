@@ -28,10 +28,15 @@ function HomeMainPC() {
             description1: "Premier projet perso en dehors de la formation où l'objectif était de créer une carte avec des jeux de lumière visible lors du survol de la souris",
             description2: "",
             description3: "",
+            lienProd: "https://animation-card-ryan-decian.netlify.app/",
             languageDev: [
                 {
                     img: LogoReact,
                     alt: "React",
+                },
+                {
+                    img: LogoJavaScript,
+                    alt: "JavaScript",
                 },
                 {
                     img: LogoHTML,
@@ -41,18 +46,14 @@ function HomeMainPC() {
                     img: LogoCSS,
                     alt: "CSS",
                 },
-                {
-                    img: LogoJavaScript,
-                    alt: "JavaScript",
-                },
             ],
         },
         {
             id: 2,
-            title: "Projet card",
+            title: "Projet billes",
             date: {
-                yearStart: "2015",
-                yearEnd: "10/2024",
+                yearStart: "2024",
+                yearEnd: "2024",
             },
             img: LogoReact,
             description1: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
@@ -146,6 +147,8 @@ function HomeMainPC() {
                                      description3 = {Var.description3}
                                      moduleImgLangageDev = {style.ImgLangageDevPC}
                                      languageDev = {Var.languageDev || []}
+                                     lienProd = {Var.lienProd}
+                                     moduleLienProd = {style.LienProdPC}
                                      />
                              )
                          })
