@@ -28,7 +28,7 @@ function NavPC() {
 
              <section className="NavBottomPC">
                 <Link to="/home">
-                     <h1 id="Autor">Ryan DECIAN</h1>
+                     <h1>Ryan DECIAN</h1>
                 </Link>
                  <h3>Développeur web full stack junior</h3>
              </section>

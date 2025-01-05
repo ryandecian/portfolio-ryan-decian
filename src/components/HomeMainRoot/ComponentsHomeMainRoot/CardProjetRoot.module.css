@@ -1,0 +1,231 @@
+@import "../../../root.css";
+
+/*Version mobile style CSS module*/
+
+/*Version PC style CSS module*/
+.ContainerCardProjetRootPC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-column: var(--GridColumnFaceBefore);
+    border-radius: 1rem;
+    width: var(--WidthFaceBefore);
+    height: var(--HeightFaceBefore);
+    background-color: var(--BackgroundCardProjet);
+    margin: auto;
+    transition: all 0.3s ease;
+}
+
+.CardProjetImgPC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.CardProjetImgPC > img {
+    width: 240px;
+    height: 240px;
+    max-width: 100%;
+    border-radius: 1rem 1rem 0.5rem 0.5rem;
+    object-fit: contain;
+}
+
+.ContainerCardProjetInfoPC {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 1rem 1rem 1rem 1rem;
+    width: calc(100% - 2rem);
+    max-width: 100%;
+}
+
+.TitleCardProjetPC {
+    margin: 0rem 0rem 0rem 0rem;
+    font-size: var(--h3);
+    color: var(--textColorWhite);
+}
+
+.YearCardProjetPC {
+    margin: 0rem 0rem 0rem 0rem;
+    font-size: var(--h5);
+    color: var(--textColorWhite);
+}
+
+.ButtonCardProjetPC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.ButtonCardProjetPC > button {
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet,
+        red,
+        orange,
+        yellow
+    ); /* Dégradé avec plus de couleurs pour lisser les transitions */
+    background-size: 400% 400%; /* Taille étendue pour un effet plus subtil */
+    -webkit-background-clip: text; /* Applique le dégradé au texte pour WebKit */
+    background-clip: text; /* Applique le dégradé au texte pour les navigateurs modernes */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour afficher le dégradé */
+    font-size: var(--h4); /* Taille de la police */
+    cursor: pointer; /* Curseur de clic */
+    padding: 0.5rem 1rem; /* Ajoute un espace intérieur */
+    margin: 0;
+    border: none; /* Supprime les contours */
+    outline: none; /* Supprime le focus par défaut */
+    font-family: inherit; /* Hérite de la police parente */
+    text-decoration: none; /* Supprime tout soulignement */
+    transition: transform 0.3s ease; /* Transition douce pour l'agrandissement */
+    animation: gradientMove 6s linear infinite; /* Animation fluide et continue */
+}
+
+.ButtonCardProjetPC > button:hover {
+    transform: scale(1.1); /* Légère mise en avant au survol */
+}
+
+
+
+
+/*--------------------------------------------------------*/
+/*Face arrière de la card*/
+.ContainerSubCardProjetRootPC {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-column: var(--GridColumnFaceAfter);
+    border-radius: 1rem;
+    width: var(--WidthFaceAfter);
+    height: var(--HeightFaceAfter);
+    background-color: var(--BackgroundCardProjet);
+    margin: auto;
+    transition: all 0.3s ease;
+}
+
+.SubContainerSubCardProjetRootPC {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: var(--WidthFaceAfter);
+}
+
+.LienProdTitlePC {
+    text-decoration: none;
+    transition: transform 0.5s ease, text-decoration 0.3s ease;
+}
+.LienProdTitlePC:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.TitleSubCardProjetPC {
+    margin: 0.5rem 0rem 0rem 0rem;
+    font-size: var(--h2);
+    color: var(--TitleCardProjet);
+}
+
+.ContainerSubCardProjetInfoPC {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: calc(100% - 1rem); /*Attention, dépend de la valeur margin qui doit être = */
+    margin: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.DateSubCardProjetPC {
+    font-size: var(--p);
+    margin: 0.5rem 0rem 0rem 0rem;
+}
+
+.DescriptionSubCardProjetPC {
+    margin: 1rem 0rem 0rem 0rem;
+    font-size: var(--p);
+}
+
+.ImgLangageDevPC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0rem 0.3rem 0rem;
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.LienProdPC {
+    margin: 0.3rem 0rem 0.5rem 0rem;
+    text-decoration: none;
+    color: var(--LienProjet);
+    font-size: var(--p);
+}
+
+.LienProdPC:hover {
+    color: var(--LienProjetHover);
+    text-decoration: underline;
+}
+
+.ImgLangageDevPC > img {
+    margin: 0rem 0.2rem 0rem 0.2rem;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.ContainerSubCardProjetRootPC > button {
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet,
+        red,
+        orange,
+        yellow
+    ); /* Dégradé avec plus de couleurs pour lisser les transitions */
+    background-size: 400% 400%; /* Taille étendue pour un effet plus subtil */
+    -webkit-background-clip: text; /* Applique le dégradé au texte pour WebKit */
+    background-clip: text; /* Applique le dégradé au texte pour les navigateurs modernes */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour afficher le dégradé */
+    font-size: var(--h4); /* Taille de la police */
+    cursor: pointer; /* Curseur de clic */
+    padding: 0.5rem 1rem; /* Ajoute un espace intérieur */
+    margin: 0;
+    border: none; /* Supprime les contours */
+    outline: none; /* Supprime le focus par défaut */
+    font-family: inherit; /* Hérite de la police parente */
+    text-decoration: none; /* Supprime tout soulignement */
+    transition: transform 0.3s ease; /* Transition douce pour l'agrandissement */
+    animation: gradientMove 6s linear infinite; /* Animation fluide et continue */
+}
+
+.ContainerSubCardProjetRootPC > button:hover {
+    transform: scale(1.1); /* Légère mise en avant au survol */
+}

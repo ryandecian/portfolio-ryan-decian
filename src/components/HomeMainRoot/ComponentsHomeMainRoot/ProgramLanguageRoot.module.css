@@ -46,6 +46,10 @@
     object-fit: contain;
 }
 
+.LanguageDevPC > div > .BorderContainerPC > img:hover {
+    transform: scale(1.1);
+}
+
 .LanguageDevPC > div > .BorderContainerPC > h5 {
     width: auto;
     height: 20%;
