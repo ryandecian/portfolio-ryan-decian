@@ -1,17 +1,20 @@
 import "./HomePage.css"
 import NavRoot from "../components/NavRoot/NavRoot";
 import HomeMainRoot from "../components/HomeMainRoot/HomeMainRoot";
+import FooterRoot from "../components/HomeMainRoot/Footer/FooterRoot";
 
 function HomePage() {
     return(
         <>
         <header>
-            <NavRoot />
+             <NavRoot />
         </header>
         <main>
-            <HomeMainRoot />
+             <HomeMainRoot />
         </main>
-        <footer></footer>
+        <footer>
+             <FooterRoot />
+        </footer>
         </>
     )
 }

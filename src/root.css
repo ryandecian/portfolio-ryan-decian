@@ -1,14 +1,24 @@
 @import "./assets/Fonts/Roboto/RobotoStyleSheet.css";
 
 :root {
-    --BackgroudMenuBurger: #A9CCE3;
-    --textColorMenu: #818181;
+     /*Couleur des textes*/
+         /*Couleur des textes général*/
+             --backgroundBlack: black;
+             --backgroundWhite: white;
 
-    --textColorBlack: black;
-    --textColorWhite: white;
+         /*Couleur des textes du Footer*/
+             --Copyright: #ff007f;
 
-    --backgroundBlack: black;
-    --backgroundWhite: white;
+     /*Backgound du site*/
+         /*Backgound du général*/
+             --textColorBlack: black;
+             --textColorWhite: white;
+
+         /*Background du Menu Burger*/
+             --BackgroudMenuBurger: #A9CCE3;
+             --textColorMenu: #818181;
+
+
 
     --BackgroundCardProjet: #080808;
 
