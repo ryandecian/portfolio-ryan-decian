@@ -28,6 +28,10 @@ const router = createBrowserRouter([
          path: "/grid",
          element: <Grid />,
        },
+       {
+         path: "/experiences",
+         element: <Grid />,
+       },
       ]
     },
   ]);
