@@ -63,7 +63,7 @@ function HomeMainPC() {
             description1: "Projet personnel avec pour objectif : créer un fond interactif avec des billes. Débuté en JS, puis poursuivi en React TypeScript pour ajouter plus de fonctionnalités.",
             description2: "",
             description3: "",
-            lienProd: "https://animation-card-ryan-decian.netlify.app/",
+            lienProd: "https://projet-bille.netlify.app/",
             languageDev: [
                 {
                     img: LogoReact,
