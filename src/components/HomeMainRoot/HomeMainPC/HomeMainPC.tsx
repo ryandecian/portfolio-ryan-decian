@@ -11,9 +11,13 @@ import LogoHTML from "../../../assets/ProgramLanguageImg/LogoHTMLSimple.png"
 import LogoCSS from "../../../assets/ProgramLanguageImg/LogoCSSSimple.png"
 import LogoJavaScript from "../../../assets/ProgramLanguageImg/LogoJavaScriptSimple.png"
 import LogoNodeJS from "../../../assets/ProgramLanguageImg/LogoNodeJS.png"
+import LogoGitHub from "../../../assets/ProgramLanguageImg/LogoGitHubSimpleBlue.png"
+import LogoModuleCSS from "../../../assets/ProgramLanguageImg/LogoModuleCSS.png"
 
 /*Import des images de projet*/
 import AnimationCard from "../../../assets/Projets/AnimationCard/AnimationCard.jpg"
+import GenkiAnime from "../../../assets/Projets/GenkiAnime/GenkiAnime.jpg"
+import ProjetBille from "../../../assets/Projets/Projet-bille/Projet-bille.jpg"
 
 function HomeMainPC() {
     const Projets = [
@@ -31,10 +35,6 @@ function HomeMainPC() {
             lienProd: "https://animation-card-ryan-decian.netlify.app/",
             languageDev: [
                 {
-                    img: LogoReact,
-                    alt: "React",
-                },
-                {
                     img: LogoJavaScript,
                     alt: "JavaScript",
                 },
@@ -46,37 +46,93 @@ function HomeMainPC() {
                     img: LogoCSS,
                     alt: "CSS",
                 },
+                {
+                    img: LogoGitHub,
+                    alt: "GitHub",
+                },
             ],
         },
         {
             id: 2,
             title: "Projet billes",
             date: {
-                yearStart: "2024",
-                yearEnd: "2024",
+                yearStart: "16/12/2024",
+                yearEnd: "14/01/2025",
             },
-            img: LogoReact,
-            description1: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
+            img: ProjetBille,
+            description1: "Projet personnel avec pour objectif : créer un fond interactif avec des billes. Débuté en JS, puis poursuivi en React TypeScript pour ajouter plus de fonctionnalités.",
+            description2: "",
+            description3: "",
+            lienProd: "https://animation-card-ryan-decian.netlify.app/",
+            languageDev: [
+                {
+                    img: LogoReact,
+                    alt: "React",
+                },
+                {
+                    img: LogoHTML,
+                    alt: "HTML",
+                },
+                {
+                    img: LogoCSS,
+                    alt: "CSS",
+                },
+                {
+                    img: LogoGitHub,
+                    alt: "GitHub",
+                },
+                {
+                    img: LogoJavaScript,
+                    alt: "JavaScript",
+                },
+                {
+                    img: LogoNodeJS,
+                    alt: "JavaScript",
+                },
+            ],
         },
         {
             id: 3,
-            title: "Projet card",
+            title: "GenkiAnime",
             date: {
-                yearStart: "2015",
-                yearEnd: "10/2024",
+                yearStart: "04/11/2024",
+                yearEnd: "29/11/2024",
             },
-            img: LogoReact,
-            description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
-        },
-        {
-            id: 4,
-            title: "Projet card",
-            date: {
-                yearStart: "2015",
-                yearEnd: "10/2024",
-            },
-            img: LogoReact,
-            description: "Premier projet de groupe de la formation, avec un délai de 2 semaines pour le realiser. Réaliser un site en groupe avec pour thème choisi les bonne adresse pour manger.",
+            img: GenkiAnime,
+            description1: "Deuxième projet de formation à la Wild Code School qui devait être fait en groupe mais que j'ai réalisé seul suite au défi de mon formateur. Le projet a été réalisé sous React en TypeScrypt.",        
+            description2: "",
+            description3: "",
+            lienProd: "https://genkianime.netlify.app/",
+            languageDev: [
+                {
+                    img: LogoReact,
+                    alt: "React",
+                },
+                {
+                    img: LogoHTML,
+                    alt: "HTML",
+                },
+                {
+                    img: LogoCSS,
+                    alt: "CSS",
+                },
+                {
+                    img: LogoGitHub,
+                    alt: "GitHub",
+                },
+                {
+                    img: LogoJavaScript,
+                    alt: "JavaScript",
+                },
+                {
+                    img: LogoNodeJS,
+                    alt: "JavaScript",
+                },
+                {
+                    img: LogoModuleCSS,
+                    alt: "Module CSS",
+                },
+            ],
         },
     ]
     return (

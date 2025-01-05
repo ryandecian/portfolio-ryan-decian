@@ -10,6 +10,8 @@
     --backgroundBlack: black;
     --backgroundWhite: white;
 
+    --BackgroundCardProjet: #080808;
+
      /*Logique taille police d'écriture site*/
          --font-size-root: 16px; /*Ref size, dimensionne tout le site*/
          --p: var(--font-size-root); /*16px*/
