@@ -194,6 +194,7 @@ function HomeMainPC() {
 
                                      moduleContainerSubCardProjetRoot = {style.ContainerSubCardProjetRootPC}
                                      moduleSubContainerSubCardProjetRoot = {style.SubContainerSubCardProjetRootPC}
+                                     moduleLienProdTitle = {style.LienProdTitlePC}
                                      moduleTitleSubCardProjet = {style.TitleSubCardProjetPC}
                                      moduleDateSubCardProjet = {style.DateSubCardProjetPC}
                                      moduleContainerSubCardProjetInfo = {style.ContainerSubCardProjetInfoPC}

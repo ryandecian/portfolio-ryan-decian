@@ -23,6 +23,7 @@ interface CardProjetRootProps {
 
     moduleContainerSubCardProjetRoot: string;
     moduleSubContainerSubCardProjetRoot: string;
+    moduleLienProdTitle: string;
     moduleTitleSubCardProjet: string;
     moduleDateSubCardProjet: string;
     moduleContainerSubCardProjetInfo: string;
@@ -52,6 +53,7 @@ function CardProjetRoot(Props: CardProjetRootProps) {
 
          moduleContainerSubCardProjetRoot, 
          moduleSubContainerSubCardProjetRoot, 
+         moduleLienProdTitle, 
          moduleTitleSubCardProjet, 
          moduleDateSubCardProjet, 
          moduleContainerSubCardProjetInfo, 
@@ -89,7 +91,9 @@ function CardProjetRoot(Props: CardProjetRootProps) {
              <section className={moduleContainerSubCardProjetRoot}>
                  <div className={moduleSubContainerSubCardProjetRoot}>
                     
-                     <h2 className={moduleTitleSubCardProjet}>{title}</h2>
+                     <a href={lienProd} className={moduleLienProdTitle}>
+                        <h2 className={moduleTitleSubCardProjet}>{title}</h2>
+                     </a>
 
                      <div className={moduleContainerSubCardProjetInfo}>
                      {yearStart || yearEnd ? (

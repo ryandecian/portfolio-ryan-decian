@@ -128,6 +128,13 @@
     width: var(--WidthFaceAfter);
 }
 
+.LienProdTitlePC {
+    text-decoration: none;
+}
+.LienProdTitlePC:hover {
+    text-decoration: underline;
+}
+
 .TitleSubCardProjetPC {
     margin: 0.5rem 0rem 0rem 0rem;
     font-size: var(--h2);
