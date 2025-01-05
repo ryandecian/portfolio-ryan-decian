@@ -41,6 +41,14 @@
                  --GridColumnFaceAfter: span 4;
                  --WidthFaceAfter: 500px;
                  --HeightFaceAfter: 325px;
+
+         /* 3) Couleur du Text des CardProjet*/
+             /*Couleur titre du projet*/
+                 --TitleCardProjet: rgb(138, 43, 226);
+                
+             /*Couleur lien vers projet*/
+                 --LienProjet: #007BFF;
+                 --LienProjetHover: #0056b3;
 }
 
 body {
