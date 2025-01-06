@@ -11,13 +11,21 @@ function IconNavRoot(Props: IconNavRoot) {
     return (
          <section>
              <div className={iconNav}>
-                 <img src={github} alt="GitHub"/>
+                 <a href="https://github.com/ryandecian">
+                     <img src={github} alt="GitHub"/>
+                 </a>
              </div>
+
              <div className={iconNav}>
-                 <img src={linkedin} alt="Linkedin"/> 
+                 <a href="https://www.linkedin.com/in/ryan-decian-864696302">
+                     <img src={linkedin} alt="Linkedin"/>
+                 </a>
              </div>
+
              <div className={iconNav}>
-                 <img src={mail} alt="Mail"/> 
+                 <a href="mailto:ryan.decian.dev+portfolio@gmail.com">
+                     <img src={mail} alt="Mail"/>
+                 </a>
              </div>
          </section>
     )
