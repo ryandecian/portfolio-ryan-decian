@@ -29,6 +29,14 @@
     width: 100%;
     max-width: 1300px;
 }
+@media (max-width: 1340px) {
+    .SubContainerAboutHomeMainPC {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
 
 .PresentationPC {
     display: flex;
