@@ -27,25 +27,92 @@
 # TRAITEMENTS DU LOGICIEL.
 # ------------------------------------------------------------------
 
-# Cette commande permet d'automatiser le commit :
-# Crée un agent pour le mot de passe SSH
-# Ajoute tous les fichiers modifiés au commit
-# Pousse sur la branche actuelle automatiquement
+
+# Cette commande permet de mettre a jour toutes les branches
+# d'un projet et de supprimer les branches obsolètes qui ont
+# été supprimées de GitHub
 
 
-# Attention, pour lancer cette commande il faudra : 
+# Cette version n'est compatible que sur Windows et Visual Studio Code
 
-# Lancer la commande suivante dans le terminal git :
-# chmod +x npm-run-commit.sh
-# Copier coller cette ligne dans package.json dans script :
-# "commit": "bash ./npm-run-commit.sh"
-# Exécution de cette commande avec :
-# npm run commit
+
+# Configuration pour rendre ce script exécutable : 
+# Il faut ouvrir le logiciel Visual Code Studio en administrateur puis
+# Copier coller les commandes entre les pointillés dans votre terminal bash : 
+
+: <<EOF
+---------------------------------------------------------------------------------------------
+
+# Enregistrer le chemin actuel
+initial_path=$(pwd)
+
+# Chemin cible pour le dossier Script
+target_path="/c/Program Files/Git/usr/bin/Script"
+
+# Chemin du fichier à déplacer (depuis la racine du projet React)
+file_to_move="./git-commit-biome"
+
+# Vérifier si le dossier existe
+if [ ! -d "$target_path" ]; then
+    echo "📂 Le dossier 'Script' n'existe pas. Création en cours..."
+    mkdir -p "$target_path"
+    echo "✅ Dossier 'Script' créé avec succès."
+else
+    echo "✔️ Le dossier 'Script' existe déjà."
+fi
+
+# Vérifier si le fichier git-commit-biome existe à la racine du projet
+if [ -f "$file_to_move" ]; then
+    echo "📄 Le fichier 'git-commit-biome' existe. Déplacement en cours..."
+    mv "$file_to_move" "$target_path"
+    echo "✅ Fichier 'git-commit-biome' déplacé vers : $target_path"
+else
+    echo "❌ Le fichier 'git-commit-biome' n'a pas été trouvé à la racine du projet."
+    exit 1
+fi
+
+# Se déplacer dans le dossier cible
+cd "$target_path" || { echo "❌ Échec lors de la navigation vers $target_path"; exit 1; }
+echo "📂 Vous êtes maintenant dans : $(pwd)"
+
+# Rendre le fichier git-commit-biome exécutable
+chmod +x git-commit-biome
+echo "✅ Le fichier 'git-commit-biome' est maintenant exécutable."
+
+# Vérifier et ajouter la ligne PATH dans ~/.bashrc si elle n'existe pas
+bashrc_file="$HOME/.bashrc"
+path_line='export PATH=$PATH:/usr/bin/Script'
+
+if ! grep -Fxq "$path_line" "$bashrc_file"; then
+    echo "🔧 La ligne PATH n'existe pas dans ~/.bashrc. Ajout en cours..."
+    echo "$path_line" >> "$bashrc_file"
+    echo "✅ Ligne ajoutée à ~/.bashrc : $path_line"
+else
+    echo "✔️ La ligne PATH existe déjà dans ~/.bashrc."
+fi
+
+# Charger le fichier .bashrc pour appliquer les changements immédiatement
+source "$bashrc_file"
+echo "🔄 Fichier ~/.bashrc rechargé pour appliquer les changements."
+
+# Retourner au chemin initial
+cd "$initial_path" || { echo "❌ Échec lors de la navigation vers $initial_path"; exit 1; }
+echo "📂 Retour au chemin initial : $(pwd)"
+
+echo "🚀 Script terminé avec succès."
+
+
+---------------------------------------------------------------------------------------------
+EOF
+
+# Pour lancer cette commande : 
+# git-commit-biome
+
 
 #!/bin/bash
 
 # Version du script
-echo -e "\033[1;35mVersion du script V6.3.1\033[0m"
+echo -e "\033[1;35mVersion du script V7.1.2\033[0m"
 echo ""
 echo ""
 echo -e "\033[35mDébut d'exécution du script\033[0m"
@@ -95,49 +162,58 @@ fi
 echo -e "\033[34m✅ Traitement agent SSH terminé\033[0m"
 echo ""
 
-# Étape 4 : Affiche l'état actuel du dépôt
+# Étape 4 : Vérification avec Biome pour corriger les fichiers
+echo ""
+echo -e "\033[36m🚀 Exécution de Biome...\033[0m"
+echo ""
+echo -e "\033[36m🛠️. Modification des fichiers nécessaires\033[0m"
+npx @biomejs/biome check --fix --unsafe ./client
+echo -e "\033[34m✅ Exécution de Biome terminée\033[0m"
+echo ""
+
+# Étape 5 : Affiche l'état actuel du dépôt
 echo -e "\033[36m📄 Vérification de l'état actuel du dépôt...\033[0m"
 git status
 echo ""
 
-# Étape 5 : Demande le message de commit
+# Étape 6 : Demande le message de commit
 read -p $'\033[1;33mEntrez votre message de commit : \033[0m' msg
 echo ""
 
-# Étape 6 : Récupère les fichiers modifiés, nouveaux et supprimés
+# Étape 7 : Récupère les fichiers modifiés, nouveaux et supprimés
 files=$(git ls-files --modified --deleted --others --exclude-standard)
 
-# Étape 7 : Vérifie s'il y a des fichiers à ajouter
+# Étape 8 : Vérifie s'il y a des fichiers à ajouter
 if [ -z "$files" ]; then
     echo -e "\033[1;31m❌ Aucun fichier modifié, supprimé ou nouveau fichier à ajouter.\033[0m"
     echo -e "\033[1;35mCommit annulé.\033[0m"
     exit 1
 fi
 
-# Étape 8 : Ajoute les fichiers modifiés, nouveaux et supprimés
+# Étape 9 : Ajoute les fichiers modifiés, nouveaux et supprimés
 echo -e "\033[36m📄 Ajout des fichiers au staging...\033[0m"
 git add -A
 echo ""
 
-# Étape 9 : Crée un fichier temporaire pour le message de commit
+# Étape 10 : Crée un fichier temporaire pour le message de commit
 echo "$msg" > .gitmessage.txt
 
-# Étape 10 : Effectue le commit
+# Étape 11 : Effectue le commit
 echo -e "\033[36m📝 Création du commit...\033[0m"
 git commit -F .gitmessage.txt
 echo ""
 
-# Étape 11 : Récupère le nom de la branche actuelle
+# Étape 12 : Récupère le nom de la branche actuelle
 echo -e "\033[36m🌿 Récupération du nom de la branche actuelle\033[0m"
 branch=$(git rev-parse --abbrev-ref HEAD)
 echo ""
 
-# Étape 12 : Pousse sur la branche courante
+# Étape 13 : Pousse sur la branche courante
 echo -e "\033[36m🚀 Pousse sur la branche '$branch'...\033[0m"
 git push origin "$branch" || { echo "❌ Erreur : Push échoué."; exit 1; }
 echo ""
 
-# Étape 13 : Résumé du commit
+# Étape 14 : Résumé du commit
 echo ""
 echo -e "\033[1;35mFin du script\033[0m"
 echo -e "\033[34m✅ Commit réussi, envoi sur la branche \033[1;35m'$branch'\033[34m avec le message :\033[0m"
