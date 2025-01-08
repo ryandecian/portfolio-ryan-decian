@@ -58,8 +58,10 @@ git fetch --all --prune
 local_branches=$(git branch --format='%(refname:short)')
 remote_branches=$(git branch -r --format='%(refname:short)' | sed 's#origin/##')
 
-# Initialiser une liste pour les branches supprimées
+# Initialiser des listes pour les branches supprimées, fichiers mis à jour et fichiers ignorés
 deleted_branches=()
+updated_files=()
+ignored_files=()
 
 # Suppression des branches locales obsolètes
 for branch in $local_branches; do
@@ -90,8 +92,10 @@ for branch in $remote_branches; do
     
     if echo "$pull_output" | grep -q "Already up to date"; then
         echo -e "\033[34m🔵 Ignoré, pas de modification trouvée pour la branche : $branch\033[0m"
+        ignored_files+=("$branch")
     else
         echo -e "\033[32m✅ Mise à jour effectuée pour : $branch\033[0m"
+        updated_files+=("$branch")
     fi
 done
 
@@ -107,6 +111,26 @@ if [ ${#deleted_branches[@]} -gt 0 ]; then
     done
 else
     echo -e "\n\033[32m✅ Aucune branche locale supprimée.\033[0m"
+fi
+
+# Afficher la liste des branches mises à jour
+if [ ${#updated_files[@]} -gt 0 ]; then
+    echo -e "\n\033[32m✅ Branches mises à jour :\033[0m"
+    for branch in "${updated_files[@]}"; do
+        echo "  - $branch"
+    done
+else
+    echo -e "\n\033[34m🔵 Aucune branche mise à jour.\033[0m"
+fi
+
+# Afficher la liste des branches ignorées (aucune modification trouvée)
+if [ ${#ignored_files[@]} -gt 0 ]; then
+    echo -e "\n\033[34m🔵 Branches ignorées (aucune modification) :\033[0m"
+    for branch in "${ignored_files[@]}"; do
+        echo "  - $branch"
+    done
+else
+    echo -e "\n\033[32m✅ Aucune branche ignorée.\033[0m"
 fi
 
 echo -e "\033[32m🚀 Script terminé avec succès !\033[0m"
