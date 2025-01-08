@@ -127,4 +127,13 @@
     justify-content: start;
     align-items: center;
     margin: 2rem 0rem 0rem 0rem;
+    width: 100%;
+}
+@media (max-width: 251px) {
+    .sideNav > section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+    }
 }
