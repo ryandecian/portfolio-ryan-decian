@@ -190,5 +190,7 @@ else
     echo -e "\n\033[32m✅ Aucune branche locale supprimée.\033[0m"
 fi
 
-
-echo -e "\033[32m🚀 Script terminé avec succès !\033[0m"
+echo ""
+echo ""
+echo ""
+echo -e "\033[1;35mFin du script\033[0m"
