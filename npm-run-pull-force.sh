@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Étape 3 : Vérification agent SSH
-# Emplacement du fichier pour stocker les informations de l'agent
 echo -e "\033[36m🔍 Vérification si un agent SSH est actif\033[0m"
 echo ""
 SSH_ENV="$HOME/.ssh-agent.env"
@@ -36,30 +35,40 @@ fi
 echo -e "\033[34m✅ Traitement agent SSH terminé\033[0m"
 echo ""
 
-
 # Étape 1 : Obtenir la branche actuelle
 current_branch=$(git branch --show-current)
 
 # Vérifier si on est dans un dépôt Git
 if [ -z "$current_branch" ]; then
-  echo "Erreur : vous n'êtes pas dans un dépôt Git ou aucune branche n'est actuellement active."
+  echo "❌ Erreur : vous n'êtes pas dans un dépôt Git ou aucune branche n'est actuellement active."
   exit 1
 fi
 
-echo "Branche actuelle : $current_branch"
+echo -e "\033[32mBranche actuelle : $current_branch\033[0m"
+echo ""
 
-# Étape 2 : Mettre à jour toutes les branches locales
-for branch in $(git branch | sed 's/* //'); do
+# Étape 2 : Lister et afficher toutes les branches locales
+branches=$(git branch | sed 's/* //')
+echo -e "\033[36m🔎 Branches locales trouvées :\033[0m"
+for branch in $branches; do
+  echo "- $branch"
+done
+echo ""
+
+# Étape 3 : Mettre à jour toutes les branches locales
+for branch in $branches; do
+  echo -e "\033[33m🔄 Passage à la branche : $branch\033[0m"
   git checkout $branch
   UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
   if [ $? -eq 0 ]; then
-    echo "Mise à jour de la branche '$branch' avec '$UPSTREAM'..."
+    echo "📥 Mise à jour de la branche '$branch' avec '$UPSTREAM'..."
     git pull
   else
-    echo "Pas de branche distante pour '$branch'. Ignorée."
+    echo "⚠️  Pas de branche distante pour '$branch'. Ignorée."
   fi
+  echo ""
 done
 
-# Étape 3 : Revenir à la branche initiale
+# Étape 4 : Revenir à la branche initiale
 git checkout $current_branch
-echo "Retour sur la branche initiale : $current_branch"
+echo -e "\033[32m✅ Retour sur la branche initiale : $current_branch\033[0m"
