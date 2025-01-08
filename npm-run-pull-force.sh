@@ -182,7 +182,7 @@ fi
 
 # Afficher la liste des branches supprimées
 if [ ${#deleted_branches[@]} -gt 0 ]; then
-    echo -e "\n\033[31m⚠️ Branches locales supprimées :\033[0m"
+    echo -e "\n\033[31m⚠️. Branches locales supprimées :\033[0m"
     for branch in "${deleted_branches[@]}"; do
         echo "  - $branch"
     done
