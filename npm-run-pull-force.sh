@@ -109,13 +109,19 @@ deleted_branches=()
 updated_files=()
 ignored_files=()
 
+echo ""
+echo -e "\033[1;36m🔄 Début des mises a jours\033[0m"
+echo ""
+echo -e "\033[1;36m🗑️ Suppression des branches locales obsolètes\033[0m"
+echo ""
 # Suppression des branches locales obsolètes
 for branch in $local_branches; do
     if [ "$branch" == "$current_branch" ]; then
         continue
     fi
     if ! echo "$remote_branches" | grep -q "^$branch$"; then
-        echo "🔴 La branche locale '$branch' n'existe plus sur le dépôt distant. Suppression locale..."
+        echo -e"\033[31m🗑️ La branche locale '$branch' n'existe plus sur le dépôt distant. Suppression locale...\033[0m]"
+        echo ""
         git branch -d "$branch"
         deleted_branches+=("$branch")
     fi
