@@ -74,11 +74,14 @@ echo -e "\033[34m✅ Traitement agent SSH terminé\033[0m"
 echo ""
 
 # Vérification du dépôt Git et branche actuelle
+echo -e "\033[1;36m📂 Vérification du dépôt Git\033[0m"
+echo -e
 if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
   echo "❌ Erreur : ce répertoire n'est pas un dépôt Git."
   exit 1
 fi
 
+echo -e "\033[36m🌿 Vérification de la branche actuelle\033[0m"
 current_branch=$(git branch --show-current)
 
 if [ -z "$current_branch" ]; then
@@ -86,7 +89,8 @@ if [ -z "$current_branch" ]; then
   exit 1
 fi
 
-echo -e "\033[32m🌿 Branche actuelle : $current_branch\033[0m"
+echo -e "\033[36m🌿 Récupération de la branche actuelle\033[0m"
+echo -e "\033[36m🌿 Branche actuelle : $current_branch\033[0m"
 echo ""
 
 # Mise à jour des branches distantes et nettoyage des références obsolètes
