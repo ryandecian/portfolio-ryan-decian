@@ -67,6 +67,11 @@
 .DescriptionPC {
     font-size: var(--p);
 }
+@media (max-width: 251px) {
+    .DescriptionPC {
+        font-size: var(--h6);
+    }
+}
 
 .ContainerProjetHomeMainPC {
     display: flex;
