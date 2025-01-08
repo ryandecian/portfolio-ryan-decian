@@ -1,0 +1,96 @@
+[33m002bc3e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mTest[m[33m, [m[1;31morigin/ScriptPull[m[33m, [m[1;32mScriptPull[m[33m)[m Amélioration du script, récupère toute les branches existante sur github puis les met a jours en local. Amélioration de la cohérence des données. Suppression des branches locales qui ONT été supprimé sur github. Si une branche locale n'a jamais été push sur github, celui-ci sera ignoré et ne sera pas supprimé.
+[33mb3599ff[m Ajout de la fonction de listage de toute les branche locale trouvé equi vont être mise a jour
+[33m6757006[m Ajout de la logique de création ou de récupération d'un agent SSH
+[33m12e2568[m Création d'un nouveau script qui aura pour objectif de mettre a jours toutes les branches du projet.
+[33mf1afb9a[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m Merge pull request #8 from ryandecian/dev
+[33m1f9c66d[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m Merge pull request #7 from ryandecian/nav
+[33m4b8bdfe[m[33m ([m[1;32mnav[m[33m)[m Modification de la nav et enlèvement de l'animation
+[33m1e607eb[m Modification de l'avatar, Photo de profil
+[33m70f09f5[m Rectification des media query des logos language dev
+[33m64d3f3e[m Ajustement de la partie responsive en 250px pour les logos de language dev
+[33md528a48[m Ajout des marges en media query sur le composant PresentationPC
+[33m217976e[m Initialisation de la branch nav. Modification du composant HomeMainPC et ajout d'un media query pour passer en column les langague dev et la description
+[33mb69f69d[m Merge pull request #6 from ryandecian/dev
+[33m0c4b7b0[m Merge pull request #5 from ryandecian/nav
+[33m15032a8[m Ajout des vrais liens sur la nav verion pc et mobile (github + mail + linkedin)
+[33m081ac39[m Initialisation de la branche nav
+[33m3c9fd08[m Merge pull request #4 from ryandecian/dev
+[33md7c688e[m[33m ([m[1;32mfooter[m[33m)[m Merge pull request #3 from ryandecian/footer
+[33me57ab47[m Initialisation de la branche dev
+[33m7d9da8b[m Fin de la création du footer provisoire version PC
+[33m4ebf629[m Initilalisation de la branch footer
+[33m4a9a20b[m[33m ([m[1;32mprojet[m[33m)[m Merge pull request #1 from ryandecian/projet
+[33m3902ded[m Code fianl de la branch projet[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[Dnal
+[33mcae32f8[m Ajout d'un lien sur la face arrière des CardProjet sur le titre avec un effet dynamique
+[33mc4ae729[m Modification du style des CardProjet en y ajoutant des couleurs au liens vers la prod et en y ajoutant un effet dynamique
+[33mf47a570[m AJout du lien du projet bille
+[33m3cad61b[m Projet bille terminé, la card est correctement configuré
+[33m81620ec[m Ajout du lien vers le site en prod, la couleur du lien a été changé en blanc mais il devra être a nouveau changé pour plus de visibilité
+[33m382f9fc[m Rectification des dimensions
+[33m803c649[m Ajout des icon de language sur la face arrière des CardProjet, il maque le dimensionnement des icon
+[33m322a781[m Ajout d'un bouton Voir plus de projets et configuration du routage dans main.tsx
+[33m0a1f5ce[m Amélioration du style du bouton des CardProjet
+[33m8b914f4[m Déplacement des logiques de domensionnement des CardProjet dans le fichier root.css
+[33m3e93f2b[m Push du soir
+[33m5fe12b6[m Petite modification
+[33m9b87900[m Agencement des cardProjet automatiquement en fonction de l'espace disponible
+[33mafa57d1[m Modification du code, la description des cardProjet est maintenant optionnelle. Si la description est null ou n'existe pas, la balise HTML ne sera pas rendu et le conteneur adaptera l'espace disponible
+[33mc6f9641[m Centrage des cardProjet
+[33m559ffb1[m Modification du style de la NavMobile pour intégrer les changement de police d'écriture pour la taille
+[33mf75edab[m Application de la nouvelle stratégie de modification des taille de police d'écriture ok, ceci est le déploiment
+[33m6d40e57[m Ajout d'une logique dans le fichier Root.css permettant de modifier l'ensemble des taille de police d'écriture du site en adaptant le tout de manière automatique a toutes les pages et logique déjà existant et futur même avec les conditions responsive des différentes versions
+[33m671f123[m Fin de résolution des conflit et réintégratiion on des fichiers
+[33md3204c4[m Résolution de conflit
+[33m13304fc[m Ajout d'un petit effet d'agrandissement sur les icons de language dev lors du passage de la souris
+[33mceb17da[m Création du composant CardProjet terminé, il ne reste plus qu'a coder les modules css et intégrer le composant a HomeMainPC[D[D[D[D[D[D[D[D[D[D[à
+[33m601b296[m Initialisation de la branche projet
+[33m7403b60[m Push avant création d'une nouvelle branch
+[33m880ab53[m Intégration d'une police d'écriture au format woff2[C[D. Cette police d'écriture a été téléchargé, convertie de ttf à woff2. Il a par la suite été passé en locale de manière a ne pas dépendre d'un serveur tier comme google.
+[33m9ea8b0c[m Ajout du style au contenu de About secteur HomeMainPC
+[33m1ac189f[m Modification des Logos de language de dev et stylisation ok
+[33m7f75400[m Ajout des Logos React, JS, CSS, module CSS, Node [C[C[CJS et HTML. Il manque des Logos
+[33m9ddfc1d[m Ajout d'une balise div intermediaire pour appliquer un style linear. La structure n'est pas terminé, ceci est un test
+[33mf9acc51[m Transfère des logique CSS du composant HomeMainPC.css vers ProgramLanguageRoot.module.css stylisant ainsi le composant ProgramLanguageRoot.tsx de CSS en Module CSS
+[33m5e3e51a[m Mise a jour du script npm-run-commit
+[33m8f97235[m Modification de l'emplacement de l'icon
+[33m32dca42[m Déplacement de la logique test dans le composant ProgramLanguageRoot et création du fichier ProgramLanguageRoot.module.css
+[33m1e2a243[m Création du dossier ComponentsHomeMainRoot qui prendra tout les composants qui seront utiliser dans le secteur PC et Mobile.
+[33m5e36a3c[m Test disposition grid sur HomeMainPC validé, + structuration de la page commencé
+[33m8abbaf6[m Résolution de conflit
+[33m37f2683[m Merge branch 'main' of github.com:ryandecian/portfolio-ryan-decian
+[33mbc3e7aa[m Routage de la chaine HomeMain
+[33m78be528[m initialisation des fonctions HomeMain Root et PC
+[33mc6efd70[m initialisation des fonctions HomeMain Root et PC
+[33m0875254[m Suppression des import d'images icons github, linkedin et mail dans les composants NavPC et NavMobile. Transfère des logiques dans un seul et unique composant IconNavRoot qui est stylisé par le fichier IconNavRoot.module.css. Intégrassion de ce composant des les fichiers NavPC et NavMobile
+[33mfc6d320[m Création du composant IconNavRoot en vue d'une intégration des modules CSS pour ce composant
+[33m214e92d[m Modification du Background du menu burger, ajout d'une animation css sur le boutton de sortie du menu burger
+[33m173ad22[m Rectification des class IconNav en IconNavPC
+[33m31e5325[m modification des couleur de texte dans NavMobile en Blanc
+[33m23b23fc[m Ajout d'animation sur les IconNav avec du CSS
+[33mffd95d7[m Modification des class et des IconNav + CSS
+[33mea31999[m Modification du background sur black
+[33m8060de3[m Création composant HomeMainPC
+[33m93c90d3[m Test10 final
+[33m780a8be[m Test9 Script sh qui fonctionne enfin
+[33mc485aca[m Test8 Script sh
+[33mce9e2e3[m Test7 Script sh
+[33m9946455[m Test6 Script sh
+[33m684e06d[m Test5 Script sh
+[33m34404df[m Test4 Script sh
+[33mb3cebe5[m Test3 Script sh
+[33m49398dd[m Test2 modification du script sh
+[33m956ec45[m Test modification du script sh
+[33m254f86e[m Ajout des dossiers HomeMainRoot
+[33m6dd2fa4[m Mofification du script sh pour ajouter un agent automatiquement
+[33m60cc1db[m Modification du script sh
+[33m1914f7d[m Modification du fichier json et ajout de la commande npm run commit
+[33mfce9c2b[m Ajout des dossier NavRoot, NavPC et NavMobile, ajout du dossier componentsNavRoot et intégration des modules CSS pour le composant MenuNavRoot
+[33m1794fb5[m Installation des dépendance react-router-dom
+[33m29d064a[m Création du fichier root.css
+[33m728d3af[m Insertion de la class Autor avec mon nom en H1 et un titre en H3. Tout est responsive
+[33mfdc779e[m Responsive drapeau ok mais il manque le codage des bouttons
+[33m50cdf58[m Ajout des drapeaux de langue
+[33macca55a[m Nav terminé + début de création du projet carte de fond + installation de react-router-dom
+[33mf54231c[m Menu burger ok mais impossible de faire disparaitre le bloc nav desktop
+[33mb05673d[m Envoi des dépendance
+[33m6ef0b4f[m first commit
