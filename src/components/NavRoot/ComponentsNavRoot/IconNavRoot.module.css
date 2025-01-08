@@ -22,7 +22,13 @@
 
 .IconNavMobile > a > img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 10%;
+}
+@media(max-width: 250px) {
+    .IconNavMobile > a > img {
+        max-width: 70%;
+        max-height: 70%;
+    }
 }
 
 /*Version PC*/
