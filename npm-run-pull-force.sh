@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------
 # Licence MIT
 #
-# Copyright (c) 2025 Ryan Decian
+# Copyright (c) 2025 Ryan DECIAN
 #
 # Permission est accordée, gratuitement, à toute personne obtenant
 # une copie de ce logiciel et des fichiers de documentation associés
@@ -29,6 +29,14 @@
 
 
 #!/bin/bash
+
+# Version du script
+echo -e "\033[1;35mVersion du script V6.2.2\033[0m"
+echo -e "\033[35mLicense - Copyright (c) 2025 Ryan DECIAN\033[0m"
+echo ""
+echo ""
+echo -e "\033[35mDébut d'exécution du script\033[0m"
+echo ""
 
 # Vérification agent SSH
 echo -e "\033[36m🔍 Vérification si un agent SSH est actif\033[0m"
