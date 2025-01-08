@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Étape 3 : Vérification agent SSH
+# Vérification agent SSH
 echo -e "\033[36m🔍 Vérification si un agent SSH est actif\033[0m"
 echo ""
 SSH_ENV="$HOME/.ssh-agent.env"
@@ -35,49 +35,64 @@ fi
 echo -e "\033[34m✅ Traitement agent SSH terminé\033[0m"
 echo ""
 
-# Étape 1 : Obtenir la branche actuelle
-current_branch=$(git branch --show-current)
-
-# Vérifier si on est dans un dépôt Git
-if [ -z "$current_branch" ]; then
-  echo "❌ Erreur : vous n'êtes pas dans un dépôt Git ou aucune branche n'est actuellement active."
+# Vérification du dépôt Git et branche actuelle
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+  echo "❌ Erreur : ce répertoire n'est pas un dépôt Git."
   exit 1
 fi
 
-echo -e "\033[32mBranche actuelle : $current_branch\033[0m"
+current_branch=$(git branch --show-current)
+
+if [ -z "$current_branch" ]; then
+  echo "❌ Erreur : aucune branche active. Assurez-vous d'être sur une branche avant d'exécuter ce script."
+  exit 1
+fi
+
+echo -e "\033[32m🌿 Branche actuelle : $current_branch\033[0m"
 echo ""
 
-# Étape 2 : Récupérer toutes les nouvelles branches distantes
-echo -e "\033[36m🔄 Récupération des nouvelles branches distantes...\033[0m"
+# Mise à jour des branches distantes et nettoyage des références obsolètes
 git fetch --all --prune
-echo ""
 
-# Étape 3 : Synchroniser les branches locales avec les branches distantes
-branches=$(git branch -r | grep -v '\->' | sed 's/origin\///')
+# Liste des branches locales et distantes
+local_branches=$(git branch --format='%(refname:short)')
+remote_branches=$(git branch -r --format='%(refname:short)' | sed 's#origin/##')
 
-echo -e "\033[36m🔎 Branches trouvées sur le dépôt distant :\033[0m"
-for remote_branch in $branches; do
-  if ! git branch --list | grep -q "$remote_branch"; then
-    echo "🆕 Création de la branche locale pour '$remote_branch'..."
-    git checkout -b "$remote_branch" "origin/$remote_branch"
-  fi
-done
-echo ""
-
-# Mise à jour de toutes les branches locales
-for branch in $(git branch | sed 's/* //'); do
-  echo -e "\033[33m🔄 Passage à la branche : $branch\033[0m"
-  git checkout $branch
-  UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
-  if [ $? -eq 0 ]; then
-    echo "📥 Mise à jour de la branche '$branch' avec '$UPSTREAM'..."
-    git pull
-  else
-    echo "⚠️  Pas de branche distante pour '$branch'. Ignorée."
-  fi
-  echo ""
+# Suppression des branches locales obsolètes
+for branch in $local_branches; do
+    if [ "$branch" == "$current_branch" ]; then
+        continue
+    fi
+    if ! echo "$remote_branches" | grep -q "^$branch$"; then
+        echo "La branche locale '$branch' a été supprimée sur le dépôt distant. Suppression locale..."
+        git branch -d "$branch"
+    fi
 done
 
-# Étape 4 : Revenir à la branche initiale
-git checkout $current_branch
-echo -e "\033[32m✅ Retour sur la branche initiale : $current_branch\033[0m"
+# Mise à jour des branches locales en utilisant git pull origin nom_de_la_branche
+for branch in $remote_branches; do
+    echo -e "\033[33m🚀 Passage à la branche : $branch\033[0m"
+    
+    # Vérifie si la branche locale existe, sinon la crée
+    if ! git show-ref --verify --quiet refs/heads/$branch; then
+        git checkout -b $branch origin/$branch
+    else
+        git checkout $branch
+    fi
+
+    # Faire un git pull origin nom_de_la_branche
+    echo -e "\033[36m🔄 Mise à jour avec 'git pull origin $branch'\033[0m"
+    pull_output=$(git pull origin $branch 2>&1)
+    
+    if echo "$pull_output" | grep -q "Already up to date"; then
+        echo -e "\033[34m🔵 Ignoré, pas de modification trouvée pour la branche : $branch\033[0m"
+    else
+        echo -e "\033[32m✅ Mise à jour effectuée pour : $branch\033[0m"
+    fi
+done
+
+# Retourner à la branche initiale
+git checkout "$current_branch"
+echo -e "\033[34m🔄 Retour à la branche initiale : $current_branch\033[0m"
+
+echo -e "\033[32m🚀 Script terminé avec succès !\033[0m"
