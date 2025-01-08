@@ -1,5 +1,5 @@
 import "./HomeMainPC.css"
-import Avatar from "../../../assets/data-img/Avatar-Ryan-DECIAN.jpg"
+import Avatar from "../../../assets/data-img/RyanDECIAN.jpg"
 import ProgramLanguageRoot from "../ComponentsHomeMainRoot/ProgramLanguageRoot";
 import CardProjetRoot from "../ComponentsHomeMainRoot/CardProjetRoot";
 import style from "../ComponentsHomeMainRoot/CardProjetRoot.module.css"

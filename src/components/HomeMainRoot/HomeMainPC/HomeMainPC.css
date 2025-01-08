@@ -29,6 +29,14 @@
     width: 100%;
     max-width: 1300px;
 }
+@media (max-width: 1340px) {
+    .SubContainerAboutHomeMainPC {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
 
 .PresentationPC {
     display: flex;
@@ -38,6 +46,11 @@
     width: auto;
     max-width: 500px;
     margin: 0rem 1rem 0rem 0rem;
+}
+@media (max-width: 1340px) {
+    .PresentationPC {
+        margin: 0rem 0rem 5rem 0rem;
+    }
 }
 
 .AvatarPC {
@@ -53,6 +66,11 @@
 
 .DescriptionPC {
     font-size: var(--p);
+}
+@media (max-width: 251px) {
+    .DescriptionPC {
+        font-size: var(--h6);
+    }
 }
 
 .ContainerProjetHomeMainPC {

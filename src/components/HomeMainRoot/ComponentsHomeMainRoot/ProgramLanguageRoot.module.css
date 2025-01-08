@@ -14,16 +14,33 @@
     width: 525px;
     margin: 0rem 0rem 0rem 1rem;
 }
+@media (max-width: 251px) {
+    .LanguageDevPC {
+        display: grid;
+        grid-template-columns: repeat(6, 34px);
+        grid-template-rows: repeat(6, 20px);
+        column-gap: 4px;
+        row-gap: 10px;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+}
 
 .LanguageDevPC > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 100px;
+    width: 165px;
+    height: 115px;
     margin: 0;
     border-radius: var(--border-radius);
     background: var(--background-border);
+}
+@media (max-width: 251px) {
+    .LanguageDevPC > div {
+        width: 72px;
+        height: 50px;
+    }
 }
 
 .LanguageDevPC > div > .BorderContainerPC {
@@ -31,19 +48,32 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 145px;
-    height: 95px;
+    width: 160px;
+    height: 110px;
     background-color: black;
     border-radius: var(--border-radius);
     margin: 0;
 }
+@media (max-width: 251px) {
+    .LanguageDevPC > div > .BorderContainerPC {
+        width: 70px;
+        height: 48px;
+    }
+}
 
 .LanguageDevPC > div > .BorderContainerPC > img {
-    width: 90px;
+    width: 65%;
     height: 65%;
     margin: 0.3rem 0px 0px 0px;
     background-color: black;
     object-fit: contain;
+}
+@media (max-width: 251px) {
+    .LanguageDevPC > div .BorderContainerPC > img {
+        width: 26px;
+        height: 26px;
+        margin: 0rem 0rem 0rem 0rem;
+    }
 }
 
 .LanguageDevPC > div > .BorderContainerPC > img:hover {
@@ -54,6 +84,13 @@
     width: auto;
     height: 20%;
     margin: 0.4rem 0px 0px 0px;
+    font-size: var(--h5);
+}
+@media (max-width: 251px) {
+    .LanguageDevPC > div > .BorderContainerPC > h5 {
+        margin: 0rem 0rem 0rem 0rem;
+        font-size: var(--h6);
+    }
 }
 
 .LanguageDevPC > .Container1PC {
