@@ -21,7 +21,7 @@
     color: var(--textColorWhite);
 }
 
-.NavMobile > h3 {
+.NavMobile > h2 {
     margin-top: 0.5rem;
     margin-bottom: 1.25rem;
     color: var(--textColorWhite);
