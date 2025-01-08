@@ -29,6 +29,11 @@ from "../NavPC/NavPC.tsx"
     text-decoration: none;
     font-size: var(--p);
 }
+@media (max-width: 250px) {
+    .MenuLinkMobile {
+        font-size: var(--h5);
+    }
+}
 
 
 /*Style version PC*/
