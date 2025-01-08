@@ -33,8 +33,12 @@
 # été supprimées de GitHub
 
 
-# Configuration pour rendre ce script exécutable :
-#Copier coller les commandes entre les pointillés dans votre terminal bash : 
+# Cette version n'est compatible que sur Windows et Visual Studio Code
+
+
+# Configuration pour rendre ce script exécutable : 
+# Il faut ouvrir le logiciel Visual Code Studio en administrateur puis
+# Copier coller les commandes entre les pointillés dans votre terminal bash : 
 
 : <<EOF
 ---------------------------------------------------------------------------------------------
