@@ -19,7 +19,7 @@
         display: grid;
         grid-template-columns: repeat(6, 34px);
         grid-template-rows: repeat(6, 20px);
-        column-gap: 2px;
+        column-gap: 4px;
         row-gap: 10px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -38,8 +38,8 @@
 }
 @media (max-width: 251px) {
     .LanguageDevPC > div {
-        width: 70px;
-        height: 45px;
+        width: 72px;
+        height: 50px;
     }
 }
 
@@ -56,8 +56,8 @@
 }
 @media (max-width: 251px) {
     .LanguageDevPC > div > .BorderContainerPC {
-        width: 68px;
-        height: 43px;
+        width: 70px;
+        height: 48px;
     }
 }
 
