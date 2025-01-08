@@ -112,7 +112,7 @@ ignored_files=()
 echo ""
 echo -e "\033[1;36m🔄 Début des mises a jours\033[0m"
 echo ""
-echo -e "\033[1;36m🗑️ Suppression des branches locales obsolètes\033[0m"
+echo -e "\033[1;36m🛠️ Suppression des branches locales obsolètes\033[0m"
 echo ""
 # Suppression des branches locales obsolètes
 for branch in $local_branches; do
@@ -129,7 +129,8 @@ done
 
 # Mise à jour des branches locales en utilisant git pull origin nom_de_la_branche
 for branch in $remote_branches; do
-    echo -e "\033[33m🌱 Passage à la branche : $branch\033[0m"
+    echo ""
+    echo -e "\033[33m🌿 Passage à la branche : $branch\033[0m"
     
     # Vérifie si la branche locale existe, sinon la crée
     if ! git show-ref --verify --quiet refs/heads/$branch; then
@@ -143,7 +144,7 @@ for branch in $remote_branches; do
     pull_output=$(git pull origin $branch 2>&1)
     
     if echo "$pull_output" | grep -q "Already up to date"; then
-        echo -e "\033[34m🔵 Ignoré, pas de modification trouvée pour la branche : $branch\033[0m"
+        echo -e "\033[34m💤 Ignoré, pas de modification trouvée pour la branche : $branch\033[0m"
         ignored_files+=("$branch")
     else
         echo -e "\033[32m✅ Mise à jour effectuée pour : $branch\033[0m"
@@ -153,16 +154,20 @@ done
 
 # Retourner à la branche initiale
 git checkout "$current_branch"
-echo -e "\033[34m🔄 Retour à la branche initiale : $current_branch\033[0m"
+echo ""
+echo ""
+echo -e "\033[1;33m🍃 Retour à la branche initiale : $current_branch\033[0m"
+echo ""
+echo ""
 
-# Afficher la liste des branches supprimées
-if [ ${#deleted_branches[@]} -gt 0 ]; then
-    echo -e "\n\033[31m🚫 Branches locales supprimées :\033[0m"
-    for branch in "${deleted_branches[@]}"; do
+# Afficher la liste des branches ignorées (aucune modification trouvée)
+if [ ${#ignored_files[@]} -gt 0 ]; then
+    echo -e "\n\033[34m💤 Branches ignorées (aucune modification) :\033[0m"
+    for branch in "${ignored_files[@]}"; do
         echo "  - $branch"
     done
 else
-    echo -e "\n\033[32m✅ Aucune branche locale supprimée.\033[0m"
+    echo -e "\n\033[32m🔗 Aucune branche ignorée.\033[0m"
 fi
 
 # Afficher la liste des branches mises à jour
@@ -172,17 +177,18 @@ if [ ${#updated_files[@]} -gt 0 ]; then
         echo "  - $branch"
     done
 else
-    echo -e "\n\033[34m🔵 Aucune branche mise à jour.\033[0m"
+    echo -e "\n\033[34m💤 Aucune branche mise à jour.\033[0m"
 fi
 
-# Afficher la liste des branches ignorées (aucune modification trouvée)
-if [ ${#ignored_files[@]} -gt 0 ]; then
-    echo -e "\n\033[34m🔵 Branches ignorées (aucune modification) :\033[0m"
-    for branch in "${ignored_files[@]}"; do
+# Afficher la liste des branches supprimées
+if [ ${#deleted_branches[@]} -gt 0 ]; then
+    echo -e "\n\033[31m⚠️ Branches locales supprimées :\033[0m"
+    for branch in "${deleted_branches[@]}"; do
         echo "  - $branch"
     done
 else
-    echo -e "\n\033[32m✅ Aucune branche ignorée.\033[0m"
+    echo -e "\n\033[32m✅ Aucune branche locale supprimée.\033[0m"
 fi
+
 
 echo -e "\033[32m🚀 Script terminé avec succès !\033[0m"
