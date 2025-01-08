@@ -45,7 +45,7 @@
 #!/bin/bash
 
 # Version du script
-echo -e "\033[1;35mVersion du script V6.2.2\033[0m"
+echo -e "\033[1;35mVersion du script V6.3.1\033[0m"
 echo ""
 echo ""
 echo -e "\033[35mDébut d'exécution du script\033[0m"

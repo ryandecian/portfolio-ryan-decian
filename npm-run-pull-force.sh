@@ -27,6 +27,11 @@
 # TRAITEMENTS DU LOGICIEL.
 # ------------------------------------------------------------------
 
+# Cette commande permet de mettre a jour toutes les branches
+# d'un projet et de supprimer les branches obsolètes qui ont
+# été supprimées de GitHub
+
+
 # Attention, pour lancer cette commande il faudra : 
 
 # Lancer la commande suivante dans le terminal git :
@@ -39,7 +44,7 @@
 #!/bin/bash
 
 # Version du script
-echo -e "\033[1;35mVersion du script V5.1.2\033[0m"
+echo -e "\033[1;35mVersion du script V5.1.3\033[0m"
 echo -e "\033[35mLicense - Copyright (c) 2025 Ryan DECIAN\033[0m"
 echo ""
 echo ""
