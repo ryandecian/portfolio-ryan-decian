@@ -27,11 +27,19 @@
 # TRAITEMENTS DU LOGICIEL.
 # ------------------------------------------------------------------
 
+# Attention, pour lancer cette commande il faudra : 
+
+# Lancer la commande suivante dans le terminal git :
+# chmod +x npm-run-pull-force.sh
+# Copier coller cette ligne dans package.json dans script :
+# "pull-force": "bash ./npm-run-pull-force.sh"
+# Exécution de cette commande avec :
+# npm run commit
 
 #!/bin/bash
 
 # Version du script
-echo -e "\033[1;35mVersion du script V5.1.1\033[0m"
+echo -e "\033[1;35mVersion du script V5.1.2\033[0m"
 echo -e "\033[35mLicense - Copyright (c) 2025 Ryan DECIAN\033[0m"
 echo ""
 echo ""
