@@ -58,14 +58,18 @@ git fetch --all --prune
 local_branches=$(git branch --format='%(refname:short)')
 remote_branches=$(git branch -r --format='%(refname:short)' | sed 's#origin/##')
 
+# Initialiser une liste pour les branches supprimées
+deleted_branches=()
+
 # Suppression des branches locales obsolètes
 for branch in $local_branches; do
     if [ "$branch" == "$current_branch" ]; then
         continue
     fi
     if ! echo "$remote_branches" | grep -q "^$branch$"; then
-        echo "La branche locale '$branch' a été supprimée sur le dépôt distant. Suppression locale..."
+        echo "🔴 La branche locale '$branch' n'existe plus sur le dépôt distant. Suppression locale..."
         git branch -d "$branch"
+        deleted_branches+=("$branch")
     fi
 done
 
@@ -94,5 +98,15 @@ done
 # Retourner à la branche initiale
 git checkout "$current_branch"
 echo -e "\033[34m🔄 Retour à la branche initiale : $current_branch\033[0m"
+
+# Afficher la liste des branches supprimées
+if [ ${#deleted_branches[@]} -gt 0 ]; then
+    echo -e "\n\033[31m🚫 Branches locales supprimées :\033[0m"
+    for branch in "${deleted_branches[@]}"; do
+        echo "  - $branch"
+    done
+else
+    echo -e "\n\033[32m✅ Aucune branche locale supprimée.\033[0m"
+fi
 
 echo -e "\033[32m🚀 Script terminé avec succès !\033[0m"
