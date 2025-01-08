@@ -31,7 +31,7 @@
 #!/bin/bash
 
 # Version du script
-echo -e "\033[1;35mVersion du script V6.2.2\033[0m"
+echo -e "\033[1;35mVersion du script V5.1.1\033[0m"
 echo -e "\033[35mLicense - Copyright (c) 2025 Ryan DECIAN\033[0m"
 echo ""
 echo ""
