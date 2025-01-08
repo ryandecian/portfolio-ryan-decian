@@ -81,7 +81,7 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
   exit 1
 fi
 
-echo -e "\033[36m🌿 Vérification de la branche actuelle\033[0m"
+echo -e "\033[36m🔄 Vérification de la branche actuelle\033[0m"
 current_branch=$(git branch --show-current)
 
 if [ -z "$current_branch" ]; then
@@ -89,16 +89,19 @@ if [ -z "$current_branch" ]; then
   exit 1
 fi
 
-echo -e "\033[36m🌿 Récupération de la branche actuelle\033[0m"
+echo -e "\033[36m🔍 Récupération de la branche actuelle\033[0m"
 echo -e "\033[36m🌿 Branche actuelle : $current_branch\033[0m"
 echo ""
 
 # Mise à jour des branches distantes et nettoyage des références obsolètes
+echo -e "\033[36m🌐 Récupération des branches sur GitHub\033[0m"
+echo ""
 git fetch --all --prune
 
 # Liste des branches locales et distantes
 local_branches=$(git branch --format='%(refname:short)')
 remote_branches=$(git branch -r --format='%(refname:short)' | sed 's#origin/##')
+echo -e "\033[36m💾 Récupération des branches terminée\033[0m"
 
 # Initialiser des listes pour les branches supprimées, fichiers mis à jour et fichiers ignorés
 deleted_branches=()
