@@ -101,7 +101,8 @@ git fetch --all --prune
 # Liste des branches locales et distantes
 local_branches=$(git branch --format='%(refname:short)')
 remote_branches=$(git branch -r --format='%(refname:short)' | sed 's#origin/##')
-echo -e "\033[36m💾 Récupération des branches terminée\033[0m"
+echo -e "\033[36m💿 Récupération des branches terminée\033[0m"
+echo ""
 
 # Initialiser des listes pour les branches supprimées, fichiers mis à jour et fichiers ignorés
 deleted_branches=()
@@ -122,7 +123,7 @@ done
 
 # Mise à jour des branches locales en utilisant git pull origin nom_de_la_branche
 for branch in $remote_branches; do
-    echo -e "\033[33m🚀 Passage à la branche : $branch\033[0m"
+    echo -e "\033[33m🌱 Passage à la branche : $branch\033[0m"
     
     # Vérifie si la branche locale existe, sinon la crée
     if ! git show-ref --verify --quiet refs/heads/$branch; then
@@ -132,7 +133,7 @@ for branch in $remote_branches; do
     fi
 
     # Faire un git pull origin nom_de_la_branche
-    echo -e "\033[36m🔄 Mise à jour avec 'git pull origin $branch'\033[0m"
+    echo -e "\033[36m🔄 Mise à jour de la branche $branch'\033[0m"
     pull_output=$(git pull origin $branch 2>&1)
     
     if echo "$pull_output" | grep -q "Already up to date"; then
