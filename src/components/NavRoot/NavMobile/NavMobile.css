@@ -20,8 +20,13 @@
     font-size: var(--h1);
     color: var(--textColorWhite);
 }
+@media (max-width: 251px) {
+    .NavMobile > a > h1 {
+        font-size: var(--h2);
+    }
+}
 
-.NavMobile > h3 {
+.NavMobile > h2 {
     margin-top: 0.5rem;
     margin-bottom: 1.25rem;
     color: var(--textColorWhite);
@@ -43,6 +48,12 @@
     right: -250px;
     background-color: var(--BackgroudMenuBurger);
     transition: right 0.5s ease;
+}
+@media (max-width: 251px) {
+    .sideNav {
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
 .sideNav.active {
@@ -67,6 +78,11 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;
 }
+@media (max-width: 251px) {
+    #closeBtn {
+        padding: 0.3rem 1.2rem;
+    }
+}
 
 #closeBtn:hover {
     transform: rotate(90deg) scale(1.1); /* Légère rotation et agrandissement */
@@ -87,6 +103,12 @@
     background-color: var(--textColorWhite);
     margin: 0.5rem 0rem;
 }
+@media (max-width: 251px) {
+    .menuBurger > span {
+        width: 30px;
+        height: 4px;
+    }
+}
 
 /*-----------------------------------------------*/
 
@@ -105,4 +127,13 @@
     justify-content: start;
     align-items: center;
     margin: 2rem 0rem 0rem 0rem;
+    width: 100%;
+}
+@media (max-width: 251px) {
+    .sideNav > section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+    }
 }

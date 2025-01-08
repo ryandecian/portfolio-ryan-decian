@@ -17,7 +17,7 @@ function NavMobile() {
                  <Link to="/home">
                      <h1>Ryan DECIAN</h1>
                  </Link>
-                 <h3>Développeur web full stack junior</h3>
+                 <h2>Développeur web full stack junior</h2>
                  <div  className={`sideNav ${active ? "active" : ""}`} id="mySideNav">
 
                      <div>
