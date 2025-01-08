@@ -47,16 +47,25 @@ fi
 echo -e "\033[32mBranche actuelle : $current_branch\033[0m"
 echo ""
 
-# Étape 2 : Lister et afficher toutes les branches locales
-branches=$(git branch | sed 's/* //')
-echo -e "\033[36m🔎 Branches locales trouvées :\033[0m"
-for branch in $branches; do
-  echo "- $branch"
+# Étape 2 : Récupérer toutes les nouvelles branches distantes
+echo -e "\033[36m🔄 Récupération des nouvelles branches distantes...\033[0m"
+git fetch --all --prune
+echo ""
+
+# Étape 3 : Synchroniser les branches locales avec les branches distantes
+branches=$(git branch -r | grep -v '\->' | sed 's/origin\///')
+
+echo -e "\033[36m🔎 Branches trouvées sur le dépôt distant :\033[0m"
+for remote_branch in $branches; do
+  if ! git branch --list | grep -q "$remote_branch"; then
+    echo "🆕 Création de la branche locale pour '$remote_branch'..."
+    git checkout -b "$remote_branch" "origin/$remote_branch"
+  fi
 done
 echo ""
 
-# Étape 3 : Mettre à jour toutes les branches locales
-for branch in $branches; do
+# Mise à jour de toutes les branches locales
+for branch in $(git branch | sed 's/* //'); do
   echo -e "\033[33m🔄 Passage à la branche : $branch\033[0m"
   git checkout $branch
   UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
