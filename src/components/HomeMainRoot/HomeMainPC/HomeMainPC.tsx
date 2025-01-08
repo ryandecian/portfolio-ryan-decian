@@ -160,7 +160,7 @@ function HomeMainPC() {
                              technologie et de ne jamais être à court de nouvelles choses à 
                              découvrir, alimente mon enthousiasme et ma passion pour le 
                              développement Web. Quand je ne suis pas devant mon ordinateur, 
-                             j’aime passer mon temps à lire, à me maintenir en forme et à jouer de la guitare.
+                             j’aime passer mon temps à lire, à me maintenir en forme et à faire de l'équitation.
                         </p>
                     </div>
 

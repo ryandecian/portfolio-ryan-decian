@@ -10,6 +10,12 @@
     height: 3rem;
     margin: 0rem 1rem;
 }
+@media (max-width: 251px) {
+    .IconNavMobile {
+        width: calc(48px);
+        margin: 0;
+    }
+}
 
 .IconNavMobile > a {
     display: flex;
@@ -17,12 +23,20 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    min-width: 48px;
+    min-height: 48px;
     text-decoration: none;
 }
 
 .IconNavMobile > a > img {
     max-width: 100%;
     max-height: 100%;
+}
+@media(max-width: 251px) {
+    .IconNavMobile > a > img {
+        max-width: 70%;
+        max-height: 70%;
+    }
 }
 
 /*Version PC*/
