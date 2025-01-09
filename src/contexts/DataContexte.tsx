@@ -1,5 +1,9 @@
 import { createContext } from "react";
 import { useState } from "react";
+type dataType = {
+    data: string;
+    setData:;
+}
 
 /* Création du contexte et nom du contexte*/
 const DataContext = createContext<string>("");
