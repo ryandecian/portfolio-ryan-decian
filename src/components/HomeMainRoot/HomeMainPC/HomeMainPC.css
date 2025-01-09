@@ -1,12 +1,14 @@
 @import "../../../root.css";
 
-.HomeMainPC {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: var(--textColorWhite);
-    width: 100%;
+@media (min-width: 768px){
+    .HomeMainPC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--textColorWhite);
+        width: 100%;
+    }
 }
 
 .ContainerAboutHomeMainPC {
