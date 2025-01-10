@@ -1,35 +1,145 @@
 import { createContext } from "react";
 import { useState } from "react";
+
+/*Import des images de langage dev*/
+import LogoReact from "../assets/ProgramLanguageImg/LogoReactSimple.png"
+import LogoHTML from "../assets/ProgramLanguageImg/LogoHTMLSimple.png"
+import LogoCSS from "../assets/ProgramLanguageImg/LogoCSSSimple.png"
+import LogoJavaScript from "../assets/ProgramLanguageImg/LogoJavaScriptSimple.png"
+import LogoNodeJS from "../assets/ProgramLanguageImg/LogoNodeJS.png"
+import LogoGitHub from "../assets/ProgramLanguageImg/LogoGitHubSimpleBlue.png"
+import LogoModuleCSS from "../assets/ProgramLanguageImg/LogoModuleCSS.png"
+
+/*Import des images de projets*/
+
+
+
+
+
+
+
 type dataType = {
-    data: string;
+    data: string[];
     setData: (e: string) => void;
 }
-
-class User {
-    name: string = 'Ryan';
-    age: number = 25;
-  }
-  
-  type UserInstance = InstanceType<typeof User>;
-  
-  const user: UserInstance = new User(); // OK
-  
-  
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
 /* Création du contexte et nom du contexte*/
-const DataContext = createContext<string>("");
+const DataContext = createContext<dataType | null>(null);
+
+const Projets = [
+    {
+        id: 1,
+        title: "AnimationCard",
+        date: {
+            yearStart: "10/2024",
+            yearEnd: "11/2024",
+        },
+        img: AnimationCard,
+        description1: "Premier projet perso en dehors de la formation où l'objectif était de créer une carte avec des jeux de lumière visible lors du survol de la souris",
+        description2: "",
+        description3: "",
+        lienProd: "https://animation-card-ryan-decian.netlify.app/",
+        languageDev: [
+            {
+                img: LogoJavaScript,
+                alt: "JavaScript",
+            },
+            {
+                img: LogoHTML,
+                alt: "HTML",
+            },
+            {
+                img: LogoCSS,
+                alt: "CSS",
+            },
+            {
+                img: LogoGitHub,
+                alt: "GitHub",
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "Projet billes",
+        date: {
+            yearStart: "16/12/2024",
+            yearEnd: "14/01/2025",
+        },
+        img: ProjetBille,
+        description1: "Projet personnel avec pour objectif : créer un fond interactif avec des billes. Débuté en JS, puis poursuivi en React TypeScript pour ajouter plus de fonctionnalités.",
+        description2: "",
+        description3: "",
+        lienProd: "https://projet-bille.netlify.app/",
+        languageDev: [
+            {
+                img: LogoReact,
+                alt: "React",
+            },
+            {
+                img: LogoHTML,
+                alt: "HTML",
+            },
+            {
+                img: LogoCSS,
+                alt: "CSS",
+            },
+            {
+                img: LogoGitHub,
+                alt: "GitHub",
+            },
+            {
+                img: LogoJavaScript,
+                alt: "JavaScript",
+            },
+            {
+                img: LogoNodeJS,
+                alt: "JavaScript",
+            },
+        ],
+    },
+    {
+        id: 3,
+        title: "GenkiAnime",
+        date: {
+            yearStart: "04/11/2024",
+            yearEnd: "29/11/2024",
+        },
+        img: GenkiAnime,
+        description1: "Deuxième projet de formation à la Wild Code School qui devait être fait en groupe mais que j'ai réalisé seul suite au défi de mon formateur. Le projet a été réalisé sous React en TypeScrypt.",        
+        description2: "",
+        description3: "",
+        lienProd: "https://genkianime.netlify.app/",
+        languageDev: [
+            {
+                img: LogoReact,
+                alt: "React",
+            },
+            {
+                img: LogoHTML,
+                alt: "HTML",
+            },
+            {
+                img: LogoCSS,
+                alt: "CSS",
+            },
+            {
+                img: LogoGitHub,
+                alt: "GitHub",
+            },
+            {
+                img: LogoJavaScript,
+                alt: "JavaScript",
+            },
+            {
+                img: LogoNodeJS,
+                alt: "JavaScript",
+            },
+            {
+                img: LogoModuleCSS,
+                alt: "Module CSS",
+            },
+        ],
+    },
+]
 
 /* Type de children. Cela type permet de prendre tout ce que React peux prendre :*/
 /* Elément JSX, string, number, null, un tableau d'élément, un fragment ou fragment*/
@@ -39,11 +149,19 @@ type childrenType = {
 
 /*Mise a disposition du contexte*/
 export function DataProvider({children}: childrenType) {
-    const [data, setData] = useState<string>("")
+    const [data, setData] = useState<string[]>([""])
     return (
         <DataContext.Provider
-             value={{date, setData}}>
+             value={{data, setData}}>
              {children}
         </DataContext.Provider>
     )
 }
+
+export const useData = () => {
+    const data = useData(DataContext);
+    if (!data) {
+      throw new Error("useData doit être utilisé à l'intérieur d'un DataProvider.");
+    }
+    return data;
+  };
