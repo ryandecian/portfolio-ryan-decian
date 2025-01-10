@@ -24,7 +24,23 @@ interface dataType {
     setData: (e: string) => void;
 }
 
-interface ProjetType {}
+interface ProjetType {
+    id: number;
+    title: string;
+    date : {
+        yearStart: string;
+        yearEnd: string;
+    };
+    img: string;
+    description1: string;
+    description2: string;
+    description3: string;
+    lienProd: string;
+    languageDev: {
+        image: string;
+        alt: string;
+    }[]
+}
 
 /* Type de children. Cela type permet de prendre tout ce que React peux prendre :*/
 /* Elément JSX, string, number, null, un tableau d'élément, un fragment ou fragment*/
