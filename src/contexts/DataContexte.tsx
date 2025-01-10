@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { useState } from "react";
 
 /*Import des images de langage dev*/
@@ -11,7 +11,9 @@ import LogoGitHub from "../assets/ProgramLanguageImg/LogoGitHubSimpleBlue.png"
 import LogoModuleCSS from "../assets/ProgramLanguageImg/LogoModuleCSS.png"
 
 /*Import des images de projets*/
-
+import AnimationCard from "../assets/Projets/AnimationCard/AnimationCard.jpg"
+import GenkiAnime from "../assets/Projets/GenkiAnime/GenkiAnime.jpg"
+import ProjetBille from "../assets/Projets/Projet-bille/Projet-bille.jpg"
 
 
 
