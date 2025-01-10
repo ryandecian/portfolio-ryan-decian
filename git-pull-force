@@ -27,24 +27,92 @@
 # TRAITEMENTS DU LOGICIEL.
 # ------------------------------------------------------------------
 
+
 # Cette commande permet de mettre a jour toutes les branches
 # d'un projet et de supprimer les branches obsolètes qui ont
 # été supprimées de GitHub
 
 
-# Attention, pour lancer cette commande il faudra : 
+# Cette version n'est compatible que sur Windows et Visual Studio Code
 
-# Lancer la commande suivante dans le terminal git :
-# chmod +x npm-run-pull-force.sh
-# Copier coller cette ligne dans package.json dans script :
-# "pull-force": "bash ./npm-run-pull-force.sh"
-# Exécution de cette commande avec :
-# npm run commit
+
+# Configuration pour rendre ce script exécutable : 
+# Il faut ouvrir le logiciel Visual Code Studio en administrateur puis
+# Copier coller les commandes entre les pointillés dans votre terminal bash : 
+
+: <<EOF
+---------------------------------------------------------------------------------------------
+
+# Enregistrer le chemin actuel
+initial_path=$(pwd)
+
+# Chemin cible pour le dossier Script
+target_path="/c/Program Files/Git/usr/bin/Script"
+
+# Chemin du fichier à déplacer (depuis la racine du projet React)
+file_to_move="./git-pull-force"
+
+# Vérifier si le dossier existe
+if [ ! -d "$target_path" ]; then
+    echo "📂 Le dossier 'Script' n'existe pas. Création en cours..."
+    mkdir -p "$target_path"
+    echo "✅ Dossier 'Script' créé avec succès."
+else
+    echo "✔️ Le dossier 'Script' existe déjà."
+fi
+
+# Vérifier si le fichier git-pull-force existe à la racine du projet
+if [ -f "$file_to_move" ]; then
+    echo "📄 Le fichier 'git-pull-force' existe. Déplacement en cours..."
+    mv "$file_to_move" "$target_path"
+    echo "✅ Fichier 'git-pull-force' déplacé vers : $target_path"
+else
+    echo "❌ Le fichier 'git-pull-force' n'a pas été trouvé à la racine du projet."
+    exit 1
+fi
+
+# Se déplacer dans le dossier cible
+cd "$target_path" || { echo "❌ Échec lors de la navigation vers $target_path"; exit 1; }
+echo "📂 Vous êtes maintenant dans : $(pwd)"
+
+# Rendre le fichier git-pull-force exécutable
+chmod +x git-pull-force
+echo "✅ Le fichier 'git-pull-force' est maintenant exécutable."
+
+# Vérifier et ajouter la ligne PATH dans ~/.bashrc si elle n'existe pas
+bashrc_file="$HOME/.bashrc"
+path_line='export PATH=$PATH:/usr/bin/Script'
+
+if ! grep -Fxq "$path_line" "$bashrc_file"; then
+    echo "🔧 La ligne PATH n'existe pas dans ~/.bashrc. Ajout en cours..."
+    echo "$path_line" >> "$bashrc_file"
+    echo "✅ Ligne ajoutée à ~/.bashrc : $path_line"
+else
+    echo "✔️ La ligne PATH existe déjà dans ~/.bashrc."
+fi
+
+# Charger le fichier .bashrc pour appliquer les changements immédiatement
+source "$bashrc_file"
+echo "🔄 Fichier ~/.bashrc rechargé pour appliquer les changements."
+
+# Retourner au chemin initial
+cd "$initial_path" || { echo "❌ Échec lors de la navigation vers $initial_path"; exit 1; }
+echo "📂 Retour au chemin initial : $(pwd)"
+
+echo "🚀 Script terminé avec succès."
+
+
+---------------------------------------------------------------------------------------------
+EOF
+
+# Pour lancer cette commande : 
+# git-pull-force
+
 
 #!/bin/bash
 
 # Version du script
-echo -e "\033[1;35mVersion du script V5.1.4\033[0m"
+echo -e "\033[1;35mVersion du script V5.2.3\033[0m"
 echo -e "\033[35mLicense - Copyright (c) 2025 Ryan DECIAN\033[0m"
 echo ""
 echo ""
