@@ -16,16 +16,31 @@ import GenkiAnime from "../assets/Projets/GenkiAnime/GenkiAnime.jpg"
 import ProjetBille from "../assets/Projets/Projet-bille/Projet-bille.jpg"
 
 
+/*------------------------------------------------------------------------------------------*/
+/*Déclaration des types*/
 
-
-
-
-type dataType = {
+interface dataType {
     data: string[];
     setData: (e: string) => void;
 }
+
+interface ProjetType {}
+
+/* Type de children. Cela type permet de prendre tout ce que React peux prendre :*/
+/* Elément JSX, string, number, null, un tableau d'élément, un fragment ou fragment*/
+interface childrenType {
+    children: React.ReactNode;
+}
+
+
+/*------------------------------------------------------------------------------------------*/
 /* Création du contexte et nom du contexte*/
+
 const DataContext = createContext<dataType | null>(null);
+
+
+/*------------------------------------------------------------------------------------------*/
+/*Déclaration des valeurs mise a disposition dans le context*/
 
 const Projets = [
     {
@@ -143,11 +158,8 @@ const Projets = [
     },
 ]
 
-/* Type de children. Cela type permet de prendre tout ce que React peux prendre :*/
-/* Elément JSX, string, number, null, un tableau d'élément, un fragment ou fragment*/
-type childrenType = {
-    children: React.ReactNode;
-}
+
+/*------------------------------------------------------------------------------------------*/
 
 /*Mise a disposition du contexte*/
 export function DataProvider({children}: childrenType) {
