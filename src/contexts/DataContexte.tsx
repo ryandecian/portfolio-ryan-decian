@@ -37,10 +37,6 @@ interface ProjectsType {
     }[]
 }
 
-interface ProjectsType {
-    id: number;
-    title: string;
-}
 interface dataType {
     data: ProjectsType[];
     setData: React.Dispatch<React.SetStateAction<ProjectsType[]>>;
@@ -183,7 +179,7 @@ const Projects: ProjectsType[] = [
 
 /*Mise a disposition du contexte*/
 export function DataProvider({children}: childrenType) {
-    const [data, setData] = useState<string[]>([""])
+    const [data, setData] = useState<ProjectsType[]>(Projects)
     return (
         <DataContext.Provider
              value={{data, setData}}>
@@ -193,7 +189,7 @@ export function DataProvider({children}: childrenType) {
 }
 
 export const useData = () => {
-    const data = useData(DataContext);
+    const data = useContext(DataContext);
     if (!data) {
       throw new Error("useData doit être utilisé à l'intérieur d'un DataProvider.");
     }
