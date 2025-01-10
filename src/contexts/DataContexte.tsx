@@ -19,12 +19,7 @@ import ProjetBille from "../assets/Projets/Projet-bille/Projet-bille.jpg"
 /*------------------------------------------------------------------------------------------*/
 /*Déclaration des types*/
 
-interface dataType {
-    data: string[];
-    setData: (e: string) => void;
-}
-
-interface ProjetType {
+interface ProjectsType {
     id: number;
     title: string;
     date : {
@@ -37,9 +32,18 @@ interface ProjetType {
     description3: string;
     lienProd: string;
     languageDev: {
-        image: string;
+        img: string;
         alt: string;
     }[]
+}
+
+interface ProjectsType {
+    id: number;
+    title: string;
+}
+interface dataType {
+    data: ProjectsType[];
+    setData: React.Dispatch<React.SetStateAction<ProjectsType[]>>;
 }
 
 /* Type de children. Cela type permet de prendre tout ce que React peux prendre :*/
@@ -50,7 +54,7 @@ interface childrenType {
 
 
 /*------------------------------------------------------------------------------------------*/
-/* Création du contexte et nom du contexte*/
+/* Création du context et nom du context*/
 
 const DataContext = createContext<dataType | null>(null);
 
@@ -58,7 +62,7 @@ const DataContext = createContext<dataType | null>(null);
 /*------------------------------------------------------------------------------------------*/
 /*Déclaration des valeurs mise a disposition dans le context*/
 
-const Projets = [
+const Projects: ProjectsType[] = [
     {
         id: 1,
         title: "AnimationCard",
