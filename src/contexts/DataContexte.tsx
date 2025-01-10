@@ -2,8 +2,31 @@ import { createContext } from "react";
 import { useState } from "react";
 type dataType = {
     data: string;
-    setData:;
+    setData: (e: string) => void;
 }
+
+class User {
+    name: string = 'Ryan';
+    age: number = 25;
+  }
+  
+  type UserInstance = InstanceType<typeof User>;
+  
+  const user: UserInstance = new User(); // OK
+  
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 /* Création du contexte et nom du contexte*/
 const DataContext = createContext<string>("");
