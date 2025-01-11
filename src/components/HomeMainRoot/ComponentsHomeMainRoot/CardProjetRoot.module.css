@@ -221,16 +221,6 @@
     }
 }
 
-.ImgLangageDevMobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem 0rem 0.3rem 0rem;
-    width: 100%;
-    max-width: 100%;
-    max-height: auto;
-}
-
 .LienProdMobile {
     margin: 0.3rem 0rem 0.5rem 0rem;
     text-decoration: none;
@@ -248,6 +238,16 @@
     text-decoration: underline;
 }
 
+.ImgLangageDevMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0rem 0.3rem 0rem;
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+}
+
 .ImgLangageDevMobile > img {
     margin: 0rem 0.2rem 0rem 0.2rem;
     width: 35px;
@@ -255,7 +255,10 @@
     object-fit: contain;
 }
 @media (max-width: 251px) {
-    .ImgLangageDevMobile {}
+    .ImgLangageDevMobile > img {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 @keyframes gradientMove {
