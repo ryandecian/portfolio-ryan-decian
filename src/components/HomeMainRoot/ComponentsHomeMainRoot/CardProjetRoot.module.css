@@ -38,6 +38,12 @@
     border-radius: 1rem 1rem 0.5rem 0.5rem;
     object-fit: contain;
 }
+@media (max-width: 251px) {
+    .CardProjetImgMobile {
+        width: 120px;
+        height: 120px;
+    }
+}
 
 .ContainerCardProjetInfoMobile {
     display: flex;
@@ -47,17 +53,35 @@
     width: calc(100% - 2rem);
     max-width: 100%;
 }
+@media (max-width: 251px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
 
 .TitleCardProjetMobile {
     margin: 0rem 0rem 0rem 0rem;
     font-size: var(--h3);
     color: var(--textColorWhite);
 }
+@media (max-width: 251px) {
+    .TitleCardProjetMobile {
+        font-size: var(--h6);
+    }
+}
 
 .YearCardProjetMobile {
     margin: 0rem 0rem 0rem 0rem;
     font-size: var(--h5);
     color: var(--textColorWhite);
+}
+@media (max-width: 251px) {
+    .YearCardProjetMobile {
+        font-size: calc(var(--h6) - 2px); /*9px*/
+    }
 }
 
 .ButtonCardProjetMobile {
@@ -100,6 +124,11 @@
     text-decoration: none; /* Supprime tout soulignement */
     transition: transform 0.3s ease; /* Transition douce pour l'agrandissement */
     animation: gradientMove 6s linear infinite; /* Animation fluide et continue */
+}
+@media (max-width: 251px) {
+    .ButtonCardProjetMobile > button {
+        font-size: var(--h6);
+    }
 }
 
 .ButtonCardProjetMobile > button:hover {

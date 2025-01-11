@@ -57,7 +57,7 @@ function HomeMainMobile() {
                                  <CardProjetRoot
                                      moduleContainerCardProjetRoot = {style.ContainerCardProjetRootMobile}
                                      moduleCardProjetImg = {style.CardProjetImgMobile}
-                                     moduleContainerCardProjetInfo = {style.ContainerCardProjetInfoPC}
+                                     moduleContainerCardProjetInfo = {style.ContainerCardProjetInfoMobile}
                                      moduleTitleCardProjet = {style.TitleCardProjetMobile}
                                      moduleYearCardProjet = {style.YearCardProjetMobile}
                                      moduleButtonCardProjet = {style.ButtonCardProjetMobile}
