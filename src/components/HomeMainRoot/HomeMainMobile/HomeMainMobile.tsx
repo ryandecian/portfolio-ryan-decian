@@ -11,21 +11,21 @@ function HomeMainMobile() {
     const {data} = useData()
     
     return (
-         <section className="HomeMainPC">
+         <section className="HomeMainMobile">
 
-             <section className="ContainerAboutHomeMainPC">
+             <section className="ContainerAboutHomeMainMobile">
 
                  <h2>A Propos</h2>
 
-                 <section className="SubContainerAboutHomeMainPC">
+                 <section className="SubContainerAboutHomeMainMobile">
 
-                     <div className="PresentationPC">
+                     <div className="PresentationMobile">
 
-                         <div className="AvatarPC">
+                         <div className="AvatarMobile">
                              <img src={Avatar} alt="Ryan DECIAN" />
                          </div>
 
-                         <div className="DescriptionPC">
+                         <div className="DescriptionMobile">
                              <p>
                                  Pleinement engagé dans la philosophie 
                                  de l’apprentissage tout au long de la vie, 
@@ -48,9 +48,9 @@ function HomeMainMobile() {
 
              </section>
 
-             <section className="ContainerProjetHomeMainPC">
+             <section className="ContainerProjetHomeMainMobile">
                  <h2>Projets</h2>
-                 <section className="MapProjetPC">
+                 <section className="MapProjetMobile">
                      {
                          data.map((Var) => {
                               return (
@@ -86,7 +86,7 @@ function HomeMainMobile() {
                          })
                      }
                  </section>
-                 <Link to="Projets" className="ButtonHomeMainPC">Voir plus de projets</Link>
+                 <Link to="Projets" className="ButtonHomeMainMobile">Voir plus de projets</Link>
              </section>
 
          </section>
