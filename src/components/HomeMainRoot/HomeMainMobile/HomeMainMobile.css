@@ -106,6 +106,7 @@
     .MapProjetMobile {
         grid-template-columns: var(--MapProjetMobile-grid-template-columns-Media250px); /*Largeur d'une cellule grid = 55px*/
         grid-auto-rows: var(--MapProjet-grid-auto-rows-Media250px); /*Hauteur d'une cellule grid 181.5px*/
+        gap: var(--MapProjetMobile-gap-Media250px);
     }
 }
 

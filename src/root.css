@@ -54,6 +54,7 @@
 
                      /*Media250px*/
                          --MapProjetMobile-grid-template-columns-Media250px: repeat(auto-fit, 55px);
+                         --MapProjetMobile-gap-Media250px: 10px;
 
          /* 2) Dimension des cards*/
              /*Face avant (Before)*/
