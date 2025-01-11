@@ -44,12 +44,12 @@
                          --MapProjetPC-grid-template-columns-Origin: repeat(auto-fit, 110px);
                          --MapProjetPC-gap-Origin: 20px;
                     
-                     /*Media250px*/
+                     /*Media???px*/
                  
                  /*MapProjetMobile*/
                      /*Origin*/
-                         --MapProjetMobile-grid-template-columns: repeat(auto-fit, 110px);
-                         --MapProjet-gap-Mobile: 20px;
+                         --MapProjetMobile-grid-template-columns-Origin: repeat(auto-fit, 110px);
+                         --MapProjetMobile-gap-Origin: 20px;
 
                      /*Media250px*/
 
