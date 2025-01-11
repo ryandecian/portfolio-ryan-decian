@@ -102,6 +102,12 @@
     width: 100%;
     max-width: 100%;
 }
+@media (max-width: 251px){
+    .MapProjetMobile {
+        grid-template-columns: calc(var(--MapProjetMobile-grid-template-columns) / 2); /*Largeur grid = 55px*/
+        grid-auto-rows: var(--MapProjet-grid-auto-rows-Root); /*A voir après*/
+    }
+}
 
 /*Logique du bouton (Voir plus de projets) */
 .ButtonHomeMainMobile {

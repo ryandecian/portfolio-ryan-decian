@@ -14,6 +14,13 @@
     margin: auto;
     transition: all 0.3s ease;
 }
+@media (max-width: 251px) {
+    .ContainerCardProjetRootMobile {
+        grid-column: var(--GridColumnFaceBefore);
+        width: calc(var(--WidthFaceBefore) / 2); /*Largeur d'une CardProjet = 120px*/
+        height: var(--HeightFaceBefore); /*A revoir après*/
+    }
+}
 
 .CardProjetImgMobile {
     display: flex;
@@ -114,6 +121,13 @@
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
+}
+@media (max-width: 251px) {
+    .ContainerSubCardProjetRootMobile {
+        grid-column: var(--GridColumnFaceAfter);
+        width: calc(var(--WidthFaceAfter) / 2); /*Largeur d'une CardProjet = 250px*/
+        height: var(--HeightFaceAfter); /*A revoir après*/
+    }
 }
 
 .SubContainerSubCardProjetRootMobile {
