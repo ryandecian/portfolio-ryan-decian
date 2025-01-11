@@ -37,12 +37,12 @@
 
          /* 1) Dimension des container CardProjet*/
              /*MapProjetRoot*/ /*ClassName présent dans les composants HomeMain PC et Mobile*/
-                 --MapProjet-grid-auto-rows-Root: 343.8px;
+                 --MapProjetRoot-grid-auto-rows-Origin: 343.8px;
 
                  /*MapProjetPC*/
                      /*Origin*/
-                         --MapProjetPC-grid-template-columns: repeat(auto-fit, 110px);
-                         --MapProjet-gap-PC: 20px;
+                         --MapProjetPC-grid-template-columns-Origin: repeat(auto-fit, 110px);
+                         --MapProjetPC-gap-Origin: 20px;
                     
                      /*Media250px*/
                  

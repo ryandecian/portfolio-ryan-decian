@@ -95,7 +95,7 @@
 .MapProjetMobile {
     display: grid;
     grid-template-columns: var(--MapProjetMobile-grid-template-columns);
-    grid-auto-rows: var(--MapProjet-grid-auto-rows-Root);
+    grid-auto-rows: var(--MapProjetRoot-grid-auto-rows-Origin);
     gap: var(--MapProjet-gap-Mobile);
     justify-content: center;
     align-items: start;
