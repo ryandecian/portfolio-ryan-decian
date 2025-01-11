@@ -1,0 +1,17 @@
+@import "../../../root.css";
+
+@media (max-width: 769px){
+    .HomeMainMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--textColorWhite);
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .HomeMainMobile {
+        display: none;
+    }
+}

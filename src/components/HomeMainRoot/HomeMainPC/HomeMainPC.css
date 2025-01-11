@@ -1,6 +1,11 @@
 @import "../../../root.css";
 
-@media (min-width: 768px){
+@media (max-width: 768px){
+    .HomeMainPC {
+        display: none;
+    }
+}
+@media (min-width: 767px){
     .HomeMainPC {
         display: flex;
         justify-content: center;
