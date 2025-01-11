@@ -1,6 +1,15 @@
-
+import "./HomeMainMobile.css"
+import { Link } from "react-router-dom";
+import CardProjetRoot from "../ComponentsHomeMainRoot/CardProjetRoot";
+import style from "../ComponentsHomeMainRoot/CardProjetRoot.module.css"
+import ProgramLanguageRoot from "../ComponentsHomeMainRoot/ProgramLanguageRoot";
+import Avatar from "../../../assets/data-img/RyanDECIAN.jpg"
+import { useData } from "../../../contexts/DataContexte";
 
 function HomeMainMobile() {
+
+    const {data} = useData()
+    
     return (
          <section className="HomeMainPC">
 
