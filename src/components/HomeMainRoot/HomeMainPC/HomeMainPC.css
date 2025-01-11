@@ -95,7 +95,7 @@
 .MapProjetPC {
     display: grid;
     grid-template-columns: var(--MapProjetPC-grid-template-columns);
-    grid-auto-rows: var(--MapProjet-grid-auto-rows-PC);
+    grid-auto-rows: var(--MapProjet-grid-auto-rows-Root);
     gap: var(--MapProjet-gap-PC);
     justify-content: center;
     align-items: start;

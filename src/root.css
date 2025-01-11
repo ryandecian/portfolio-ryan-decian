@@ -37,7 +37,7 @@
 
          /* 1) Dimension des container CardProjet*/
              /*MapProjetRoot*/
-                 --MapProjet-grid-auto-rows-Root: min-content;
+                 --MapProjet-grid-auto-rows-Root: 343.8px;
 
              /*MapProjetPC*/
                  --MapProjetPC-grid-template-columns: repeat(auto-fit, 110px);
@@ -51,12 +51,12 @@
              /*Face avant (Before)*/
                  --GridColumnFaceBefore: span 2;
                  --WidthFaceBefore: 240px;
-                 --HeightFaceBefore: 325px;
+                 --HeightFaceBefore: 343.8px;
 
              /*Face Arrière (After)*/
                  --GridColumnFaceAfter: span 4;
                  --WidthFaceAfter: 500px;
-                 --HeightFaceAfter: 325px;
+                 --HeightFaceAfter: 343.8px;
 
          /* 3) Couleur du Text des CardProjet*/
              /*Couleur titre du projet*/
