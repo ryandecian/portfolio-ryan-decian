@@ -41,6 +41,9 @@
                  --MapProjet-grid-auto-rows: min-content;
                  --MapProjet-gap: 20px;
 
+             /*MapProjetMobile*/
+             --MapProjetMobile-grid-template-columns: repeat(auto-fit, 110px);
+
          /* 2) Dimension des cards*/
              /*Face avant (Before)*/
                  --GridColumnFaceBefore: span 2;

@@ -44,7 +44,7 @@
 #!/bin/bash
 
 # Version du script
-echo -e "\033[1;35mVersion du script V5.1.4\033[0m"
+echo -e "\033[1;35mVersion du script V5.1.5\033[0m"
 echo -e "\033[35mLicense - Copyright (c) 2025 Ryan DECIAN\033[0m"
 echo ""
 echo ""
@@ -125,7 +125,7 @@ ignored_files=()
 echo ""
 echo -e "\033[1;36m🔄 Début des mises a jours\033[0m"
 echo ""
-echo -e "\033[1;36m🛠️ Suppression des branches locales obsolètes\033[0m"
+echo -e "\033[1;36m🛠️. Suppression des branches locales obsolètes\033[0m"
 echo ""
 # Suppression des branches locales obsolètes
 for branch in $local_branches; do
@@ -133,7 +133,7 @@ for branch in $local_branches; do
         continue
     fi
     if ! echo "$remote_branches" | grep -q "^$branch$"; then
-        echo -e"\033[31m🗑️ La branche locale '$branch' n'existe plus sur le dépôt distant. Suppression locale...\033[0m"
+        echo -e "\033[31m🗑️. La branche locale '$branch' n'existe plus sur le dépôt distant. Suppression locale...\033[0m"
         echo ""
         git branch -d "$branch"
         deleted_branches+=("$branch")
