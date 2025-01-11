@@ -38,6 +38,7 @@
          /* 1) Dimension des container CardProjet*/
              /*MapProjetRoot*/ /*ClassName présent dans les composants HomeMain PC et Mobile*/
                  --MapProjetRoot-grid-auto-rows-Origin: 343.8px;
+                 --MapProjetRoot-grid-auto-rows-Media250px: 181.5px;
 
                  /*MapProjetPC*/
                      /*Origin*/
@@ -52,6 +53,7 @@
                          --MapProjetMobile-gap-Origin: 20px;
 
                      /*Media250px*/
+                         --MapProjetMobile-grid-template-columns-Media250px: repeat(auto-fit, 55px);
 
          /* 2) Dimension des cards*/
              /*Face avant (Before)*/

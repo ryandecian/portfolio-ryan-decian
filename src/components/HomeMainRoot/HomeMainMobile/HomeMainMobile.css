@@ -94,8 +94,8 @@
 
 .MapProjetMobile {
     display: grid;
-    grid-template-columns: var(--MapProjetMobile-grid-template-columns-Origin);
-    grid-auto-rows: var(--MapProjetRoot-grid-auto-rows-Origin);
+    grid-template-columns: var(--MapProjetMobile-grid-template-columns-Origin); /*Largeur d'une cellule grid = 55px*/
+    grid-auto-rows: var(--MapProjetRoot-grid-auto-rows-Origin); /*Hauteur d'une cellule grid 343.8px*/
     gap: var(--MapProjetMobile-gap-Origin);
     justify-content: center;
     align-items: start;
@@ -104,8 +104,8 @@
 }
 @media (max-width: 251px){
     .MapProjetMobile {
-        grid-template-columns: calc(var(--MapProjetMobile-grid-template-columns) / 2); /*Largeur grid = 55px*/
-        grid-auto-rows: var(--MapProjet-grid-auto-rows-Root); /*A voir après*/
+        grid-template-columns: var(--MapProjetMobile-grid-template-columns-Media250px); /*Largeur d'une cellule grid = 55px*/
+        grid-auto-rows: var(--MapProjet-grid-auto-rows-Media250px); /*Hauteur d'une cellule grid 181.5px*/
     }
 }
 
