@@ -46,32 +46,32 @@ function HomeMainMobile() {
                          data.map((Var) => {
                               return (
                                  <CardProjetRoot
-                                     moduleContainerCardProjetRoot = {style.ContainerCardProjetRootPC}
-                                     moduleCardProjetImg = {style.CardProjetImgPC}
+                                     moduleContainerCardProjetRoot = {style.ContainerCardProjetRootMobile}
+                                     moduleCardProjetImg = {style.CardProjetImgMobile}
                                      moduleContainerCardProjetInfo = {style.ContainerCardProjetInfoPC}
-                                     moduleTitleCardProjet = {style.TitleCardProjetPC}
-                                     moduleYearCardProjet = {style.YearCardProjetPC}
-                                     moduleButtonCardProjet = {style.ButtonCardProjetPC}
+                                     moduleTitleCardProjet = {style.TitleCardProjetMobile}
+                                     moduleYearCardProjet = {style.YearCardProjetMobile}
+                                     moduleButtonCardProjet = {style.ButtonCardProjetMobile}
                                      src = {Var.img}
                                      title = {Var.title}
                                      yearStart = {Var.date.yearStart}
                                      yearEnd = {Var.date.yearEnd}
                                      key = {Var.id}
 
-                                     moduleContainerSubCardProjetRoot = {style.ContainerSubCardProjetRootPC}
-                                     moduleSubContainerSubCardProjetRoot = {style.SubContainerSubCardProjetRootPC}
-                                     moduleLienProdTitle = {style.LienProdTitlePC}
-                                     moduleTitleSubCardProjet = {style.TitleSubCardProjetPC}
-                                     moduleDateSubCardProjet = {style.DateSubCardProjetPC}
-                                     moduleContainerSubCardProjetInfo = {style.ContainerSubCardProjetInfoPC}
-                                     moduleDescriptionSubCardProjet = {style.DescriptionSubCardProjetPC}
+                                     moduleContainerSubCardProjetRoot = {style.ContainerSubCardProjetRootMobile}
+                                     moduleSubContainerSubCardProjetRoot = {style.SubContainerSubCardProjetRootMobile}
+                                     moduleLienProdTitle = {style.LienProdTitleMobile}
+                                     moduleTitleSubCardProjet = {style.TitleSubCardProjetMobile}
+                                     moduleDateSubCardProjet = {style.DateSubCardProjetMobile}
+                                     moduleContainerSubCardProjetInfo = {style.ContainerSubCardProjetInfoMobile}
+                                     moduleDescriptionSubCardProjet = {style.DescriptionSubCardProjetMobile}
                                      description1 = {Var.description1}
                                      description2 = {Var.description2}
                                      description3 = {Var.description3}
-                                     moduleImgLangageDev = {style.ImgLangageDevPC}
+                                     moduleImgLangageDev = {style.ImgLangageDevMobile}
                                      languageDev = {Var.languageDev || []}
                                      lienProd = {Var.lienProd}
-                                     moduleLienProd = {style.LienProdPC}
+                                     moduleLienProd = {style.LienProdMobile}
                                  />
                              )
                          })
