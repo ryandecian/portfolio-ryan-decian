@@ -166,6 +166,11 @@
     flex-direction: column;
     width: var(--WidthFaceAfter);
 }
+@media (max-width: 251px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: calc(var(--WidthFaceAfter) / 2); /*Largeur d'une CardProjet = 250px*/
+    }
+}
 
 .LienProdTitleMobile {
     text-decoration: none;
@@ -181,6 +186,11 @@
     font-size: var(--h2);
     color: var(--TitleCardProjet);
 }
+@media (max-width: 251px) {
+    .TitleSubCardProjetMobile {
+        font-size: var(--h5);
+    }
+}
 
 .ContainerSubCardProjetInfoMobile {
     display: flex;
@@ -195,10 +205,20 @@
     font-size: var(--p);
     margin: 0.5rem 0rem 0rem 0rem;
 }
+@media (max-width: 251px) {
+    .DateSubCardProjetMobile {
+        font-size: var(--h6);
+    }
+}
 
 .DescriptionSubCardProjetMobile {
     margin: 1rem 0rem 0rem 0rem;
     font-size: var(--p);
+}
+@media (max-width: 251px) {
+    .DescriptionSubCardProjetMobile {
+        font-size: var(--h6);
+    }
 }
 
 .ImgLangageDevMobile {
@@ -217,6 +237,11 @@
     color: var(--LienProjet);
     font-size: var(--p);
 }
+@media (max-width: 251px) {
+    .LienProdMobile {
+        font-size: var(--h6);
+    }
+}
 
 .LienProdPC:hover {
     color: var(--LienProjetHover);
@@ -228,6 +253,9 @@
     width: 35px;
     height: 35px;
     object-fit: contain;
+}
+@media (max-width: 251px) {
+    .ImgLangageDevMobile {}
 }
 
 @keyframes gradientMove {
@@ -263,6 +291,11 @@
     text-decoration: none; /* Supprime tout soulignement */
     transition: transform 0.3s ease; /* Transition douce pour l'agrandissement */
     animation: gradientMove 6s linear infinite; /* Animation fluide et continue */
+}
+@media (max-width: 251px) {
+    .ContainerSubCardProjetRootMobile > button {
+        font-size: calc(var(--h6) - 2);
+    }
 }
 
 .ContainerSubCardProjetRootMobile > button:hover {
