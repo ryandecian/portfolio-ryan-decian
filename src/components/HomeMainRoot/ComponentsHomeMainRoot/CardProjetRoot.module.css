@@ -8,8 +8,8 @@
     flex-direction: column;
     grid-column: var(--GridColumnFaceBefore);
     border-radius: 1rem;
-    width: var(--WidthFaceBefore);
-    height: var(--HeightFaceBefore);
+    width: var(--WidthFaceBefore-Origin);
+    height: var(--HeightFaceBefore-Origin);
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
@@ -17,8 +17,8 @@
 @media (max-width: 251px) {
     .ContainerCardProjetRootMobile {
         grid-column: var(--GridColumnFaceBefore);
-        width: calc(var(--WidthFaceBefore) / 2); /*Largeur d'une CardProjet = 120px*/
-        height: var(--HeightFaceBefore); /*A revoir après*/
+        width: var(--WidthFaceBefore-Media250px); /*Largeur d'une CardProjet = 120px*/
+        height: var(--HeightFaceBefore-Media250px); /*Hauteur d'une CardProjet = 181.5px*/
     }
 }
 

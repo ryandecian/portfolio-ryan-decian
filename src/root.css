@@ -50,8 +50,15 @@
          /* 2) Dimension des cards*/
              /*Face avant (Before)*/
                  --GridColumnFaceBefore: span 2;
-                 --WidthFaceBefore: 240px;
-                 --HeightFaceBefore: 343.8px;
+
+                     /*Origin*/
+                         --WidthFaceBefore-Origin: 240px;
+                         --HeightFaceBefore-Origin: 343.8px;
+
+                     /*Media250px*/
+                         --WidthFaceBefore-Media250px: 120px;
+                         --HeightFaceBefore-Media250px: 181.5px;
+
 
              /*Face Arrière (After)*/
                  --GridColumnFaceAfter: span 4;
