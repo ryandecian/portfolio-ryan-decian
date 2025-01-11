@@ -36,13 +36,16 @@
      /*Logique des CardProjet*/
 
          /* 1) Dimension des container CardProjet*/
+             /*MapProjetRoot*/
+                 --MapProjet-grid-auto-rows-Root: min-content;
+
              /*MapProjetPC*/
                  --MapProjetPC-grid-template-columns: repeat(auto-fit, 110px);
-                 --MapProjet-grid-auto-rows: min-content;
-                 --MapProjet-gap: 20px;
-
-             /*MapProjetMobile*/
-             --MapProjetMobile-grid-template-columns: repeat(auto-fit, 110px);
+                 --MapProjet-gap-PC: 20px;
+                 
+                 /*MapProjetMobile*/
+                 --MapProjetMobile-grid-template-columns: repeat(auto-fit, 110px);
+                 --MapProjet-gap-Mobile: 20px;
 
          /* 2) Dimension des cards*/
              /*Face avant (Before)*/
