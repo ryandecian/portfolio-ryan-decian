@@ -297,7 +297,7 @@
 }
 @media (max-width: 251px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size: calc(var(--h6) - 2);
+        font-size: var(--h6);
     }
 }
 
