@@ -8,11 +8,18 @@
     flex-direction: column;
     grid-column: var(--GridColumnFaceBefore);
     border-radius: 1rem;
-    width: var(--WidthFaceBefore);
-    height: var(--HeightFaceBefore);
+    width: var(--WidthFaceBefore-Origin);
+    height: var(--HeightFaceBefore-Origin);
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
+}
+@media (max-width: 251px) {
+    .ContainerCardProjetRootMobile {
+        grid-column: var(--GridColumnFaceBefore);
+        width: var(--WidthFaceBefore-Media250px); /*Largeur d'une CardProjet = 100px*/
+        height: var(--HeightFaceBefore-Media250px); /*Hauteur d'une CardProjet = 193.5px*/
+    }
 }
 
 .CardProjetImgMobile {
@@ -25,11 +32,17 @@
 }
 
 .CardProjetImgMobile > img {
-    width: 240px;
-    height: 240px;
+    width: var(--Width-ImgCardProjet-Root); /*240px*/
+    height: var(--Height-ImgCardProjet-Root); /*240px*/
     max-width: 100%;
     border-radius: 1rem 1rem 0.5rem 0.5rem;
     object-fit: contain;
+}
+@media (max-width: 251px) {
+    .CardProjetImgMobile > img {
+        width: var(--Width-ImgCardProjet-Media250px); /*100px*/
+        height: var(--Width-ImgCardProjet-Media250px); /*100px*/
+    }
 }
 
 .ContainerCardProjetInfoMobile {
@@ -40,17 +53,36 @@
     width: calc(100% - 2rem);
     max-width: 100%;
 }
+@media (max-width: 251px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
 
 .TitleCardProjetMobile {
     margin: 0rem 0rem 0rem 0rem;
     font-size: var(--h3);
     color: var(--textColorWhite);
 }
+@media (max-width: 251px) {
+    .TitleCardProjetMobile {
+        font-size: var(--h6);
+    }
+}
 
 .YearCardProjetMobile {
     margin: 0rem 0rem 0rem 0rem;
     font-size: var(--h5);
     color: var(--textColorWhite);
+}
+@media (max-width: 251px) {
+    .YearCardProjetMobile {
+        font-size: calc(var(--h6) - 2px); /*9px*/
+    }
 }
 
 .ButtonCardProjetMobile {
@@ -94,6 +126,11 @@
     transition: transform 0.3s ease; /* Transition douce pour l'agrandissement */
     animation: gradientMove 6s linear infinite; /* Animation fluide et continue */
 }
+@media (max-width: 251px) {
+    .ButtonCardProjetMobile > button {
+        font-size: var(--h6);
+    }
+}
 
 .ButtonCardProjetMobile > button:hover {
     transform: scale(1.1); /* Légère mise en avant au survol */
@@ -107,13 +144,20 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    grid-column: var(--GridColumnFaceAfter);
+    grid-column: var(--GridColumnFaceAfter); /*span 4*/
     border-radius: 1rem;
-    width: var(--WidthFaceAfter);
-    height: var(--HeightFaceAfter);
+    width: var(--WidthFaceAfter-Origin); /*500px*/
+    height: var(--HeightFaceAfter-Origin); /*343.8px*/
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
+}
+@media (max-width: 251px) {
+    .ContainerSubCardProjetRootMobile {
+        grid-column: var(--GridColumnFaceAfter); /*span 4*/
+        width: var(--WidthFaceAfter-Media250px); /*Largeur d'une CardProjet = 210px*/
+        height: var(--HeightFaceAfter-Media250px); /*Hauteur d'une CardProjet = 193.5px*/
+    }
 }
 
 .SubContainerSubCardProjetRootMobile {
@@ -121,7 +165,12 @@
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    width: var(--WidthFaceAfter);
+    width: var(--WidthFaceAfter-Origin); /*Largeur d'une CardProjet = 500px*/
+}
+@media (max-width: 251px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: var(--WidthFaceAfter-Media250px); /*Largeur d'une CardProjet = 210px*/
+    }
 }
 
 .LienProdTitleMobile {
@@ -138,6 +187,11 @@
     font-size: var(--h2);
     color: var(--TitleCardProjet);
 }
+@media (max-width: 251px) {
+    .TitleSubCardProjetMobile {
+        font-size: var(--h5);
+    }
+}
 
 .ContainerSubCardProjetInfoMobile {
     display: flex;
@@ -147,15 +201,49 @@
     width: calc(100% - 1rem); /*Attention, dépend de la valeur margin qui doit être = */
     margin: 0.5rem 0rem 0rem 0.5rem;
 }
+@media (max-width: 251px) {
+    .ContainerSubCardProjetInfoMobile {
+        margin: 0.2rem 0rem 0rem 0rem;
+    }
+}
 
 .DateSubCardProjetMobile {
     font-size: var(--p);
     margin: 0.5rem 0rem 0rem 0rem;
 }
+@media (max-width: 251px) {
+    .DateSubCardProjetMobile {
+        font-size: var(--h6);
+    }
+}
 
 .DescriptionSubCardProjetMobile {
     margin: 1rem 0rem 0rem 0rem;
     font-size: var(--p);
+}
+@media (max-width: 251px) {
+    .DescriptionSubCardProjetMobile {
+        font-size: calc(var(--h6) - 2px);
+        margin: 0.5rem 0rem 0rem 0rem;
+    }
+}
+
+.LienProdMobile {
+    margin: 0.3rem 0rem 0.5rem 0rem;
+    text-decoration: none;
+    color: var(--LienProjet);
+    font-size: var(--p);
+}
+@media (max-width: 251px) {
+    .LienProdMobile {
+        font-size: var(--h6);
+        margin: 0.3rem 0rem 0rem 0rem;
+    }
+}
+
+.LienProdPC:hover {
+    color: var(--LienProjetHover);
+    text-decoration: underline;
 }
 
 .ImgLangageDevMobile {
@@ -168,23 +256,17 @@
     max-height: auto;
 }
 
-.LienProdMobile {
-    margin: 0.3rem 0rem 0.5rem 0rem;
-    text-decoration: none;
-    color: var(--LienProjet);
-    font-size: var(--p);
-}
-
-.LienProdPC:hover {
-    color: var(--LienProjetHover);
-    text-decoration: underline;
-}
-
 .ImgLangageDevMobile > img {
     margin: 0rem 0.2rem 0rem 0.2rem;
     width: 35px;
     height: 35px;
     object-fit: contain;
+}
+@media (max-width: 251px) {
+    .ImgLangageDevMobile > img {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 @keyframes gradientMove {
@@ -221,6 +303,11 @@
     transition: transform 0.3s ease; /* Transition douce pour l'agrandissement */
     animation: gradientMove 6s linear infinite; /* Animation fluide et continue */
 }
+@media (max-width: 251px) {
+    .ContainerSubCardProjetRootMobile > button {
+        font-size: var(--h6);
+    }
+}
 
 .ContainerSubCardProjetRootMobile > button:hover {
     transform: scale(1.1); /* Légère mise en avant au survol */
@@ -235,8 +322,8 @@
     flex-direction: column;
     grid-column: var(--GridColumnFaceBefore);
     border-radius: 1rem;
-    width: var(--WidthFaceBefore);
-    height: var(--HeightFaceBefore);
+    width: var(--WidthFaceBefore-Origin);
+    height: var(--HeightFaceBefore-Origin);
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
@@ -338,8 +425,8 @@
     flex-direction: column;
     grid-column: var(--GridColumnFaceAfter);
     border-radius: 1rem;
-    width: var(--WidthFaceAfter);
-    height: var(--HeightFaceAfter);
+    width: var(--WidthFaceAfter-Origin); /*500px*/
+    height: var(--HeightFaceAfter-Origin); /*343.8px*/
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
