@@ -36,34 +36,52 @@
      /*Logique des CardProjet*/
 
          /* 1) Dimension des container CardProjet*/
-             /*MapProjetRoot*/
-                 --MapProjet-grid-auto-rows-Root: 343.8px;
+             /*MapProjetRoot*/ /*ClassName présent dans les composants HomeMain PC et Mobile*/
+                 --MapProjetRoot-grid-auto-rows-Origin: 343.8px;
+                 --MapProjetRoot-grid-auto-rows-Media250px: 200px; /*Ancienne valeur 193.5px*/
+                 --Width-ImgCardProjet-Root: 240px;
+                 --Height-ImgCardProjet-Root: 240px;
 
-             /*MapProjetPC*/
-                 --MapProjetPC-grid-template-columns: repeat(auto-fit, 110px);
-                 --MapProjet-gap-PC: 20px;
+                 /*MapProjetPC*/
+                     /*Origin*/
+                         --MapProjetPC-grid-template-columns-Origin: repeat(auto-fit, 110px);
+                         --MapProjetPC-gap-Origin: 20px;
+                    
+                     /*Media???px*/
                  
                  /*MapProjetMobile*/
-                 --MapProjetMobile-grid-template-columns: repeat(auto-fit, 110px);
-                 --MapProjet-gap-Mobile: 20px;
+                     /*Origin*/
+                         --MapProjetMobile-grid-template-columns-Origin: repeat(auto-fit, 110px);
+                         --MapProjetMobile-gap-Origin: 20px;
+
+                     /*Media250px*/
+                         --MapProjetMobile-grid-template-columns-Media250px: repeat(auto-fit, 45px);
+                         --MapProjetMobile-gap-Media250px: 10px;
+                         --Width-ImgCardProjet-Media250px: 100px;
+                         --Height-ImgCardProjet-Media250px: 100px;
 
          /* 2) Dimension des cards*/
              /*Face avant (Before)*/
                  --GridColumnFaceBefore: span 2;
 
-                     /*Origin*/
-                         --WidthFaceBefore-Origin: 240px;
-                         --HeightFaceBefore-Origin: 343.8px;
+                 /*Origin*/
+                     --WidthFaceBefore-Origin: 240px;
+                     --HeightFaceBefore-Origin: 343.8px;
 
-                     /*Media250px*/
-                         --WidthFaceBefore-Media250px: 120px;
-                         --HeightFaceBefore-Media250px: 181.5px;
+                 /*Media250px*/
+                     --WidthFaceBefore-Media250px: 100px;
+                     --HeightFaceBefore-Media250px: 200px;/*Ancienne valeur 193.5px*/
 
-
-             /*Face Arrière (After)*/
+             /*Face avant (After)*/
                  --GridColumnFaceAfter: span 4;
-                 --WidthFaceAfter: 500px;
-                 --HeightFaceAfter: 343.8px;
+
+                 /*Origin*/
+                     --WidthFaceAfter-Origin: 500px;
+                     --HeightFaceAfter-Origin: 343.8px;
+
+                 /*Media250px*/
+                     --WidthFaceAfter-Media250px: 210px;
+                     --HeightFaceAfter-Media250px: 200px; /*Ancienne valeur 193.5px*/
 
          /* 3) Couleur du Text des CardProjet*/
              /*Couleur titre du projet*/
@@ -82,4 +100,9 @@ body {
     padding: 20px; /* Encadre un espace minimum sur le site*/
     /*text-align: justify; 
     /*ligne le texte en ajustant les espaces pour des lignes de même longueur.*/
+}
+@media (max-width: 251px) {
+    body {
+        padding: 10px;
+    }
 }
