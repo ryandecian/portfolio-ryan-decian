@@ -38,7 +38,7 @@
          /* 1) Dimension des container CardProjet*/
              /*MapProjetRoot*/ /*ClassName présent dans les composants HomeMain PC et Mobile*/
                  --MapProjetRoot-grid-auto-rows-Origin: 343.8px;
-                 --MapProjetRoot-grid-auto-rows-Media250px: 213.5px;
+                 --MapProjetRoot-grid-auto-rows-Media250px: 193.5px;
                  --Width-ImgCardProjet-Root: 240px;
                  --Height-ImgCardProjet-Root: 240px;
 
@@ -55,7 +55,7 @@
                          --MapProjetMobile-gap-Origin: 20px;
 
                      /*Media250px*/
-                         --MapProjetMobile-grid-template-columns-Media250px: repeat(auto-fit, 55px);
+                         --MapProjetMobile-grid-template-columns-Media250px: repeat(auto-fit, 45px);
                          --MapProjetMobile-gap-Media250px: 10px;
                          --Width-ImgCardProjet-Media250px: 100px;
                          --Height-ImgCardProjet-Media250px: 100px;
@@ -70,7 +70,7 @@
 
                  /*Media250px*/
                      --WidthFaceBefore-Media250px: 120px;
-                     --HeightFaceBefore-Media250px: 213.5px;
+                     --HeightFaceBefore-Media250px: 193.5px;
 
 
              /*Face Arrière (After)*/
