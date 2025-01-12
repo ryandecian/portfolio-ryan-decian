@@ -94,9 +94,9 @@
 
 .MapProjetMobile {
     display: grid;
-    grid-template-columns: var(--MapProjetMobile-grid-template-columns);
-    grid-auto-rows: var(--MapProjet-grid-auto-rows-Root);
-    gap: var(--MapProjet-gap-Mobile);
+    grid-template-columns: var(--MapProjetMobile-grid-template-columns-Origin); /*Largeur d'une cellule grid = 110px*/
+    grid-auto-rows: var(--MapProjetRoot-grid-auto-rows-Origin); /*Hauteur d'une cellule grid 343.8px*/
+    gap: var(--MapProjetMobile-gap-Origin); /*gap de 20px*/
     justify-content: center;
     align-items: start;
     width: 100%;
@@ -104,8 +104,9 @@
 }
 @media (max-width: 251px){
     .MapProjetMobile {
-        grid-template-columns: calc(var(--MapProjetMobile-grid-template-columns) / 2); /*Largeur grid = 55px*/
-        grid-auto-rows: var(--MapProjet-grid-auto-rows-Root); /*A voir après*/
+        grid-template-columns: var(--MapProjetMobile-grid-template-columns-Media250px); /*Largeur d'une cellule grid = 45px*/
+        grid-auto-rows: var(--MapProjetRoot-grid-auto-rows-Media250px); /*Hauteur d'une cellule grid 193.5px*/
+        gap: var(--MapProjetMobile-gap-Media250px); /*gap de 10px*/
     }
 }
 
@@ -127,6 +128,12 @@
     margin: 2rem 0rem 1rem 0rem;
     text-decoration: none;
     transition: transform 0.3s ease, background 0.3s ease; /* Ajoute une transition fluide */
+}
+@media (max-width: 251px) {
+    .ButtonHomeMainMobile {
+        font-size: calc(var(--h6) - 2px);
+        padding: 0.1rem 0.5rem;
+    }
 }
 
 .ButtonHomeMainMobile:hover {
