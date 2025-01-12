@@ -129,6 +129,12 @@
     text-decoration: none;
     transition: transform 0.3s ease, background 0.3s ease; /* Ajoute une transition fluide */
 }
+@media (max-width: 251px) {
+    .ButtonHomeMainMobile {
+        font-size: calc(var(--h6) - 2px);
+        padding: 0.1rem 0.5rem;
+    }
+}
 
 .ButtonHomeMainMobile:hover {
     transform: scale(1.05); /* Légère mise en avant */
