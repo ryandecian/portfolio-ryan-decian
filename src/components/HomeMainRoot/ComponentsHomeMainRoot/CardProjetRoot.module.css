@@ -17,7 +17,7 @@
 @media (max-width: 251px) {
     .ContainerCardProjetRootMobile {
         grid-column: var(--GridColumnFaceBefore);
-        width: var(--WidthFaceBefore-Media250px); /*Largeur d'une CardProjet = 105px*/
+        width: var(--WidthFaceBefore-Media250px); /*Largeur d'une CardProjet = 100px*/
         height: var(--HeightFaceBefore-Media250px); /*Hauteur d'une CardProjet = 193.5px*/
     }
 }
