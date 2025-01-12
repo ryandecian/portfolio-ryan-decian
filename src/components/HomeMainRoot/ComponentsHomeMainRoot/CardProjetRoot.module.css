@@ -144,19 +144,19 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    grid-column: var(--GridColumnFaceAfter);
+    grid-column: var(--GridColumnFaceAfter); /*span 4*/
     border-radius: 1rem;
-    width: var(--WidthFaceAfter);
-    height: var(--HeightFaceAfter);
+    width: var(--WidthFaceAfter-Origin); /*500px*/
+    height: var(--HeightFaceAfter-Origin); /*343.8px*/
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
 }
 @media (max-width: 251px) {
     .ContainerSubCardProjetRootMobile {
-        grid-column: var(--GridColumnFaceAfter);
-        width: calc(var(--WidthFaceAfter) / 2); /*Largeur d'une CardProjet = 250px*/
-        height: var(--HeightFaceAfter); /*A revoir après*/
+        grid-column: var(--GridColumnFaceAfter); /*span 4*/
+        width: var(--WidthFaceAfter-Media250px); /*Largeur d'une CardProjet = 210px*/
+        height: var(--HeightFaceAfter-Media250px); /*Hauteur d'une CardProjet = 193.5px*/
     }
 }
 
@@ -165,11 +165,11 @@
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    width: var(--WidthFaceAfter);
+    width: var(--WidthFaceAfter-Origin); /*Largeur d'une CardProjet = 500px*/
 }
 @media (max-width: 251px) {
     .SubContainerSubCardProjetRootMobile {
-        width: calc(var(--WidthFaceAfter) / 2); /*Largeur d'une CardProjet = 250px*/
+        width: var(--WidthFaceAfter-Media250px); /*Largeur d'une CardProjet = 210px*/
     }
 }
 
@@ -201,6 +201,11 @@
     width: calc(100% - 1rem); /*Attention, dépend de la valeur margin qui doit être = */
     margin: 0.5rem 0rem 0rem 0.5rem;
 }
+@media (max-width: 251px) {
+    .ContainerSubCardProjetInfoMobile {
+        margin: 0.2rem 0rem 0rem 0rem;
+    }
+}
 
 .DateSubCardProjetMobile {
     font-size: var(--p);
@@ -218,7 +223,8 @@
 }
 @media (max-width: 251px) {
     .DescriptionSubCardProjetMobile {
-        font-size: var(--h6);
+        font-size: calc(var(--h6) - 2px);
+        margin: 0.5rem 0rem 0rem 0rem;
     }
 }
 
@@ -231,6 +237,7 @@
 @media (max-width: 251px) {
     .LienProdMobile {
         font-size: var(--h6);
+        margin: 0.3rem 0rem 0rem 0rem;
     }
 }
 
@@ -257,8 +264,8 @@
 }
 @media (max-width: 251px) {
     .ImgLangageDevMobile > img {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -315,8 +322,8 @@
     flex-direction: column;
     grid-column: var(--GridColumnFaceBefore);
     border-radius: 1rem;
-    width: var(--WidthFaceBefore);
-    height: var(--HeightFaceBefore);
+    width: var(--WidthFaceBefore-Origin);
+    height: var(--HeightFaceBefore-Origin);
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
@@ -418,8 +425,8 @@
     flex-direction: column;
     grid-column: var(--GridColumnFaceAfter);
     border-radius: 1rem;
-    width: var(--WidthFaceAfter);
-    height: var(--HeightFaceAfter);
+    width: var(--WidthFaceAfter-Origin); /*500px*/
+    height: var(--HeightFaceAfter-Origin); /*343.8px*/
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;

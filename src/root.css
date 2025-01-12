@@ -38,7 +38,7 @@
          /* 1) Dimension des container CardProjet*/
              /*MapProjetRoot*/ /*ClassName présent dans les composants HomeMain PC et Mobile*/
                  --MapProjetRoot-grid-auto-rows-Origin: 343.8px;
-                 --MapProjetRoot-grid-auto-rows-Media250px: 193.5px;
+                 --MapProjetRoot-grid-auto-rows-Media250px: 200px; /*Ancienne valeur 193.5px*/
                  --Width-ImgCardProjet-Root: 240px;
                  --Height-ImgCardProjet-Root: 240px;
 
@@ -70,13 +70,18 @@
 
                  /*Media250px*/
                      --WidthFaceBefore-Media250px: 100px;
-                     --HeightFaceBefore-Media250px: 193.5px;
+                     --HeightFaceBefore-Media250px: 200px;/*Ancienne valeur 193.5px*/
 
-
-             /*Face Arrière (After)*/
+             /*Face avant (After)*/
                  --GridColumnFaceAfter: span 4;
-                 --WidthFaceAfter: 500px;
-                 --HeightFaceAfter: 343.8px;
+
+                 /*Origin*/
+                     --WidthFaceAfter-Origin: 500px;
+                     --HeightFaceAfter-Origin: 343.8px;
+
+                 /*Media250px*/
+                     --WidthFaceAfter-Media250px: 210px;
+                     --HeightFaceAfter-Media250px: 200px; /*Ancienne valeur 193.5px*/
 
          /* 3) Couleur du Text des CardProjet*/
              /*Couleur titre du projet*/
