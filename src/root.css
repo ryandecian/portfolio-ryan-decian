@@ -92,3 +92,8 @@ body {
     /*text-align: justify; 
     /*ligne le texte en ajustant les espaces pour des lignes de même longueur.*/
 }
+@media (max-width: 251px) {
+    body {
+        padding: 10px;
+    }
+}
