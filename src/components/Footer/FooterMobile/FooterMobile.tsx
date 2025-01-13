@@ -7,10 +7,11 @@ function FooterMobile() {
         <section className="FooterMobile">
          <p className="CopyrightMobile"> 
                  <span className="DateLogMobile">
-                     {dateNow === 2024 ? `©2024 ` : `©2024 - ${dateNow} `}
+                     {dateNow === 2024 ? `©2024 - ` : `©2024 - ${dateNow} - `}
                  </span>
-             Ryan DECIAN. Tous droits réservés.
+             Ryan DECIAN.
          </p>
+         <p className="CopyrightSubMobile">Tous droits réservés.</p>
         </section>
     )
 }

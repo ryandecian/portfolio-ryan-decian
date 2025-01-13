@@ -14,12 +14,16 @@
 @media (max-width: 251px) {
     .FooterMobile {
         display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
     }
 }
 
 .CopyrightMobile {
     font-size: var(--h5);
     color: var(--textColorWhite);
+    margin: 0.7rem 0rem 0rem 0rem;
 }
 @media (max-width: 251px) {
     .CopyrightMobile {
@@ -33,6 +37,17 @@
 }
 @media (max-width: 251px) {
     .DateLogMobile {
+        font-size: var(--h7);
+    }
+}
+
+.CopyrightSubMobile {
+    font-size: var(--h5);
+    color: var(--textColorWhite);
+    margin: 0rem 0rem 0rem 0rem;
+}
+@media (max-width: 251px) {
+    .CopyrightSubMobile {
         font-size: var(--h7);
     }
 }
