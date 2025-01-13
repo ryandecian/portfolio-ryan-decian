@@ -1,23 +1,23 @@
 @import "../../../root.css";
 
-.FooterPC {
+.FooterMobile {
     /*Le code de cette balise ne sert a rien pour le moment*/
     display: flex;
     justify-content: start;
     align-items: center;
 }
-@media (max-width: 768px) {
-    .FooterPC {
+@media (min-width: 769px) {
+    .FooterMobile {
         display: none;
     }
 }
 
-.CopyrightPC {
+.CopyrightMobile {
     font-size: var(--h5);
     color: var(--textColorWhite);
 }
 
-.DateLogPC {
+.DateLogMobile {
     font-size: var(--h5);
     color: var(--Copyright);
 }
