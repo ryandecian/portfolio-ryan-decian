@@ -11,13 +11,28 @@
         display: none;
     }
 }
+@media (max-width: 251px) {
+    .FooterMobile {
+        display: flex;
+    }
+}
 
 .CopyrightMobile {
     font-size: var(--h5);
     color: var(--textColorWhite);
 }
+@media (max-width: 251px) {
+    .CopyrightMobile {
+        font-size: var(--h7);
+    }
+}
 
 .DateLogMobile {
     font-size: var(--h5);
     color: var(--Copyright);
+}
+@media (max-width: 251px) {
+    .DateLogMobile {
+        font-size: var(--h7);
+    }
 }
