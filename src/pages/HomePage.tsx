@@ -1,7 +1,7 @@
 import "./HomePage.css"
 import NavRoot from "../components/NavRoot/NavRoot";
 import HomeMainRoot from "../components/HomeMainRoot/HomeMainRoot";
-import FooterRoot from "../components/HomeMainRoot/Footer/FooterRoot";
+import FooterRoot from "../components/Footer/FooterRoot";
 
 function HomePage() {
     return(

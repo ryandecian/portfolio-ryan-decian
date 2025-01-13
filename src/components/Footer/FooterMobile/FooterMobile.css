@@ -1,0 +1,53 @@
+@import "../../../root.css";
+
+.FooterMobile {
+    /*Le code de cette balise ne sert a rien pour le moment*/
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+@media (min-width: 769px) {
+    .FooterMobile {
+        display: none;
+    }
+}
+@media (max-width: 251px) {
+    .FooterMobile {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+.CopyrightMobile {
+    font-size: var(--h5);
+    color: var(--textColorWhite);
+    margin: 0.7rem 0rem 0rem 0rem;
+}
+@media (max-width: 251px) {
+    .CopyrightMobile {
+        font-size: var(--h7);
+    }
+}
+
+.DateLogMobile {
+    font-size: var(--h5);
+    color: var(--Copyright);
+}
+@media (max-width: 251px) {
+    .DateLogMobile {
+        font-size: var(--h7);
+    }
+}
+
+.CopyrightSubMobile {
+    font-size: var(--h5);
+    color: var(--textColorWhite);
+    margin: 0rem 0rem 0rem 0rem;
+}
+@media (max-width: 251px) {
+    .CopyrightSubMobile {
+        font-size: var(--h7);
+    }
+}
