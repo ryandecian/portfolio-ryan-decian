@@ -9,7 +9,7 @@ function FooterPC() {
                  <span className="DateLogPC">
                      {dateNow === 2024 ? `©2024 ` : `©2024 - ${dateNow} `}
                  </span>
-             Ryan DECIAN. Tous droits réservés.
+             - Ryan DECIAN. Tous droits réservés.
          </p>
         </section>
     )
