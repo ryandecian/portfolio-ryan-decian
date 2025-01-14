@@ -20,7 +20,12 @@
     font-size: var(--h1);
     color: var(--textColorWhite);
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
+    .NavMobile > a > h1 {
+        font-size: var(--h2);
+    }
+}
+@media (min-width: 251px) and (max-width: 350px) {
     .NavMobile > a > h1 {
         font-size: var(--h2);
     }
@@ -49,10 +54,16 @@
     background-color: var(--BackgroudMenuBurger);
     transition: right 0.5s ease;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .sideNav {
         width: 100vw;
         height: 100vh;
+    }
+}
+@media (min-width: 251px) and (max-width: 350px) {
+    .sideNav {
+        width: 250px;
+        height: 100%;
     }
 }
 
@@ -78,9 +89,14 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     #closeBtn {
         padding: 0.3rem 1.2rem;
+    }
+}
+@media (min-width: 251px) and (max-width: 350px) {
+    #closeBtn {
+        padding: 0.4rem 1.35rem;
     }
 }
 
@@ -103,10 +119,16 @@
     background-color: var(--textColorWhite);
     margin: 0.5rem 0rem;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .menuBurger > span {
         width: 30px;
         height: 4px;
+    }
+}
+@media (min-width: 251px) and (max-width: 350px) {
+    .menuBurger > span {
+        width: 32px;
+        height: 4;
     }
 }
 
@@ -129,11 +151,19 @@
     margin: 2rem 0rem 0rem 0rem;
     width: 100%;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .sideNav > section {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100vw;
+    }
+}
+@media (min-width: 251px) and (max-width: 350px) {
+    .sideNav > section {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
