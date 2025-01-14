@@ -2,11 +2,11 @@ import mail from "../../../assets/data-img/mail-icon.webp"
 import github from "../../../assets/data-img/github-icon.png"
 import linkedin from "../../../assets/data-img/linkedin-icon.png"
 
-interface IconNavRoot {
+interface IconNavRootType {
     iconNav: string;
 }
 
-function IconNavRoot(Props: IconNavRoot) {
+function IconNavRoot(Props: IconNavRootType) {
     const {iconNav} = Props
     return (
          <section>
