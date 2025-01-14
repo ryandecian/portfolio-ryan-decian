@@ -25,6 +25,11 @@
         font-size: var(--h2);
     }
 }
+@media (max-width: 351px) {
+    .NavMobile > a > h1 {
+        font-size: var(--h2);
+    }
+}
 
 .NavMobile > h2 {
     margin-top: 0.5rem;
