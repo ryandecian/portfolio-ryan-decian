@@ -34,6 +34,11 @@ from "../NavPC/NavPC.tsx"
         font-size: var(--h5);
     }
 }
+@media (min-width: 251px) and (max-width: 350px) {
+    .MenuLiMobile {
+        font-size: calc(var(--h5) + 1px);
+    }
+}
 
 
 /*Style version PC*/

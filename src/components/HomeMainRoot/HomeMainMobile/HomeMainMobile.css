@@ -1,14 +1,12 @@
 @import "../../../root.css";
 
-@media (max-width: 769px){
-    .HomeMainMobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: var(--textColorWhite);
-        width: 100%;
-    }
+.HomeMainMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--textColorWhite);
+    width: 100%;
 }
 @media (min-width: 768px) {
     .HomeMainMobile {
@@ -74,7 +72,12 @@
 .DescriptionMobile {
     font-size: var(--p);
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
+    .DescriptionMobile {
+        font-size: var(--h6);
+    }
+}
+@media (min-width: 251px) and (max-width: 350px) {
     .DescriptionMobile {
         font-size: var(--h6);
     }
@@ -102,13 +105,14 @@
     width: 100%;
     max-width: 100%;
 }
-@media (max-width: 251px){
+@media (max-width: 250px) {
     .MapProjetMobile {
         grid-template-columns: var(--MapProjetMobile-grid-template-columns-Media250px); /*Largeur d'une cellule grid = 45px*/
         grid-auto-rows: var(--MapProjetRoot-grid-auto-rows-Media250px); /*Hauteur d'une cellule grid 193.5px*/
         gap: var(--MapProjetMobile-gap-Media250px); /*gap de 10px*/
     }
 }
+@media (min-width: 251px) and (max-width: 350px) {}
 
 /*Logique du bouton (Voir plus de projets) */
 .ButtonHomeMainMobile {
@@ -129,7 +133,7 @@
     text-decoration: none;
     transition: transform 0.3s ease, background 0.3s ease; /* Ajoute une transition fluide */
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .ButtonHomeMainMobile {
         font-size: calc(var(--h6) - 2px);
         padding: 0.1rem 0.5rem;

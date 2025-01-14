@@ -10,52 +10,52 @@ import LogoGitHub from "../../../assets/ProgramLanguageImg/LogoGitHubSimpleBlue.
 
 function ProgramLanguageRoot() {
     return (
-         <div className={style.LanguageDevPC}>
+         <div className={style.LanguageDevRoot}>
 
-             <div className={style.Container1PC}>
-                 <div className={style.BorderContainerPC}>
+             <div className={style.Container1Root}>
+                 <div className={style.BorderContainerRoot}>
                      <img src={LogoReact} alt="Logo React" />
                      <h5>REACT</h5>
                  </div>
              </div>
 
-             <div className={style.Container2PC}>
-                 <div className={style.BorderContainerPC}>
+             <div className={style.Container2Root}>
+                 <div className={style.BorderContainerRoot}>
                      <img src={LogoCSS} alt="Logo CSS" />
                      <h5>CSS</h5>
                  </div>
              </div>
 
-             <div className={style.Container3PC}>
-                 <div className={style.BorderContainerPC}>
+             <div className={style.Container3Root}>
+                 <div className={style.BorderContainerRoot}>
                      <img src={LogoCSS} alt="Logo Module CSS" />
                      <h5>Module CSS</h5>
                  </div>
              </div>
 
-             <div className={style.Container4PC}>
-                 <div className={style.BorderContainerPC}>
+             <div className={style.Container4Root}>
+                 <div className={style.BorderContainerRoot}>
                      <img src={LogoHTML} alt="Logo HTML" />
                      <h5>HTML</h5>
                  </div>
              </div>
 
-             <div className={style.Container5PC}>
-                 <div className={style.BorderContainerPC}>
+             <div className={style.Container5Root}>
+                 <div className={style.BorderContainerRoot}>
                      <img src={LogoJavaScript} alt="Logo JavaScript" />
                      <h5>JAVASCRIPT</h5>
                  </div>
              </div>
 
-             <div className={style.Container6PC}>
-                 <div className={style.BorderContainerPC}>
+             <div className={style.Container6Root}>
+                 <div className={style.BorderContainerRoot}>
                      <img src={LogoNodeJS} alt="Logo NodeJS" />
                      <h5>NodeJS</h5>
                  </div>
              </div>
 
-             <div className={style.Container7PC}>
-                 <div className={style.BorderContainerPC}>
+             <div className={style.Container7Root}>
+                 <div className={style.BorderContainerRoot}>
                      <img src={LogoGitHub} alt="Logo GitHub" />
                      <h5>Git et GitHub</h5>
                  </div>
