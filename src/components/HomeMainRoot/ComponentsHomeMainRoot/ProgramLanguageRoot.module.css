@@ -349,7 +349,7 @@
     background-color: black;
     object-fit: contain;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .LanguageDevRoot > div .BorderContainerRoot > img {
         width: 26px;
         height: 26px;
