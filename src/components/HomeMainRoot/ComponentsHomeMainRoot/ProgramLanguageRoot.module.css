@@ -20,7 +20,7 @@
         grid-template-columns: repeat(6, 34px);
         grid-template-rows: repeat(6, 20px);
         column-gap: 4px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -29,9 +29,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 4px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -40,9 +40,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 5px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -51,9 +51,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 6px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -62,9 +62,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 7px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -73,9 +73,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 8px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -84,9 +84,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 9px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -95,9 +95,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 10px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -106,9 +106,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 11px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -117,9 +117,9 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 12px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
     }
@@ -128,10 +128,11 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 13px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
+        max-width: 525px;
         margin: 0rem 0rem 0rem 0rem;
     }
 }
@@ -139,10 +140,11 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 14px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
+        max-width: 525px;
         margin: 0rem 0rem 0rem 0rem;
     }
 }
@@ -150,10 +152,11 @@
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 5); /*No*/
-        grid-template-rows: repeat(6, 30px);
+        grid-template-rows: repeat(6, 30px); /*No*/
         column-gap: 15px;
-        row-gap: 10px;
+        row-gap: 10px; /*No*/
         width: 100%;
+        max-width: 525px;
         margin: 0rem 0rem 0rem 0rem;
     }
 }
@@ -172,9 +175,82 @@
 @media (max-width: 250px) {
     .LanguageDevRoot > div {
         width: 72px;
-        height: 50px;
+        height: 50px;  /*No*/
     }
 }
+@media (min-width: 251px) and (max-width: 270px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 271px) and (max-width: 300px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 301px) and (max-width: 330px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 331px) and (max-width: 360px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 361px) and (max-width: 390px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 391px) and (max-width: 420px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 421px) and (max-width: 450px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 451px) and (max-width: 480px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 481px) and (max-width: 510px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 511px) and (max-width: 540px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 541px) and (max-width: 570px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+@media (min-width: 571px) and (max-width: 600px) {
+    .LanguageDevRoot > div {
+        width: 72px;
+        height: 50px;  /*No*/
+    }
+}
+
 
 .LanguageDevRoot > div > .BorderContainerRoot {
     display: flex;
