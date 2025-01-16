@@ -55,6 +55,7 @@ function HomeMainMobile() {
                          data.map((Var) => {
                               return (
                                  <CardProjetRoot
+                                     key = {Var.id}
                                      moduleContainerCardProjetRoot = {style.ContainerCardProjetRootMobile}
                                      moduleCardProjetImg = {style.CardProjetImgMobile}
                                      moduleContainerCardProjetInfo = {style.ContainerCardProjetInfoMobile}
@@ -65,7 +66,6 @@ function HomeMainMobile() {
                                      title = {Var.title}
                                      yearStart = {Var.date.yearStart}
                                      yearEnd = {Var.date.yearEnd}
-                                     key = {Var.id}
 
                                      moduleContainerSubCardProjetRoot = {style.ContainerSubCardProjetRootMobile}
                                      moduleSubContainerSubCardProjetRoot = {style.SubContainerSubCardProjetRootMobile}
