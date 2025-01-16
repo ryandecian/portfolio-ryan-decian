@@ -25,7 +25,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 251px) and (max-width: 270px) {
+@media (min-width: 250px) and (max-width: 270px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 35px);
@@ -36,7 +36,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 271px) and (max-width: 300px) {
+@media (min-width: 270px) and (max-width: 300px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 38px);
@@ -47,7 +47,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 301px) and (max-width: 330px) {
+@media (min-width: 300px) and (max-width: 330px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 43px);
@@ -58,7 +58,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 331px) and (max-width: 360px) {
+@media (min-width: 330px) and (max-width: 360px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 48px);
@@ -69,7 +69,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 361px) and (max-width: 390px) {
+@media (min-width: 360px) and (max-width: 390px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 53px);
@@ -80,7 +80,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 391px) and (max-width: 420px) {
+@media (min-width: 390px) and (max-width: 420px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 58px);
@@ -91,7 +91,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 421px) and (max-width: 450px) {
+@media (min-width: 420px) and (max-width: 450px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 63px);
@@ -102,7 +102,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 451px) and (max-width: 480px) {
+@media (min-width: 450px) and (max-width: 480px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 68px);
@@ -113,7 +113,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 481px) and (max-width: 510px) {
+@media (min-width: 480px) and (max-width: 510px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 73px);
@@ -124,7 +124,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 511px) and (max-width: 540px) {
+@media (min-width: 510px) and (max-width: 540px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 78px);
@@ -136,7 +136,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 541px) and (max-width: 570px) {
+@media (min-width: 540px) and (max-width: 570px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 83px);
@@ -148,7 +148,7 @@
         margin: 0rem 0rem 0rem 0rem;
     }
 }
-@media (min-width: 571px) and (max-width: 600px) {
+@media (min-width: 570px) and (max-width: 600px) {
     .LanguageDevRoot {
         display: grid;
         grid-template-columns: repeat(6, 88px);
@@ -178,73 +178,73 @@
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 251px) and (max-width: 270px) {
+@media (min-width: 250px) and (max-width: 270px) {
     .LanguageDevRoot > div {
         width: 74px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 271px) and (max-width: 300px) {
+@media (min-width: 270px) and (max-width: 300px) {
     .LanguageDevRoot > div {
         width: 80px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 301px) and (max-width: 330px) {
+@media (min-width: 300px) and (max-width: 330px) {
     .LanguageDevRoot > div {
         width: 91px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 331px) and (max-width: 360px) {
+@media (min-width: 330px) and (max-width: 360px) {
     .LanguageDevRoot > div {
         width: 102px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 361px) and (max-width: 390px) {
+@media (min-width: 360px) and (max-width: 390px) {
     .LanguageDevRoot > div {
         width: 113px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 391px) and (max-width: 420px) {
+@media (min-width: 390px) and (max-width: 420px) {
     .LanguageDevRoot > div {
         width: 124px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 421px) and (max-width: 450px) {
+@media (min-width: 420px) and (max-width: 450px) {
     .LanguageDevRoot > div {
         width: 135px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 451px) and (max-width: 480px) {
+@media (min-width: 450px) and (max-width: 480px) {
     .LanguageDevRoot > div {
         width: 146px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 481px) and (max-width: 510px) {
+@media (min-width: 480px) and (max-width: 510px) {
     .LanguageDevRoot > div {
         width: 157px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 511px) and (max-width: 540px) {
+@media (min-width: 510px) and (max-width: 540px) {
     .LanguageDevRoot > div {
         width: 168px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 541px) and (max-width: 570px) {
+@media (min-width: 540px) and (max-width: 570px) {
     .LanguageDevRoot > div {
         width: 179px;
         height: 50px;  /*No*/
     }
 }
-@media (min-width: 571px) and (max-width: 600px) {
+@media (min-width: 570px) and (max-width: 600px) {
     .LanguageDevRoot > div {
         width: 190px;
         height: 50px;  /*No*/
@@ -269,73 +269,73 @@
         height: 48px; /*No*/
     }
 }
-@media (min-width: 251px) and (max-width: 270px) {
+@media (min-width: 250px) and (max-width: 270px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 72px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 271px) and (max-width: 300px) {
+@media (min-width: 270px) and (max-width: 300px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 78px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 301px) and (max-width: 330px) {
+@media (min-width: 300px) and (max-width: 330px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 79px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 331px) and (max-width: 360px) {
+@media (min-width: 330px) and (max-width: 360px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 100px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 361px) and (max-width: 390px) {
+@media (min-width: 360px) and (max-width: 390px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 111px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 391px) and (max-width: 420px) {
+@media (min-width: 390px) and (max-width: 420px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 121px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 421px) and (max-width: 450px) {
+@media (min-width: 420px) and (max-width: 450px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 132px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 451px) and (max-width: 480px) {
+@media (min-width: 450px) and (max-width: 480px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 143px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 481px) and (max-width: 510px) {
+@media (min-width: 480px) and (max-width: 510px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 153px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 511px) and (max-width: 540px) {
+@media (min-width: 510px) and (max-width: 540px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 164px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 541px) and (max-width: 570px) {
+@media (min-width: 540px) and (max-width: 570px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 175px;
         height: 48px; /*No*/
     }
 }
-@media (min-width: 571px) and (max-width: 600px) {
+@media (min-width: 570px) and (max-width: 600px) {
     .LanguageDevRoot > div > .BorderContainerRoot {
         width: 184px;
         height: 48px; /*No*/
@@ -367,7 +367,7 @@
     margin: 0.4rem 0px 0px 0px;
     font-size: var(--h5);
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .LanguageDevRoot > div > .BorderContainerRoot > h5 {
         margin: 0rem 0rem 0rem 0rem;
         font-size: var(--h6);
