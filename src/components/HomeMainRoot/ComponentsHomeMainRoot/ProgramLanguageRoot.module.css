@@ -28,7 +28,7 @@
 @media (min-width: 250px) and (max-width: 270px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 35px);
+        grid-template-columns: repeat(6, 37.15px);
         grid-template-rows: repeat(6, 20px);
         column-gap: 4px;
         row-gap: 10px;
@@ -39,7 +39,7 @@
 @media (min-width: 270px) and (max-width: 300px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 38px);
+        grid-template-columns: repeat(6, 40.30px);
         grid-template-rows: repeat(6, 22.5px);
         column-gap: 5px;
         row-gap: 10px;
@@ -50,7 +50,7 @@
 @media (min-width: 300px) and (max-width: 330px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 43px);
+        grid-template-columns: repeat(6, 43.45px);
         grid-template-rows: repeat(6, 25px);
         column-gap: 6px;
         row-gap: 10px;
@@ -61,7 +61,7 @@
 @media (min-width: 330px) and (max-width: 360px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 48px);
+        grid-template-columns: repeat(6, 46.60px);
         grid-template-rows: repeat(6, 27.5px);
         column-gap: 7px;
         row-gap: 10px;
@@ -72,7 +72,7 @@
 @media (min-width: 360px) and (max-width: 390px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 53px);
+        grid-template-columns: repeat(6, 49.75px);
         grid-template-rows: repeat(6, 30px);
         column-gap: 8px;
         row-gap: 11px;
@@ -83,7 +83,7 @@
 @media (min-width: 390px) and (max-width: 420px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 58px);
+        grid-template-columns: repeat(6, 52.90px);
         grid-template-rows: repeat(6, 32.5px);
         column-gap: 9px;
         row-gap: 11px;
@@ -94,7 +94,7 @@
 @media (min-width: 420px) and (max-width: 450px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 63px);
+        grid-template-columns: repeat(6, 56.90px);
         grid-template-rows: repeat(6, 35px);
         column-gap: 10px;
         row-gap: 12px;
@@ -105,7 +105,7 @@
 @media (min-width: 450px) and (max-width: 480px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 68px);
+        grid-template-columns: repeat(6, 59.20px);
         grid-template-rows: repeat(6, 37.5px);
         column-gap: 11px;
         row-gap: 12px;
@@ -116,7 +116,7 @@
 @media (min-width: 480px) and (max-width: 510px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 73px);
+        grid-template-columns: repeat(6, 62.35px);
         grid-template-rows: repeat(6, 40px);
         column-gap: 12px;
         row-gap: 13px;
@@ -127,7 +127,7 @@
 @media (min-width: 510px) and (max-width: 540px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 78px);
+        grid-template-columns: repeat(6, 65.50px);
         grid-template-rows: repeat(6, 42.5px);
         column-gap: 13px;
         row-gap: 13px;
@@ -139,7 +139,7 @@
 @media (min-width: 540px) and (max-width: 570px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 83px);
+        grid-template-columns: repeat(6, 68.65px);
         grid-template-rows: repeat(6, 45px);
         column-gap: 14px;
         row-gap: 14px;
@@ -151,7 +151,7 @@
 @media (min-width: 570px) and (max-width: 600px) {
     .LanguageDevRoot {
         display: grid;
-        grid-template-columns: repeat(6, 88px);
+        grid-template-columns: repeat(6, 71.80px);
         grid-template-rows: repeat(6, 47.5px); /*No*/
         column-gap: 15px;
         row-gap: 14px;
