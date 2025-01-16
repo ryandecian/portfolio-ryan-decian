@@ -30,7 +30,7 @@
         display: grid;
         grid-template-columns: repeat(6, 37.15px);
         grid-template-rows: repeat(6, 20px);
-        column-gap: 4px;
+        column-gap: 4.85px;
         row-gap: 10px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -41,7 +41,7 @@
         display: grid;
         grid-template-columns: repeat(6, 40.30px);
         grid-template-rows: repeat(6, 22.5px);
-        column-gap: 5px;
+        column-gap: 5.70px;
         row-gap: 10px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -52,7 +52,7 @@
         display: grid;
         grid-template-columns: repeat(6, 43.45px);
         grid-template-rows: repeat(6, 25px);
-        column-gap: 6px;
+        column-gap: 6.55px;
         row-gap: 10px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -63,7 +63,7 @@
         display: grid;
         grid-template-columns: repeat(6, 46.60px);
         grid-template-rows: repeat(6, 27.5px);
-        column-gap: 7px;
+        column-gap: 7.40px;
         row-gap: 10px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -74,7 +74,7 @@
         display: grid;
         grid-template-columns: repeat(6, 49.75px);
         grid-template-rows: repeat(6, 30px);
-        column-gap: 8px;
+        column-gap: 8.25px;
         row-gap: 11px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -85,7 +85,7 @@
         display: grid;
         grid-template-columns: repeat(6, 52.90px);
         grid-template-rows: repeat(6, 32.5px);
-        column-gap: 9px;
+        column-gap: 9.10px;
         row-gap: 11px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -96,7 +96,7 @@
         display: grid;
         grid-template-columns: repeat(6, 56.90px);
         grid-template-rows: repeat(6, 35px);
-        column-gap: 10px;
+        column-gap: 9.95px;
         row-gap: 12px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -107,7 +107,7 @@
         display: grid;
         grid-template-columns: repeat(6, 59.20px);
         grid-template-rows: repeat(6, 37.5px);
-        column-gap: 11px;
+        column-gap: 10.80px;
         row-gap: 12px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -118,7 +118,7 @@
         display: grid;
         grid-template-columns: repeat(6, 62.35px);
         grid-template-rows: repeat(6, 40px);
-        column-gap: 12px;
+        column-gap: 11.65px;
         row-gap: 13px;
         width: 100%;
         margin: 0rem 0rem 0rem 0rem;
@@ -129,7 +129,7 @@
         display: grid;
         grid-template-columns: repeat(6, 65.50px);
         grid-template-rows: repeat(6, 42.5px);
-        column-gap: 13px;
+        column-gap: 12.50px;
         row-gap: 13px;
         width: 100%;
         max-width: 525px;
@@ -141,7 +141,7 @@
         display: grid;
         grid-template-columns: repeat(6, 68.65px);
         grid-template-rows: repeat(6, 45px);
-        column-gap: 14px;
+        column-gap: 13.35px;
         row-gap: 14px;
         width: 100%;
         max-width: 525px;
@@ -153,7 +153,7 @@
         display: grid;
         grid-template-columns: repeat(6, 71.80px);
         grid-template-rows: repeat(6, 47.5px); /*No*/
-        column-gap: 15px;
+        column-gap: 14.20px;
         row-gap: 14px;
         width: 100%;
         max-width: 525px;
