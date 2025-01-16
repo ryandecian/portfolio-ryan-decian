@@ -16,7 +16,6 @@ interface CardProjetRootProps {
     title: string;
     yearStart?: string;
     yearEnd?: string;
-    key: number;
     description1?: string;
     description2?: string;
     description3?: string;
@@ -46,7 +45,6 @@ function CardProjetRoot(Props: CardProjetRootProps) {
          title, 
          yearStart, 
          yearEnd, 
-         key, 
          description1, 
          description2, 
          description3, 
@@ -78,7 +76,7 @@ function CardProjetRoot(Props: CardProjetRootProps) {
                      <img src={src} alt={title} />
                  </div>
 
-                 <div className={moduleContainerCardProjetInfo} key={key}>
+                 <div className={moduleContainerCardProjetInfo}>
                      <h1 className={moduleTitleCardProjet}>{title}</h1>
                      <h3 className={moduleYearCardProjet}>{yearEnd}</h3>
                  </div>

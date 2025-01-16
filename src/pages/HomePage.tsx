@@ -12,22 +12,23 @@ function HomePage() {
      }
 
     return(
-           <Helmet>
-                {/* Balises SEO */}
-                     {/* Balise pour Google */}
-                          <title>{SEO.title}</title>
-                          <meta name="description" content={SEO.description}/>
+           <>
+                <Helmet>
+                     {/* Balises SEO */}
+                          {/* Balise pour Google */}
+                               <title>{SEO.title}</title>
+                               <meta name="description" content={SEO.description}/>
 
-                     {/* Balises OpenGraph - Facebook, Linkedin, WhatsApp, Instagram*/}
-                          <meta property="og:title" content={SEO.title} />
-                          <meta property="og:description" content={SEO.description} />
-                          <meta property="og:image" content="" /> {/* Non fournis pour le moment */}
-                          <meta property="og:url" content={SEO.url} />
+                          {/* Balises OpenGraph - Facebook, Linkedin, WhatsApp, Instagram*/}
+                               <meta property="og:title" content={SEO.title} />
+                               <meta property="og:description" content={SEO.description} />
+                               <meta property="og:image" content="" /> {/* Non fournis pour le moment */}
+                               <meta property="og:url" content={SEO.url} />
 
-                     {/* Balises Twitter Cards */}
-                          <meta name="twitter:title" content={SEO.title} />
-                          <meta name="twitter:description" content={SEO.description} />
-
+                          {/* Balises Twitter Cards */}
+                               <meta name="twitter:title" content={SEO.title} />
+                               <meta name="twitter:description" content={SEO.description} />
+                </Helmet>
 
                 <header>
                      <NavRoot />
@@ -38,7 +39,7 @@ function HomePage() {
                 <footer>
                      <FooterRoot />
                 </footer>
-           </Helmet>
+           </>
     )
 }
 
