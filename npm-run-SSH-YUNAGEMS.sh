@@ -118,94 +118,50 @@ echo ""
 echo -e "\033[35mDébut d'exécution du script\033[0m"
 echo ""
 
-# Étape 1 : Piège pour nettoyer le fichier temporaire en cas de sortie du script
-trap "rm -f .gitmessage.txt" EXIT
+#!/bin/bash
 
-# Étape 2 : Retrait des fichiers en zone de staging
-echo -e "\033[36m🗑️. Retrait des fichiers en zone de staging\033[0m"
-git reset
-echo ""
-
-# Étape 3 : Vérification agent SSH
 # Emplacement du fichier pour stocker les informations de l'agent
-echo -e "\033[36m🔍 Vérification si un agent SSH est actif\033[0m"
-echo ""
 SSH_ENV="$HOME/.ssh-agent.env"
+NAS_USER="Ryan DECIAN"
+NAS_HOST="decian.ddnsfree.com"
+NAS_PORT="44218"
+SSH_KEY="$HOME/.ssh/id_ed25519"  # Remplace par ta clé privée si elle est différente
 
 # Fonction pour démarrer un nouvel agent SSH
 start_agent() {
-    echo ""
-    echo "🔑 Démarrage d'un nouvel agent SSH..."
+    echo -e "\033[36m🔑 Démarrage d'un nouvel agent SSH...\033[0m"
     echo ""
     eval "$(ssh-agent -s)" > "$SSH_ENV"
     echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$SSH_ENV"
     echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> "$SSH_ENV"
-    ssh-add ~/.ssh/id_ed25519 > /dev/null 2>&1
+    ssh-add "$SSH_KEY" > /dev/null 2>&1
     if [ $? -eq 0 ]; then
-        echo "🔐 Clé SSH ajoutée avec succès : ~/.ssh/id_ed25519"
+        echo -e "\033[32m🔐 Clé SSH ajoutée avec succès : $SSH_KEY\033[0m"
     else
-        echo "❌ Échec lors de l'ajout de la clé SSH : ~/.ssh/id_ed25519"
+        echo -e "\033[31m❌ Échec lors de l'ajout de la clé SSH : $SSH_KEY\033[0m"
+        exit 1
     fi
 }
 
 # Recharger ou démarrer l'agent SSH
-echo -e "\033[36m🔄 Recharger ou démarrer l'agent SSH\033[0m"
+echo -e "\033[36m🔄 Vérification ou démarrage de l'agent SSH\033[0m"
 echo ""
 if [ -f "$SSH_ENV" ]; then
     source "$SSH_ENV" > /dev/null
     if ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
         start_agent
+    else
+        echo -e "\033[32m✅ Un agent SSH actif a été détecté.\033[0m"
     fi
 else
     start_agent
 fi
-echo -e "\033[34m✅ Traitement agent SSH terminé\033[0m"
-echo ""
 
-# Étape 4 : Affiche l'état actuel du dépôt
-echo -e "\033[36m📄 Vérification de l'état actuel du dépôt...\033[0m"
-git status
-echo ""
-
-# Étape 5 : Demande le message de commit
-read -p $'\033[1;33mEntrez votre message de commit : \033[0m' msg
-echo ""
-
-# Étape 6 : Récupère les fichiers modifiés, nouveaux et supprimés
-files=$(git ls-files --modified --deleted --others --exclude-standard)
-
-# Étape 7 : Vérifie s'il y a des fichiers à ajouter
-if [ -z "$files" ]; then
-    echo -e "\033[1;31m❌ Aucun fichier modifié, supprimé ou nouveau fichier à ajouter.\033[0m"
-    echo -e "\033[1;35mCommit annulé.\033[0m"
-    exit 1
+# Connexion au NAS
+echo -e "\033[36m🌐 Connexion à votre NAS Synology en SSH...\033[0m"
+ssh -p "$NAS_PORT" "$NAS_USER@$NAS_HOST"
+if [ $? -eq 0 ]; then
+    echo -e "\033[32m🚀 Connexion SSH réussie.\033[0m"
+else
+    echo -e "\033[31m❌ Échec de la connexion SSH.\033[0m"
 fi
-
-# Étape 8 : Ajoute les fichiers modifiés, nouveaux et supprimés
-echo -e "\033[36m📄 Ajout des fichiers au staging...\033[0m"
-git add -A
-echo ""
-
-# Étape 9 : Crée un fichier temporaire pour le message de commit
-echo "$msg" > .gitmessage.txt
-
-# Étape 10 : Effectue le commit
-echo -e "\033[36m📝 Création du commit...\033[0m"
-git commit -F .gitmessage.txt
-echo ""
-
-# Étape 11 : Récupère le nom de la branche actuelle
-echo -e "\033[36m🌿 Récupération du nom de la branche actuelle\033[0m"
-branch=$(git rev-parse --abbrev-ref HEAD)
-echo ""
-
-# Étape 12 : Pousse sur la branche courante
-echo -e "\033[36m🚀 Pousse sur la branche '$branch'...\033[0m"
-git push origin "$branch" || { echo "❌ Erreur : Push échoué."; exit 1; }
-echo ""
-
-# Étape 13 : Résumé du commit
-echo ""
-echo -e "\033[1;35mFin du script\033[0m"
-echo -e "\033[34m✅ Commit réussi, envoi sur la branche \033[1;35m'$branch'\033[34m avec le message :\033[0m"
-echo -e "\033[33m\"$msg\"\033[0m"

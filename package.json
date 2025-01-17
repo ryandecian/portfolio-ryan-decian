@@ -9,7 +9,8 @@
     "check": "biome check src",
     "preview": "vite preview",
     "commit": "bash ./npm-run-commit.sh",
-    "pull-force": "bash ./npm-run-pull-force.sh"
+    "pull-force": "bash ./npm-run-pull-force.sh",
+    "SSH-YUNAGEMS": "bash ./npm-run-SSH-YUNAGEMS.sh"
   },
   "dependencies": {
     "react": "^18.3.1",
