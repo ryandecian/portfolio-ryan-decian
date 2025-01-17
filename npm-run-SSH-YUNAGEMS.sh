@@ -120,14 +120,12 @@ echo ""
 
 #!/bin/bash
 
-#!/bin/bash
-
 # Emplacement du fichier pour stocker les informations de l'agent
 SSH_ENV="$HOME/.ssh-agent.env"
 NAS_USER="Ryan DECIAN"
 NAS_HOST="decian.ddnsfree.com"
 NAS_PORT="44218"
-SSH_KEY="$HOME/.ssh/id_ed25519"  # Remplace par ta clé privée si différente
+SSH_KEY="$HOME/.ssh/id_ed25519_nas"  # Clé spécifique pour le NAS
 
 # Fonction pour démarrer un nouvel agent SSH
 start_agent() {
@@ -177,9 +175,4 @@ fi
 
 # Connexion au NAS
 echo -e "\033[36m🌐 Connexion à votre NAS Synology en SSH...\033[0m"
-ssh -p "$NAS_PORT" "$NAS_USER@$NAS_HOST"
-if [ $? -eq 0 ]; then
-    echo -e "\033[32m🚀 Connexion SSH réussie.\033[0m"
-else
-    echo -e "\033[31m❌ Échec de la connexion SSH.\033[0m"
-fi
+ssh -i "$SSH_KEY" -p "$NAS_PORT" "$NAS
