@@ -120,8 +120,8 @@ echo ""
 
 #!/bin/bash
 
-# Emplacement du fichier pour stocker les informations de l'agent
-SSH_ENV="$HOME/.ssh-agent.env"
+# Emplacement spécifique pour stocker les informations de l'agent lié à cette clé
+SSH_ENV="$HOME/.ssh-agent-nas.env"
 NAS_USER="Ryan DECIAN"
 NAS_HOST="decian.ddnsfree.com"
 NAS_PORT="44218"
@@ -129,7 +129,7 @@ SSH_KEY="$HOME/.ssh/id_ed25519_nas"  # Clé spécifique pour le NAS
 
 # Fonction pour démarrer un nouvel agent SSH
 start_agent() {
-    echo -e "\033[36m🔑 Démarrage d'un nouvel agent SSH...\033[0m"
+    echo -e "\033[36m🔑 Démarrage d'un nouvel agent SSH spécifique pour le NAS...\033[0m"
     echo ""
     eval "$(ssh-agent -s)" > "$SSH_ENV"
     echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$SSH_ENV"
@@ -144,7 +144,7 @@ start_agent() {
 }
 
 # Vérification ou démarrage de l'agent SSH
-echo -e "\033[36m🔄 Vérification ou démarrage de l'agent SSH\033[0m"
+echo -e "\033[36m🔄 Vérification ou démarrage de l'agent SSH spécifique pour le NAS\033[0m"
 echo ""
 if [ -f "$SSH_ENV" ]; then
     source "$SSH_ENV" > /dev/null
@@ -152,11 +152,11 @@ if [ -f "$SSH_ENV" ]; then
         echo -e "\033[33m⚠️  L'agent SSH n'est plus actif. Démarrage d'un nouvel agent...\033[0m"
         start_agent
     else
-        echo -e "\033[32m✅ Un agent SSH actif a été détecté.\033[0m"
+        echo -e "\033[32m✅ Un agent SSH actif pour le NAS a été détecté.\033[0m"
         # Vérifie si la clé est déjà ajoutée
         ssh-add -l | grep "$(cat "$SSH_KEY.pub")" > /dev/null 2>&1
         if [ $? -ne 0 ]; then
-            echo -e "\033[33m⚠️  La clé SSH n'est pas ajoutée. Ajout de la clé...\033[0m"
+            echo -e "\033[33m⚠️  La clé SSH pour le NAS n'est pas ajoutée. Ajout de la clé...\033[0m"
             ssh-add "$SSH_KEY" > /dev/null 2>&1
             if [ $? -eq 0 ]; then
                 echo -e "\033[32m🔐 Clé SSH ajoutée avec succès : $SSH_KEY\033[0m"
@@ -165,14 +165,19 @@ if [ -f "$SSH_ENV" ]; then
                 exit 1
             fi
         else
-            echo -e "\033[32m🔐 La clé SSH est déjà ajoutée à l'agent.\033[0m"
+            echo -e "\033[32m🔐 La clé SSH est déjà ajoutée à l'agent spécifique.\033[0m"
         fi
     fi
 else
-    echo -e "\033[33m⚠️  Aucun fichier d'agent SSH trouvé. Démarrage d'un nouvel agent...\033[0m"
+    echo -e "\033[33m⚠️  Aucun fichier d'agent SSH trouvé. Démarrage d'un nouvel agent spécifique...\033[0m"
     start_agent
 fi
 
 # Connexion au NAS
 echo -e "\033[36m🌐 Connexion à votre NAS Synology en SSH...\033[0m"
-ssh -i "$SSH_KEY" -p "$NAS_PORT" "$NAS
+ssh -i "$SSH_KEY" -p "$NAS_PORT" "$NAS_USER@$NAS_HOST"
+if [ $? -eq 0 ]; then
+    echo -e "\033[32m🚀 Connexion SSH réussie.\033[0m"
+else
+    echo -e "\033[31m❌ Échec de la connexion SSH.\033[0m"
+fi
