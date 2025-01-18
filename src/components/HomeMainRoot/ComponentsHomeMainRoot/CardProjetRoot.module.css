@@ -6,19 +6,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    grid-column: var(--GridColumnFaceBefore);
+    grid-column: span 2;
     border-radius: 1rem;
-    width: var(--WidthFaceBefore-Origin);
-    height: var(--HeightFaceBefore-Origin);
+    width: 240px;
+    height: 343.8px;
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .ContainerCardProjetRootMobile {
-        grid-column: var(--GridColumnFaceBefore);
-        width: var(--WidthFaceBefore-Media250px); /*Largeur d'une CardProjet = 100px*/
-        height: var(--HeightFaceBefore-Media250px); /*Hauteur d'une CardProjet = 193.5px*/
+        width: 100px;
+        height: 200px;
     }
 }
 

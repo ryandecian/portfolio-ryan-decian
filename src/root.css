@@ -71,7 +71,7 @@
 
                  /*Media250px*/
                      --WidthFaceBefore-Media250px: 100px;
-                     --HeightFaceBefore-Media250px: 200px;/*Ancienne valeur 193.5px*/
+                     --HeightFaceBefore-Media250px: 200px;
 
              /*Face avant (After)*/
                  --GridColumnFaceAfter: span 4;
