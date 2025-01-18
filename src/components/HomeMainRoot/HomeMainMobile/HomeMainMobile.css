@@ -140,6 +140,13 @@
         gap: 13.08px; /*gap de 13.08px*/
     }
 }
+@media (min-width: 360px) and (max-width: 390px) {
+    .MapProjetMobile {
+        grid-template-columns: repeat(auto-fit, 70px); /*Largeur d'une cellule grid = 70px*/
+        grid-auto-rows: 255.3px; /*Hauteur d'une cellule grid 255.3px*/
+        gap: 13.85px; /*gap de 13.85px*/
+    }
+}
 
 /*Logique du bouton (Voir plus de projets) */
 .ButtonHomeMainMobile {
