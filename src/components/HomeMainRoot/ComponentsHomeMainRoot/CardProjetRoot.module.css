@@ -145,6 +145,12 @@
         height: 153.85px;
     }
 }
+@media (min-width: 390px) and (max-width: 420px) {
+    .CardProjetImgMobile > img {
+        width: 164.62px;
+        height: 164.62px;
+    }
+}
 
 .ContainerCardProjetInfoMobile {
     display: flex;
