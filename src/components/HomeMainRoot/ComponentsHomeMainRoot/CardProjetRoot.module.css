@@ -103,16 +103,16 @@
 }
 
 .CardProjetImgMobile > img {
-    width: var(--Width-ImgCardProjet-Root); /*240px*/
-    height: var(--Height-ImgCardProjet-Root); /*240px*/
+    width: 240px;
+    height: 240px;
     max-width: 100%;
     border-radius: 1rem 1rem 0.5rem 0.5rem;
     object-fit: contain;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .CardProjetImgMobile > img {
-        width: var(--Width-ImgCardProjet-Media250px); /*100px*/
-        height: var(--Width-ImgCardProjet-Media250px); /*100px*/
+        width: 100px;
+        height: 100px;
     }
 }
 
