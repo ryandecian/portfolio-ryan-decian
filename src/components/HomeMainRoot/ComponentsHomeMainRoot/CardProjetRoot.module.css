@@ -197,7 +197,115 @@
     width: calc(100% - 2rem);
     max-width: 100%;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) { /* En attente des autres paramètre */
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 250px) and (max-width: 270px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 300px) and (max-width: 330px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 330px) and (max-width: 360px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 360px) and (max-width: 390px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .ContainerCardProjetInfoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0.5rem 1rem 1rem 1rem;
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
     .ContainerCardProjetInfoMobile {
         display: flex;
         justify-content: center;
