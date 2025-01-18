@@ -135,7 +135,7 @@ start_agent() {
     eval "$(ssh-agent -s)" > "$SSH_ENV"
     echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$SSH_ENV"
     echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> "$SSH_ENV"
-    # Utiliser le mot de passe déchiffré pour ajouter la clé SSH
+    # Ajouter la clé à l'agent avec le mot de passe déchiffré
     echo "$PASSWORD" | ssh-add "$SSH_KEY" >/dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo -e "\033[32m🔐 Clé SSH ajoutée avec succès : $SSH_KEY\033[0m"
@@ -176,14 +176,10 @@ fi
 # Configurer l'agent SSH
 setup_agent
 
-# Connexion au NAS avec le mot de passe utilisateur
+# Automatiser la connexion SSH avec le mot de passe utilisateur
 echo -e "\033[36m🌐 Connexion à votre NAS Synology en SSH...\033[0m"
-powershell.exe -Command "
-\$password = '$PASSWORD';
-Start-Process 'ssh' -ArgumentList '-i \"$SSH_KEY\" -p $NAS_PORT \"$NAS_USER@$NAS_HOST\"' -NoNewWindow -Wait;
-Start-Sleep -Seconds 2;
-\$wshell = New-Object -ComObject wscript.shell;
-\$wshell.SendKeys(\$password + '{ENTER}');
-"
+sshpass -p "$PASSWORD" ssh -i "$SSH_KEY" -p "$NAS_PORT" "$NAS_USER@$NAS_HOST"
+
+# Nettoyage sécurisé du mot de passe
 unset PASSWORD
 unset PASSPHRASE
