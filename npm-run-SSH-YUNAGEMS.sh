@@ -120,12 +120,13 @@ echo ""
 
 #!/bin/bash
 
-# Emplacement spécifique pour stocker les informations de l'agent lié à cette clé
+# Variables de configuration
 SSH_ENV="$HOME/.ssh-agent-nas.env"
 NAS_USER="Ryan DECIAN"
 NAS_HOST="decian.ddnsfree.com"
 NAS_PORT="44218"
 SSH_KEY="$HOME/.ssh/id_ed25519_nas"  # Clé spécifique pour le NAS
+ENCRYPTED_PASSWORD="U2FsdGVkX18EELSnGPcPMv8aYfj8iTyepbKu1cxFiHs2fU1QQ46ODHXneGplevHU7+HOHNKa1oNWY+jQxqzW+Tvnk935R50tybzilTs2J+A="  # Remplace par ton mot de passe chiffré
 
 # Fonction pour démarrer un nouvel agent SSH
 start_agent() {
@@ -134,7 +135,8 @@ start_agent() {
     eval "$(ssh-agent -s)" > "$SSH_ENV"
     echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$SSH_ENV"
     echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> "$SSH_ENV"
-    ssh-add "$SSH_KEY" > /dev/null 2>&1
+    # Utiliser le mot de passe déchiffré pour ajouter la clé SSH
+    echo "$PASSWORD" | ssh-add "$SSH_KEY" >/dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo -e "\033[32m🔐 Clé SSH ajoutée avec succès : $SSH_KEY\033[0m"
     else
@@ -144,40 +146,44 @@ start_agent() {
 }
 
 # Vérification ou démarrage de l'agent SSH
-echo -e "\033[36m🔄 Vérification ou démarrage de l'agent SSH spécifique pour le NAS\033[0m"
-echo ""
-if [ -f "$SSH_ENV" ]; then
-    source "$SSH_ENV" > /dev/null
-    if ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
-        echo -e "\033[33m⚠️  L'agent SSH n'est plus actif. Démarrage d'un nouvel agent...\033[0m"
-        start_agent
-    else
-        echo -e "\033[32m✅ Un agent SSH actif pour le NAS a été détecté.\033[0m"
-        # Vérifie si la clé est déjà ajoutée
-        ssh-add -l | grep "$(cat "$SSH_KEY.pub")" > /dev/null 2>&1
-        if [ $? -ne 0 ]; then
-            echo -e "\033[33m⚠️  La clé SSH pour le NAS n'est pas ajoutée. Ajout de la clé...\033[0m"
-            ssh-add "$SSH_KEY" > /dev/null 2>&1
-            if [ $? -eq 0 ]; then
-                echo -e "\033[32m🔐 Clé SSH ajoutée avec succès : $SSH_KEY\033[0m"
-            else
-                echo -e "\033[31m❌ Échec lors de l'ajout de la clé SSH : $SSH_KEY\033[0m"
-                exit 1
-            fi
+setup_agent() {
+    echo -e "\033[36m🔄 Vérification ou démarrage de l'agent SSH spécifique pour le NAS\033[0m"
+    echo ""
+    if [ -f "$SSH_ENV" ]; then
+        source "$SSH_ENV" >/dev/null
+        if ! ps -p $SSH_AGENT_PID >/dev/null 2>&1; then
+            echo -e "\033[33m⚠️  L'agent SSH n'est plus actif. Démarrage d'un nouvel agent...\033[0m"
+            start_agent
         else
-            echo -e "\033[32m🔐 La clé SSH est déjà ajoutée à l'agent spécifique.\033[0m"
+            echo -e "\033[32m✅ Un agent SSH actif pour le NAS a été détecté.\033[0m"
         fi
+    else
+        echo -e "\033[33m⚠️  Aucun fichier d'agent SSH trouvé. Démarrage d'un nouvel agent spécifique...\033[0m"
+        start_agent
     fi
-else
-    echo -e "\033[33m⚠️  Aucun fichier d'agent SSH trouvé. Démarrage d'un nouvel agent spécifique...\033[0m"
-    start_agent
+}
+
+# Déchiffrer le mot de passe utilisateur
+read -s -p "🔑 Entrez votre phrase secrète pour déchiffrer le mot de passe : " PASSPHRASE
+echo ""
+PASSWORD=$(echo "$ENCRYPTED_PASSWORD" | openssl enc -aes-256-cbc -a -d -salt -pass pass:"$PASSPHRASE" 2>/dev/null)
+
+if [ -z "$PASSWORD" ]; then
+    echo -e "\033[31m❌ Échec du déchiffrement. Phrase secrète incorrecte.\033[0m"
+    exit 1
 fi
 
-# Connexion au NAS
+# Configurer l'agent SSH
+setup_agent
+
+# Connexion au NAS avec le mot de passe utilisateur
 echo -e "\033[36m🌐 Connexion à votre NAS Synology en SSH...\033[0m"
-ssh -i "$SSH_KEY" -p "$NAS_PORT" "$NAS_USER@$NAS_HOST"
-if [ $? -eq 0 ]; then
-    echo -e "\033[32m🚀 Connexion SSH réussie.\033[0m"
-else
-    echo -e "\033[31m❌ Échec de la connexion SSH.\033[0m"
-fi
+powershell.exe -Command "
+\$password = '$PASSWORD';
+Start-Process 'ssh' -ArgumentList '-i \"$SSH_KEY\" -p $NAS_PORT \"$NAS_USER@$NAS_HOST\"' -NoNewWindow -Wait;
+Start-Sleep -Seconds 2;
+\$wshell = New-Object -ComObject wscript.shell;
+\$wshell.SendKeys(\$password + '{ENTER}');
+"
+unset PASSWORD
+unset PASSPHRASE
