@@ -20,6 +20,78 @@
         height: 200px;
     }
 }
+@media (min-width: 250px) and (max-width: 270px) {
+    .ContainerCardProjetRootMobile {
+        width: 110.77px;
+        height: 211.06px;
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .ContainerCardProjetRootMobile {
+        width: 121.54px;
+        height: 222.12px;
+    }
+}
+@media (min-width: 300px) and (max-width: 330px) {
+    .ContainerCardProjetRootMobile {
+        width: 132.31px;
+        height: 233.18px;
+    }
+}
+@media (min-width: 330px) and (max-width: 360px) {
+    .ContainerCardProjetRootMobile {
+        width: 143.08px;
+        height: 244.24px;
+    }
+}
+@media (min-width: 360px) and (max-width: 390px) {
+    .ContainerCardProjetRootMobile {
+        width: 153.85px;
+        height: 255.30px;
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .ContainerCardProjetRootMobile {
+        width: 164.62px;
+        height: 266.36px;
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .ContainerCardProjetRootMobile {
+        width: 175.39px;
+        height: 277.42px;
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .ContainerCardProjetRootMobile {
+        width: 186.16px;
+        height: 288.48px;
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .ContainerCardProjetRootMobile {
+        width: 196.93px;
+        height: 299.54px;
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .ContainerCardProjetRootMobile {
+        width: 207.7px;
+        height: 310.6px;
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .ContainerCardProjetRootMobile {
+        width: 218.47px;
+        height: 321.66px;
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
+    .ContainerCardProjetRootMobile {
+        width: 229.24px;
+        height: 332.72px;
+    }
+}
 
 .CardProjetImgMobile {
     display: flex;
@@ -31,16 +103,88 @@
 }
 
 .CardProjetImgMobile > img {
-    width: var(--Width-ImgCardProjet-Root); /*240px*/
-    height: var(--Height-ImgCardProjet-Root); /*240px*/
+    width: 240px;
+    height: 240px;
     max-width: 100%;
     border-radius: 1rem 1rem 0.5rem 0.5rem;
     object-fit: contain;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .CardProjetImgMobile > img {
-        width: var(--Width-ImgCardProjet-Media250px); /*100px*/
-        height: var(--Width-ImgCardProjet-Media250px); /*100px*/
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (min-width: 250px) and (max-width: 270px) {
+    .CardProjetImgMobile > img {
+        width: 110.77px;
+        height: 110.77px;
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .CardProjetImgMobile > img {
+        width: 121.54px;
+        height: 121.54px;
+    }
+}
+@media (min-width: 300px) and (max-width: 330px) {
+    .CardProjetImgMobile > img {
+        width: 132.31px;
+        height: 132.31px;
+    }
+}
+@media (min-width: 330px) and (max-width: 360px) {
+    .CardProjetImgMobile > img {
+        width: 143.08px;
+        height: 143.08px;
+    }
+}
+@media (min-width: 360px) and (max-width: 390px) {
+    .CardProjetImgMobile > img {
+        width: 153.85px;
+        height: 153.85px;
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .CardProjetImgMobile > img {
+        width: 164.62px;
+        height: 164.62px;
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .CardProjetImgMobile > img {
+        width: 175.39px;
+        height: 175.39px;
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .CardProjetImgMobile > img {
+        width: 186.16px;
+        height: 186.16px;
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .CardProjetImgMobile > img {
+        width: 196.93px;
+        height: 196.93px;
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .CardProjetImgMobile > img {
+        width: 207.7px;
+        height: 207.7px;
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .CardProjetImgMobile > img {
+        width: 218.47px;
+        height: 218.47px;
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
+    .CardProjetImgMobile > img {
+        width: 229.24px;
+        height: 229.24px;
     }
 }
 
@@ -48,6 +192,7 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
+    flex-direction: start;
     margin: 1rem 1rem 1rem 1rem;
     width: calc(100% - 2rem);
     max-width: 100%;
