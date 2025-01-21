@@ -906,7 +906,7 @@
 }
 @media (max-width: 250px) {
     .DescriptionSubCardProjetMobile {
-        font-size: calc(var(--h6) - 2px);
+        font-size: var(--h7);
         margin: 8px 0px 0px 0px;
     }
 }
