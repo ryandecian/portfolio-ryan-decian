@@ -1,13 +1,7 @@
 @import "./root.css";
 
-.container-link {
-  margin: 0rem 0rem 2rem 0rem;
+.AppContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
-
-.Link {
-  background-color: bisque;
-  border-radius: 1rem;
-  margin: 0.5rem;
-  padding: 0.75rem;
-}
-
