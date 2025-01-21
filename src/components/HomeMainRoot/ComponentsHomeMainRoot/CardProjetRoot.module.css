@@ -356,6 +356,46 @@
         font-size: 10.56px; /*10.56px*/
     }
 }
+@media (min-width: 360px) and (max-width: 390px) {
+    .YearCardProjetMobile {
+        font-size: 10.95px; /*10.95px*/
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .YearCardProjetMobile {
+        font-size: 11.34px; /*11.34px*/
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .YearCardProjetMobile {
+        font-size: 11.73px; /*11.73px*/
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .YearCardProjetMobile {
+        font-size: 12.12px; /*12.12px*/
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .YearCardProjetMobile {
+        font-size: 12.51px; /*12.51px*/
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .YearCardProjetMobile {
+        font-size: 12.9px; /*12.9px*/
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .YearCardProjetMobile {
+        font-size: 13.29px; /*13.29px*/
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
+    .YearCardProjetMobile {
+        font-size: 13.68px; /*13.68px*/
+    }
+}
 
 .ButtonCardProjetMobile {
     display: flex;
