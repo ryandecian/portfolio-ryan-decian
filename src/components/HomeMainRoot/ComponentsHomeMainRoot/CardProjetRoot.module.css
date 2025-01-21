@@ -336,6 +336,16 @@
         font-size: var(--h7); /*9px*/
     }
 }
+@media (min-width: 250px) and (max-width: 270px) {
+    .YearCardProjetMobile {
+        font-size: 9.39px; /*9.39px*/
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .YearCardProjetMobile {
+        font-size: 9.78px; /*9.78px*/
+    }
+}
 
 .ButtonCardProjetMobile {
     display: flex;
