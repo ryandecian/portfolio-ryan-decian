@@ -3,6 +3,7 @@ import './index.css'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DataProvider } from './contexts/DataContexte.tsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 /*Les importation de page*/
 import HomePage from './pages/HomePage.tsx';
@@ -39,7 +40,9 @@ if (rootElement == null) {
 }
 
 createRoot(document.getElementById('root')!).render(
-  <DataProvider>
+  <HelmetProvider>
+    <DataProvider>
       <RouterProvider router={router}/>
-  </DataProvider>
+    </DataProvider>
+  </HelmetProvider>
 )
