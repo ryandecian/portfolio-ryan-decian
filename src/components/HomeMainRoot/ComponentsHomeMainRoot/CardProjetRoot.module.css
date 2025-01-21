@@ -586,8 +586,8 @@
 }
 @media (max-width: 250px) {
     .ContainerSubCardProjetRootMobile {
-        width: var(--WidthFaceAfter-Media250px); /*Largeur d'une CardProjet = 210px*/
-        height: var(--HeightFaceAfter-Media250px); /*Hauteur d'une CardProjet = 193.5px*/
+        width: 210px; /*Largeur d'une CardProjet = 210px*/
+        height: 200px; /*Hauteur d'une CardProjet = 200px*/
     }
 }
 
@@ -596,11 +596,11 @@
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    width: var(--WidthFaceAfter-Origin); /*Largeur d'une CardProjet = 500px*/
+    width: 500px; /*Largeur d'une CardProjet = 500px*/
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .SubContainerSubCardProjetRootMobile {
-        width: var(--WidthFaceAfter-Media250px); /*Largeur d'une CardProjet = 210px*/
+        width: 210px; /*Largeur d'une CardProjet = 210px*/
     }
 }
 
