@@ -750,7 +750,7 @@
     font-size: var(--h2);
     color: var(--TitleCardProjet);
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .TitleSubCardProjetMobile {
         font-size: var(--h5);
     }
