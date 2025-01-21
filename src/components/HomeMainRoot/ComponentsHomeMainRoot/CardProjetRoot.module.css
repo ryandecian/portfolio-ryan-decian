@@ -333,7 +333,7 @@
 }
 @media (max-width: 250px) {
     .YearCardProjetMobile {
-        font-size: calc(var(--h6) - 2px); /*9px*/
+        font-size: var(--h7); /*9px*/
     }
 }
 
