@@ -505,62 +505,62 @@
 }
 @media (min-width: 250px) and (max-width: 270px) {
     .ButtonCardProjetMobile > button {
-        font-size:11.39px;
+        font-size: 11.39px;
     }
 }
 @media (min-width: 270px) and (max-width: 300px) {
     .ButtonCardProjetMobile > button {
-        font-size:11.78px;
+        font-size: 11.78px;
     }
 }
 @media (min-width: 300px) and (max-width: 330px) {
     .ButtonCardProjetMobile > button {
-        font-size:12.17px;
+        font-size: 12.17px;
     }
 }
 @media (min-width: 330px) and (max-width: 360px) {
     .ButtonCardProjetMobile > button {
-        font-size:12.56px;
+        font-size: 12.56px;
     }
 }
 @media (min-width: 360px) and (max-width: 390px) {
     .ButtonCardProjetMobile > button {
-        font-size:12.95px;
+        font-size: 12.95px;
     }
 }
 @media (min-width: 390px) and (max-width: 420px) {
     .ButtonCardProjetMobile > button {
-        font-size:13.34px;
+        font-size: 13.34px;
     }
 }
 @media (min-width: 420px) and (max-width: 450px) {
     .ButtonCardProjetMobile > button {
-        font-size:13.73px;
+        font-size: 13.73px;
     }
 }
 @media (min-width: 450px) and (max-width: 480px) {
     .ButtonCardProjetMobile > button {
-        font-size:14.12px;
+        font-size: 14.12px;
     }
 }
 @media (min-width: 480px) and (max-width: 510px) {
     .ButtonCardProjetMobile > button {
-        font-size:14.51px;
+        font-size: 14.51px;
     }
 }
 @media (min-width: 510px) and (max-width: 540px) {
     .ButtonCardProjetMobile > button {
-        font-size:14.9px;
+        font-size: 14.9px;
     }
 }
 @media (min-width: 540px) and (max-width: 570px) {
     .ButtonCardProjetMobile > button {
-        font-size:15.29px;
+        font-size: 15.29px;
     }
 }
 @media (min-width: 570px) and (max-width: 600px) {
     .ButtonCardProjetMobile > button {
-        font-size:15.68px;
+        font-size: 15.68px;
     }
 }
 
@@ -841,62 +841,62 @@
 }
 @media (min-width: 250px) and (max-width: 270px) {
     .DateSubCardProjetMobile {
-        font-size:11.39px;
+        font-size: 11.39px;
     }
 }
 @media (min-width: 270px) and (max-width: 300px) {
     .DateSubCardProjetMobile {
-        font-size:11.78px;
+        font-size: 11.78px;
     }
 }
 @media (min-width: 300px) and (max-width: 330px) {
     .DateSubCardProjetMobile {
-        font-size:12.17px;
+        font-size: 12.17px;
     }
 }
 @media (min-width: 330px) and (max-width: 360px) {
     .DateSubCardProjetMobile {
-        font-size:12.56px;
+        font-size: 12.56px;
     }
 }
 @media (min-width: 360px) and (max-width: 390px) {
     .DateSubCardProjetMobile {
-        font-size:12.95px;
+        font-size: 12.95px;
     }
 }
 @media (min-width: 390px) and (max-width: 420px) {
     .DateSubCardProjetMobile {
-        font-size:13.34px;
+        font-size: 13.34px;
     }
 }
 @media (min-width: 420px) and (max-width: 450px) {
     .DateSubCardProjetMobile {
-        font-size:13.73px;
+        font-size: 13.73px;
     }
 }
 @media (min-width: 450px) and (max-width: 480px) {
     .DateSubCardProjetMobile {
-        font-size:14.12px;
+        font-size: 14.12px;
     }
 }
 @media (min-width: 480px) and (max-width: 510px) {
     .DateSubCardProjetMobile {
-        font-size:14.51px;
+        font-size: 14.51px;
     }
 }
 @media (min-width: 510px) and (max-width: 540px) {
     .DateSubCardProjetMobile {
-        font-size:14.9px;
+        font-size: 14.9px;
     }
 }
 @media (min-width: 540px) and (max-width: 570px) {
     .DateSubCardProjetMobile {
-        font-size:15.29px;
+        font-size: 15.29px;
     }
 }
 @media (min-width: 570px) and (max-width: 600px) {
     .DateSubCardProjetMobile {
-        font-size:15.68px;
+        font-size: 15.68px;
     }
 }
 
@@ -912,73 +912,73 @@
 }
 @media (min-width: 250px) and (max-width: 270px) {
     .DescriptionSubCardProjetMobile {
-        font-size:9.54px;
+        font-size: 9.54px;
         margin: 8.62px 0px 0px 0px;
     }
 }
 @media (min-width: 270px) and (max-width: 300px) {
     .DescriptionSubCardProjetMobile {
-        font-size:10.08px;
+        font-size: 10.08px;
         margin: 9.24px 0px 0px 0px;
     }
 }
 @media (min-width: 300px) and (max-width: 330px) {
     .DescriptionSubCardProjetMobile {
-        font-size:10.62px;
+        font-size: 10.62px;
         margin: 9.86px 0px 0px 0px;
     }
 }
 @media (min-width: 330px) and (max-width: 360px) {
     .DescriptionSubCardProjetMobile {
-        font-size:11.16px;
+        font-size: 11.16px;
         margin: 10.48px 0px 0px 0px;
     }
 }
 @media (min-width: 360px) and (max-width: 390px) {
     .DescriptionSubCardProjetMobile {
-        font-size:11.7px;
+        font-size: 11.7px;
         margin: 11.1px 0px 0px 0px;
     }
 }
 @media (min-width: 390px) and (max-width: 420px) {
     .DescriptionSubCardProjetMobile {
-        font-size:12.24px;
+        font-size: 12.24px;
         margin: 11.72px 0px 0px 0px;
     }
 }
 @media (min-width: 420px) and (max-width: 450px) {
     .DescriptionSubCardProjetMobile {
-        font-size:12.78px;
+        font-size: 12.78px;
         margin: 12.34px 0px 0px 0px;
     }
 }
 @media (min-width: 450px) and (max-width: 480px) {
     .DescriptionSubCardProjetMobile {
-        font-size:13.32px;
+        font-size: 13.32px;
         margin: 12.96px 0px 0px 0px;
     }
 }
 @media (min-width: 480px) and (max-width: 510px) {
     .DescriptionSubCardProjetMobile {
-        font-size:13.86px;
+        font-size: 13.86px;
         margin: 13.58px 0px 0px 0px;
     }
 }
 @media (min-width: 510px) and (max-width: 540px) {
     .DescriptionSubCardProjetMobile {
-        font-size:14.4px;
+        font-size: 14.4px;
         margin: 14.2px 0px 0px 0px;
     }
 }
 @media (min-width: 540px) and (max-width: 570px) {
     .DescriptionSubCardProjetMobile {
-        font-size:14.94px;
+        font-size: 14.94px;
         margin: 14.82px 0px 0px 0px;
     }
 }
 @media (min-width: 570px) and (max-width: 600px) {
     .DescriptionSubCardProjetMobile {
-        font-size:15.48px;
+        font-size: 15.48px;
         margin: 15.44px 0px 0px 0px;
     }
 }
@@ -997,73 +997,73 @@
 }
 @media (min-width: 250px) and (max-width: 270px) {
     .LienProdMobile {
-        font-size:11.39px;
+        font-size: 11.39px;
         margin: 4.8px 0px 8.62px 0px;
     }
 }
 @media (min-width: 270px) and (max-width: 300px) {
     .LienProdMobile {
-        font-size:11.78px;
+        font-size: 11.78px;
         margin: 4.8px 0px 9.24px 0px;
     }
 }
 @media (min-width: 300px) and (max-width: 330px) {
     .LienProdMobile {
-        font-size:12.17px;
+        font-size: 12.17px;
         margin: 4.8px 0px 9.86px 0px;
     }
 }
 @media (min-width: 330px) and (max-width: 360px) {
     .LienProdMobile {
-        font-size:12.56px;
+        font-size: 12.56px;
         margin: 4.8px 0px 10.48px 0px;
     }
 }
 @media (min-width: 360px) and (max-width: 390px) {
     .LienProdMobile {
-        font-size:12.95px;
+        font-size: 12.95px;
         margin: 4.8px 0px 11.1px 0px;
     }
 }
 @media (min-width: 390px) and (max-width: 420px) {
     .LienProdMobile {
-        font-size:13.34px;
+        font-size: 13.34px;
         margin: 4.8px 0px 11.72px 0px;
     }
 }
 @media (min-width: 420px) and (max-width: 450px) {
     .LienProdMobile {
-        font-size:13.73px;
+        font-size: 13.73px;
         margin: 4.8px 0px 12.34px 0px;
     }
 }
 @media (min-width: 450px) and (max-width: 480px) {
     .LienProdMobile {
-        font-size:14.12px;
+        font-size: 14.12px;
         margin: 4.8px 0px 12.96px 0px;
     }
 }
 @media (min-width: 480px) and (max-width: 510px) {
     .LienProdMobile {
-        font-size:14.51px;
+        font-size: 14.51px;
         margin: 4.8px 0px 13.58px 0px;
     }
 }
 @media (min-width: 510px) and (max-width: 540px) {
     .LienProdMobile {
-        font-size:14.9px;
+        font-size: 14.9px;
         margin: 4.8px 0px 14.2px 0px;
     }
 }
 @media (min-width: 540px) and (max-width: 570px) {
     .LienProdMobile {
-        font-size:15.29px;
+        font-size: 15.29px;
         margin: 4.8px 0px 14.82px 0px;
     }
 }
 @media (min-width: 570px) and (max-width: 600px) {
     .LienProdMobile {
-        font-size:15.68px;
+        font-size: 15.68px;
         margin: 4.8px 0px 15.44px 0px;
     }
 }
@@ -1209,62 +1209,62 @@
 }
 @media (min-width: 250px) and (max-width: 270px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:11.39px;
+        font-size: 11.39px;
     }
 }
 @media (min-width: 270px) and (max-width: 300px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:11.78px;
+        font-size: 11.78px;
     }
 }
 @media (min-width: 300px) and (max-width: 330px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:12.17px;
+        font-size: 12.17px;
     }
 }
 @media (min-width: 330px) and (max-width: 360px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:12.56px;
+        font-size: 12.56px;
     }
 }
 @media (min-width: 360px) and (max-width: 390px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:12.95px;
+        font-size: 12.95px;
     }
 }
 @media (min-width: 390px) and (max-width: 420px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:13.34px;
+        font-size: 13.34px;
     }
 }
 @media (min-width: 420px) and (max-width: 450px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:13.73px;
+        font-size: 13.73px;
     }
 }
 @media (min-width: 450px) and (max-width: 480px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:14.12px;
+        font-size: 14.12px;
     }
 }
 @media (min-width: 480px) and (max-width: 510px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:14.51px;
+        font-size: 14.51px;
     }
 }
 @media (min-width: 510px) and (max-width: 540px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:14.9px;
+        font-size: 14.9px;
     }
 }
 @media (min-width: 540px) and (max-width: 570px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:15.29px;
+        font-size: 15.29px;
     }
 }
 @media (min-width: 570px) and (max-width: 600px) {
     .ContainerSubCardProjetRootMobile > button {
-        font-size:15.68px;
+        font-size: 15.68px;
     }
 }
 
