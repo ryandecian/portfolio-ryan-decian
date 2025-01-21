@@ -2,7 +2,6 @@
 @import "./root.css";
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--backgroundBlack);
     /*background-image: var(--light-fire);
     background-blend-mode: var(--mode-fire);
