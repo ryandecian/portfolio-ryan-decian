@@ -1011,6 +1011,78 @@
         height: 15px;
     }
 }
+@media (min-width: 250px) and (max-width: 270px) {
+    .ImgLangageDevMobile > img {
+        width: 16.54px;
+        height: 16.54px;
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .ImgLangageDevMobile > img {
+        width: 18.08px;
+        height: 18.08px;
+    }
+}
+@media (min-width: 300px) and (max-width: 330px) {
+    .ImgLangageDevMobile > img {
+        width: 19.62px;
+        height: 19.62px;
+    }
+}
+@media (min-width: 330px) and (max-width: 360px) {
+    .ImgLangageDevMobile > img {
+        width: 21.16px;
+        height: 21.16px;
+    }
+}
+@media (min-width: 360px) and (max-width: 390px) {
+    .ImgLangageDevMobile > img {
+        width: 22.7px;
+        height: 22.7px;
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .ImgLangageDevMobile > img {
+        width: 24.24px;
+        height: 24.24px;
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .ImgLangageDevMobile > img {
+        width: 25.78px;
+        height: 25.78px;
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .ImgLangageDevMobile > img {
+        width: 27.32px;
+        height: 27.32px;
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .ImgLangageDevMobile > img {
+        width: 28.86px;
+        height: 28.86px;
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .ImgLangageDevMobile > img {
+        width: 30.4px;
+        height: 30.4px;
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .ImgLangageDevMobile > img {
+        width: 31.94px;
+        height: 31.94px;
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
+    .ImgLangageDevMobile > img {
+        width: 33.48px;
+        height: 33.48px;
+    }
+}
 
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
