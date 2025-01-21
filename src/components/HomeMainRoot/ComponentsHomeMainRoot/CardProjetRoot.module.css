@@ -333,7 +333,67 @@
 }
 @media (max-width: 250px) {
     .YearCardProjetMobile {
-        font-size: calc(var(--h6) - 2px); /*9px*/
+        font-size: var(--h7); /*9px*/
+    }
+}
+@media (min-width: 250px) and (max-width: 270px) {
+    .YearCardProjetMobile {
+        font-size: 9.39px; /*9.39px*/
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .YearCardProjetMobile {
+        font-size: 9.78px; /*9.78px*/
+    }
+}
+@media (min-width: 300px) and (max-width: 330px) {
+    .YearCardProjetMobile {
+        font-size: 10.17px; /*10.17px*/
+    }
+}
+@media (min-width: 330px) and (max-width: 360px) {
+    .YearCardProjetMobile {
+        font-size: 10.56px; /*10.56px*/
+    }
+}
+@media (min-width: 360px) and (max-width: 390px) {
+    .YearCardProjetMobile {
+        font-size: 10.95px; /*10.95px*/
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .YearCardProjetMobile {
+        font-size: 11.34px; /*11.34px*/
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .YearCardProjetMobile {
+        font-size: 11.73px; /*11.73px*/
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .YearCardProjetMobile {
+        font-size: 12.12px; /*12.12px*/
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .YearCardProjetMobile {
+        font-size: 12.51px; /*12.51px*/
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .YearCardProjetMobile {
+        font-size: 12.9px; /*12.9px*/
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .YearCardProjetMobile {
+        font-size: 13.29px; /*13.29px*/
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
+    .YearCardProjetMobile {
+        font-size: 13.68px; /*13.68px*/
     }
 }
 
