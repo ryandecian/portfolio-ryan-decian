@@ -576,17 +576,16 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    grid-column: var(--GridColumnFaceAfter); /*span 4*/
+    grid-column: span 4; /*span 4*/
     border-radius: 1rem;
-    width: var(--WidthFaceAfter-Origin); /*500px*/
-    height: var(--HeightFaceAfter-Origin); /*343.8px*/
+    width: 500px; /*500px*/
+    height: 343.8px; /*343.8px*/
     background-color: var(--BackgroundCardProjet);
     margin: auto;
     transition: all 0.3s ease;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .ContainerSubCardProjetRootMobile {
-        grid-column: var(--GridColumnFaceAfter); /*span 4*/
         width: var(--WidthFaceAfter-Media250px); /*Largeur d'une CardProjet = 210px*/
         height: var(--HeightFaceAfter-Media250px); /*Hauteur d'une CardProjet = 193.5px*/
     }
@@ -844,8 +843,6 @@
 .ButtonCardProjetPC > button:hover {
     transform: scale(1.1); /* Légère mise en avant au survol */
 }
-
-
 
 
 /*--------------------------------------------------------*/
