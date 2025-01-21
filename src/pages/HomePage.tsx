@@ -10,7 +10,7 @@ function HomePage() {
            title: "Portfolio - Ryan DECIAN - Développeur Web Full Stack",
            autor: "Ryan DECIAN",
            description: "",
-           url: "", /*URL de la page*/
+           url: "https://portfolio-ryan-decian.netlify.app", /*URL de la page*/
            img: "",
            twitterUrlImg: "", /*Lien URL de l'image*/
            twitterCompte: "", /*@MonCompteTwitter*/ /*Permet d'identifier le compte officiel*/
