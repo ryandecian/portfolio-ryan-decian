@@ -590,6 +590,78 @@
         height: 200px; /*Hauteur d'une CardProjet = 200px*/
     }
 }
+@media (min-width: 250px) and (max-width: 270px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 232.31px; /*Largeur d'une CardProjet = 232.31px*/
+        height: 211.06px; /*Hauteur d'une CardProjet = 211.06px*/
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 254.62px; /*Largeur d'une CardProjet = 254.62px*/
+        height: 222.12px; /*Hauteur d'une CardProjet = 222.12px*/
+    }
+}
+@media (min-width: 300px) and (max-width: 330px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 276.93px; /*Largeur d'une CardProjet = 276.93px*/
+        height: 233.18px; /*Hauteur d'une CardProjet = 233.18px*/
+    }
+}
+@media (min-width: 330px) and (max-width: 360px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 299.24px; /*Largeur d'une CardProjet = 299.24px*/
+        height: 244.24px; /*Hauteur d'une CardProjet = 244.24px*/
+    }
+}
+@media (min-width: 360px) and (max-width: 390px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 321.55px; /*Largeur d'une CardProjet = 321.55px*/
+        height: 255.30px; /*Hauteur d'une CardProjet = 255.30px*/
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 343.86px; /*Largeur d'une CardProjet = 343.86px*/
+        height: 266.36px; /*Hauteur d'une CardProjet = 266.36px*/
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 366.17px; /*Largeur d'une CardProjet = 366.17px*/
+        height: 277.42px; /*Hauteur d'une CardProjet = 277.42px*/
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 388.48px; /*Largeur d'une CardProjet = 388.48px*/
+        height: 288.48px; /*Hauteur d'une CardProjet = 288.48px*/
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 410.79px; /*Largeur d'une CardProjet = 410.79px*/
+        height: 299.54px; /*Hauteur d'une CardProjet = 299.54px*/
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 433.1px; /*Largeur d'une CardProjet = 433.1px*/
+        height: 310.6px; /*Hauteur d'une CardProjet = 310.6px*/
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 455.41px; /*Largeur d'une CardProjet = 455.41px*/
+        height: 321.66px; /*Hauteur d'une CardProjet = 321.66px*/
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
+    .ContainerSubCardProjetRootMobile {
+        width: 477.72px; /*Largeur d'une CardProjet = 477.72px*/
+        height: 332.72px; /*Hauteur d'une CardProjet = 332.72px*/
+    }
+}
 
 .SubContainerSubCardProjetRootMobile {
     display: flex;
@@ -624,7 +696,7 @@
     }
 }
 
-.ContainerSubCardProjetInfoMobile {
+.ContainerSubCardProjetInfoMobile { /*ATTENTION, A REVOIR POUR LES MARGES*/
     display: flex;
     justify-content: center;
     align-items: start;
@@ -632,7 +704,7 @@
     width: calc(100% - 1rem); /*Attention, dépend de la valeur margin qui doit être = */
     margin: 0.5rem 0rem 0rem 0.5rem;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .ContainerSubCardProjetInfoMobile {
         margin: 0.2rem 0rem 0rem 0rem;
     }
@@ -642,7 +714,7 @@
     font-size: var(--p);
     margin: 0.5rem 0rem 0rem 0rem;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .DateSubCardProjetMobile {
         font-size: var(--h6);
     }
@@ -652,7 +724,7 @@
     margin: 1rem 0rem 0rem 0rem;
     font-size: var(--p);
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .DescriptionSubCardProjetMobile {
         font-size: calc(var(--h6) - 2px);
         margin: 0.5rem 0rem 0rem 0rem;
@@ -665,7 +737,7 @@
     color: var(--LienProjet);
     font-size: var(--p);
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .LienProdMobile {
         font-size: var(--h6);
         margin: 0.3rem 0rem 0rem 0rem;
@@ -693,7 +765,7 @@
     height: 35px;
     object-fit: contain;
 }
-@media (max-width: 251px) {
+@media (max-width: 250px) {
     .ImgLangageDevMobile > img {
         width: 15px;
         height: 15px;
