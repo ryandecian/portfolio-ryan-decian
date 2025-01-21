@@ -675,6 +675,66 @@
         width: 210px; /*Largeur d'une CardProjet = 210px*/
     }
 }
+@media (min-width: 250px) and (max-width: 270px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 232.31px; /*Largeur d'une CardProjet = 232.31px*/
+    }
+}
+@media (min-width: 270px) and (max-width: 300px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 254.62px; /*Largeur d'une CardProjet = 254.62px*/
+    }
+}
+@media (min-width: 300px) and (max-width: 330px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 276.93px; /*Largeur d'une CardProjet = 276.93px*/
+    }
+}
+@media (min-width: 330px) and (max-width: 360px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 299.24px; /*Largeur d'une CardProjet = 299.24px*/
+    }
+}
+@media (min-width: 360px) and (max-width: 390px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 321.55px; /*Largeur d'une CardProjet = 321.55px*/
+    }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 343.86px; /*Largeur d'une CardProjet = 343.86px*/
+    }
+}
+@media (min-width: 420px) and (max-width: 450px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 366.17px; /*Largeur d'une CardProjet = 366.17px*/
+    }
+}
+@media (min-width: 450px) and (max-width: 480px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 388.48px; /*Largeur d'une CardProjet = 388.48px*/
+    }
+}
+@media (min-width: 480px) and (max-width: 510px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 410.79px; /*Largeur d'une CardProjet = 410.79px*/
+    }
+}
+@media (min-width: 510px) and (max-width: 540px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 433.1px; /*Largeur d'une CardProjet = 433.1px*/
+    }
+}
+@media (min-width: 540px) and (max-width: 570px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 455.41px; /*Largeur d'une CardProjet = 455.41px*/
+    }
+}
+@media (min-width: 570px) and (max-width: 600px) {
+    .SubContainerSubCardProjetRootMobile {
+        width: 477.72px; /*Largeur d'une CardProjet = 477.72px*/
+    }
+}
 
 .LienProdTitleMobile {
     text-decoration: none;
