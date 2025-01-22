@@ -1,12 +1,10 @@
-
+import BilleM2 from "../components/CanvasRoot/BilleM2/BilleM2";
 
 function Style_fond () {
     return(
         <main>
-            <h2>Liste des collections</h2>
-            <section>
-
-            </section>
+            <BilleM2 />
+            <h1>Composant Canvas</h1>
         </main>
     )
 }
