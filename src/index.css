@@ -1,9 +1,0 @@
-@import "./light.css";
-@import "./root.css";
-
-body {
-    background-color: var(--backgroundBlack);
-    /*background-image: var(--light-fire);
-    background-blend-mode: var(--mode-fire);
-    height: 100vh;*/
-}

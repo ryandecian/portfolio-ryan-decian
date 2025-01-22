@@ -95,6 +95,7 @@
 
 body {
     font-family: 'Roboto', sans-serif; /* Police Roboto */
+    background-color: var(--backgroundBlack); /* Couleur de fond */
     font-size: 16px; /* Taille de la police */
     line-height: 1.6; /* Espacement entre les lignes pour lisibilité */
     margin: 0;
