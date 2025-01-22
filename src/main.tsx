@@ -9,7 +9,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage.tsx';
 import Projets from "./pages/Projets.tsx"
 import Grid from "./pages/Grid.tsx"
-import BilleM2 from './components/CanvasRoot/BilleM2/BilleM2.tsx';
 import Style_fond from './pages/Style_fond.tsx';
 
 const router = createBrowserRouter([
