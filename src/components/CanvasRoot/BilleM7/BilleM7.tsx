@@ -158,7 +158,7 @@ const BilleM7: React.FC = () => {
       requestAnimationFrame(animate);
     }
 
-    canvas.addEventListener("mousemove", (event) => {
+    window.addEventListener("mousemove", (event) => {
       const rect = canvas.getBoundingClientRect();
       const offsetX = 6; // Décalage horizontal en pixels
       const offsetY = 2;  // Décalage vertical en pixels
