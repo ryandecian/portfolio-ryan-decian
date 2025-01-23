@@ -8,8 +8,6 @@ import { HelmetProvider } from 'react-helmet-async';
 /*Les importation de page*/
 import HomePage from './pages/HomePage.tsx';
 import Projets from "./pages/Projets.tsx"
-import Grid from "./pages/Grid.tsx"
-import Style_fond from './pages/Style_fond.tsx';
 
 const router = createBrowserRouter([
     {
@@ -26,14 +24,6 @@ const router = createBrowserRouter([
        {
          path: "/projets",
          element: <Projets />,
-       },
-       {
-         path: "/experiences",
-         element: <Grid />,
-       },
-       {
-         path: "/canvas",
-         element: <Style_fond />,
        },
       ]
     },
