@@ -1,6 +1,11 @@
-:root {
-    --padding: 0.5rem 0.5rem 1rem 0.5rem;
+header {
+    width: 100%;
 }
-.Home {
-    color: red;
+
+main {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
 }
