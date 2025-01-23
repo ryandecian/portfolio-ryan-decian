@@ -1,8 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import "./BilleM7.css";
 import { useState } from "react";
+const ryan = 300;
 
-const BilleM7: React.FC = () => {
+interface BilleM7Props {
+  widthBilleM7: number;
+  heightBilleM7: number;
+}
+function BilleM7(Props: BilleM7Props) {
+  const { widthBilleM7, heightBilleM7 } = Props;
+  
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
 /*------------------------------------------------------------*/
@@ -10,7 +17,7 @@ const BilleM7: React.FC = () => {
      // État pour les dimensions de l'écran
      const [dimensions, setDimensions] = useState({
       width: window.innerWidth,
-      height: window.innerHeight,
+      height: {ryan},
       });
  // Calcule de l'indice de densité de point : 
    const indice = 300;
@@ -18,14 +25,14 @@ const BilleM7: React.FC = () => {
 
  // État pour la valeur calculée de "screen"
    const [screen, setScreen] = useState(() => 
-     (window.innerWidth * window.innerHeight) / density);
+     (window.innerWidth * ryan) / density);
 
  // Mettre à jour les dimensions de l'écran lors du redimensionnement
    useEffect(() => {
      const handleResize = () => {
        setDimensions({
          width: window.innerWidth,
-         height: window.innerHeight,
+         height: {ryan},
          });
      };
 
@@ -40,7 +47,7 @@ const BilleM7: React.FC = () => {
 
  // Recalculer "screen" lorsque les dimensions changent
    useEffect(() => {
-     setScreen(dimensions.width * dimensions.height / density);
+     setScreen(dimensions.width * ryan / density);
    }, [dimensions, density]);
 
  /*------------------------------------------------------------*/
@@ -58,7 +65,7 @@ const BilleM7: React.FC = () => {
 
     // Initialisation des dimensions du canvas
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = ryan;
 
     const colors = ["rgb(81, 162, 233)", "rgb(255, 77, 90)"];
     const dots = Array.from({ length: screen }, () => createDot(canvas.width, canvas.height, colors)); // Nombre de points géré par const indice
