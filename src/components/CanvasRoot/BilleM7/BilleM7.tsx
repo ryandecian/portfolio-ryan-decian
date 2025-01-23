@@ -1,56 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./BilleM7.css";
-import { useState } from "react";
-const ryan = 300;
 
-interface BilleM7Props {
-  widthBilleM7: number;
-  heightBilleM7: number;
-}
-function BilleM7(Props: BilleM7Props) {
-  const { widthBilleM7, heightBilleM7 } = Props;
-
+function BilleM7() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
-/*------------------------------------------------------------*/
- /*Logique de calcul et récupération des dimensions écran*/
-     // État pour les dimensions de l'écran
-     const [dimensions, setDimensions] = useState({
-      width: {widthBilleM7},
-      height: {heightBilleM7},
-      });
- // Calcule de l'indice de densité de point : 
-   const indice = 300;
-   const density = (1440 * 778 / indice);
-
- // État pour la valeur calculée de "screen"
-   const [screen, setScreen] = useState(() => 
-     (widthBilleM7 * heightBilleM7) / density);
-
- // Mettre à jour les dimensions de l'écran lors du redimensionnement
-   useEffect(() => {
-     const handleResize = () => {
-       setDimensions({
-         width: {widthBilleM7},
-         height: {heightBilleM7},
-         });
-     };
-
- window.addEventListener("resize", handleResize);
-
- // Nettoyage
-   return () => {
-     window.removeEventListener("resize", handleResize);
-   };
- }, []);
-
-
- // Recalculer "screen" lorsque les dimensions changent
-   useEffect(() => {
-     setScreen(widthBilleM7 * heightBilleM7 / density);
-   }, [dimensions, density]);
-
- /*------------------------------------------------------------*/
 
   useEffect(() => {
     const canvas = canvasRef.current!;
@@ -61,24 +13,27 @@ function BilleM7(Props: BilleM7Props) {
       return;
     }
 
-    const ctx = context; // Utilisation d'une variable locale pour le contexte
-
-    // Initialisation des dimensions du canvas
-    canvas.width = window.innerWidth;
-    canvas.height = ryan;
-
     const colors = ["rgb(81, 162, 233)", "rgb(255, 77, 90)"];
-    const dots = Array.from({ length: screen }, () => createDot(canvas.width, canvas.height, colors)); // Nombre de points géré par const indice
-    const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
-
     const CONNECTION_DISTANCE = 80; // Distance entre les points connectés
-    const LINE_WIDTH = 1.5; // Épaissir les lignes
-    const CURSOR_RADIUS = 200; // Rayon de transparence lien entre points
-    const MIN_POINT_OPACITY = 0.3; //Opacité des points
+    const LINE_WIDTH = 1.5; // Épaisseur des lignes
+    const CURSOR_RADIUS = 200; // Rayon d'influence de la souris
+    const MIN_POINT_OPACITY = 0.3;
     const MAX_DISTANCE = 300; // Distance d'opacité dynamique
-    /* Les points qui sont plus proches du curseur deviennent plus visibles (avec une opacité*/
-    /* proche de 1), tandis que ceux qui sont au-delà de cette distance (300 pixels ici)*/
-    /* conservent une opacité minimale définie par MIN_POINT_OPACITY.*/
+
+    const updateCanvasSize = () => {
+      canvas.width = window.innerWidth; // Largeur de la fenêtre
+      canvas.height = document.body.scrollHeight; // Hauteur totale du contenu
+    };
+
+    updateCanvasSize(); // Mise à jour initiale
+
+    // Gestion du redimensionnement de la fenêtre et du scroll
+    window.addEventListener("resize", updateCanvasSize);
+    window.addEventListener("scroll", updateCanvasSize);
+
+    const dots = Array.from({ length: 300 }, () => createDot(canvas.width, canvas.height, colors));
+
+    const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
 
     function createDot(canvasWidth: number, canvasHeight: number, colors: string[]) {
       return {
@@ -91,11 +46,11 @@ function BilleM7(Props: BilleM7Props) {
       };
     }
 
-    function updateDot(dot: typeof dots[number], canvasWidth: number, canvasHeight: number) {
-      if (dot.x + dot.radius > canvasWidth || dot.x - dot.radius < 0) {
+    function updateDot(dot: typeof dots[number]) {
+      if (dot.x + dot.radius > canvas.width || dot.x - dot.radius < 0) {
         dot.vx = -dot.vx;
       }
-      if (dot.y + dot.radius > canvasHeight || dot.y - dot.radius < 0) {
+      if (dot.y + dot.radius > canvas.height || dot.y - dot.radius < 0) {
         dot.vy = -dot.vy;
       }
       dot.x += dot.vx;
@@ -103,8 +58,8 @@ function BilleM7(Props: BilleM7Props) {
     }
 
     function drawDot(dot: typeof dots[number]) {
-      ctx.beginPath();
-      ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+      context.beginPath();
+      context.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
 
       let opacity = MIN_POINT_OPACITY;
       if (mouse.x !== null && mouse.y !== null) {
@@ -117,8 +72,8 @@ function BilleM7(Props: BilleM7Props) {
         }
       }
 
-      ctx.fillStyle = dot.color.replace("rgb", "rgba").replace(")", `, ${opacity})`);
-      ctx.fill();
+      context.fillStyle = dot.color.replace("rgb", "rgba").replace(")", `, ${opacity})`);
+      context.fill();
     }
 
     function connectDots() {
@@ -142,22 +97,22 @@ function BilleM7(Props: BilleM7Props) {
               }
             }
 
-            ctx.beginPath();
-            ctx.moveTo(dots[i].x, dots[i].y);
-            ctx.lineTo(dots[j].x, dots[j].y);
-            ctx.strokeStyle = `rgba(81, 162, 233, ${opacity})`;
-            ctx.lineWidth = LINE_WIDTH;
-            ctx.stroke();
+            context.beginPath();
+            context.moveTo(dots[i].x, dots[i].y);
+            context.lineTo(dots[j].x, dots[j].y);
+            context.strokeStyle = `rgba(81, 162, 233, ${opacity})`;
+            context.lineWidth = LINE_WIDTH;
+            context.stroke();
           }
         }
       }
     }
 
     function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      context.clearRect(0, 0, canvas.width, canvas.height);
 
       dots.forEach((dot) => {
-        updateDot(dot, canvas.width, canvas.height);
+        updateDot(dot);
         drawDot(dot);
       });
 
@@ -167,23 +122,22 @@ function BilleM7(Props: BilleM7Props) {
 
     window.addEventListener("mousemove", (event) => {
       const rect = canvas.getBoundingClientRect();
-      const offsetX = 6; // Décalage horizontal en pixels
-      const offsetY = 2;  // Décalage vertical en pixels
-    
+      const offsetX = 6; // Décalage horizontal
+      const offsetY = 2; // Décalage vertical
+
       mouse.x = event.clientX - rect.left + offsetX;
       mouse.y = event.clientY - rect.top + offsetY;
     });
 
-    window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      dots.splice(0, dots.length, ...Array.from({ length: 300 }, () => createDot(canvas.width, canvas.height, colors)));
-    });
-
     animate();
-  }, [screen]);
+
+    return () => {
+      window.removeEventListener("resize", updateCanvasSize);
+      window.removeEventListener("scroll", updateCanvasSize);
+    };
+  }, []);
 
   return <canvas ref={canvasRef} className="bille-canvasM7" />;
-};
+}
 
 export default BilleM7;

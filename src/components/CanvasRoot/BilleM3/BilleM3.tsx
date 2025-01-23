@@ -1,16 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./BilleM3.css";
 import { useState } from "react";
 
-const BilleM3: React.FC = () => {
+interface BilleM3Props {
+  widthBilleM3: number;
+  heightBilleM3: number;
+}
+
+function BilleM3(Props: BilleM3Props) {
+
+  const { widthBilleM3, heightBilleM3 } = Props;
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
 /*------------------------------------------------------------*/
  /*Logique de calcul et récupération des dimensions écran*/
      // État pour les dimensions de l'écran
      const [dimensions, setDimensions] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: widthBilleM3,
+      height: heightBilleM3,
       });
  // Calcule de l'indice de densité de point : 
    const indice = 300;
@@ -18,14 +25,14 @@ const BilleM3: React.FC = () => {
 
  // État pour la valeur calculée de "screen"
    const [screen, setScreen] = useState(() => 
-     (window.innerWidth * window.innerHeight) / density);
+     (widthBilleM3 * heightBilleM3) / density);
 
  // Mettre à jour les dimensions de l'écran lors du redimensionnement
    useEffect(() => {
      const handleResize = () => {
        setDimensions({
-         width: window.innerWidth,
-         height: window.innerHeight,
+         width: widthBilleM3,
+         height: heightBilleM3,
          });
      };
 
@@ -57,8 +64,8 @@ const BilleM3: React.FC = () => {
     const ctx = context; // Utilisation d'une variable locale pour le contexte
 
      // Initialisation des dimensions du canvas
-     canvas.width = window.innerWidth;
-     canvas.height = window.innerHeight;
+     canvas.width = widthBilleM3;
+     canvas.height = heightBilleM3;
 
      const colors = ["rgb(81, 162, 233)", "rgb(255, 77, 90)"];
      const dots = Array.from({ length: 300 }, () => createDot(canvas.width, canvas.height, colors));
@@ -146,8 +153,8 @@ const BilleM3: React.FC = () => {
     });
 
     window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = widthBilleM3;
+      canvas.height = heightBilleM3;
       dots.length = 0;
       init();
     });
