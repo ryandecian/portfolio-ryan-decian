@@ -9,15 +9,15 @@ interface BilleM7Props {
 }
 function BilleM7(Props: BilleM7Props) {
   const { widthBilleM7, heightBilleM7 } = Props;
-  
+
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
 /*------------------------------------------------------------*/
  /*Logique de calcul et récupération des dimensions écran*/
      // État pour les dimensions de l'écran
      const [dimensions, setDimensions] = useState({
-      width: window.innerWidth,
-      height: {ryan},
+      width: {widthBilleM7},
+      height: {heightBilleM7},
       });
  // Calcule de l'indice de densité de point : 
    const indice = 300;
@@ -25,14 +25,14 @@ function BilleM7(Props: BilleM7Props) {
 
  // État pour la valeur calculée de "screen"
    const [screen, setScreen] = useState(() => 
-     (window.innerWidth * ryan) / density);
+     (widthBilleM7 * heightBilleM7) / density);
 
  // Mettre à jour les dimensions de l'écran lors du redimensionnement
    useEffect(() => {
      const handleResize = () => {
        setDimensions({
-         width: window.innerWidth,
-         height: {ryan},
+         width: {widthBilleM7},
+         height: {heightBilleM7},
          });
      };
 
@@ -47,7 +47,7 @@ function BilleM7(Props: BilleM7Props) {
 
  // Recalculer "screen" lorsque les dimensions changent
    useEffect(() => {
-     setScreen(dimensions.width * ryan / density);
+     setScreen(widthBilleM7 * heightBilleM7 / density);
    }, [dimensions, density]);
 
  /*------------------------------------------------------------*/
